@@ -1,24 +1,24 @@
 ---
 title: Speechly Annotation Language Semantics
-description: How is a SAL configuration structured?
+description: How are SAL expressions structured, and how do they expand to example utterances?
 weight: 3
 menu:
   sidebar:
-    parent: "Configuring Your Application"
+    parent: "Setting up an AppId"
     title: "SAL Semantics"
 ---
-In this document we first discuss what kind of expressions can be written in a SAL configuration. For beginners we recommend to only skim this section and take a glance at the examples.
+In this document we first discuss what kind of expressions can be written in the Speechly Annotation Language. For beginners we recommend to only skim this section and take a glance at the examples.
 
 Then, we briefly review how SAL [Template expansion](#template-expansion) works. This latter part is advanced material that is not relevant for new users.
 
 # SAL expressions
-A SAL configuration consists of *SAL expressions*. A SAL expression is either
+A SAL document consists of *SAL expressions*. A SAL expression is either
 - an *Example utterance*,
 - a *Template*,
 - a *Partial template*, or
 - a *Variable definition*.
 
-Every line in a SAL configuration must define an *Example utterance*, a *Template*, or a *Variable definition*.
+Every line in a SAL document must define an *Example utterance*, a *Template*, or a *Variable definition*.
 
 Importantly: A *Partial template* may only appear as part of a *Template*, but not by itself.
 
@@ -87,7 +87,7 @@ where `LHS` is a variable name and `RHS` is either an *Example utterance*, a *Te
 
 # Template expansion
 
-The *Templates* in your SAL configuration are randomly expanded to *Example utterances* during training. The training system does not exhaustively expand all possible utterances from the templates, but randomly generates a sufficient amount of *Example Uttearances*.
+The *Templates* you provide are randomly expanded to *Example utterances* during training. The training system does not exhaustively expand all possible utterances from the templates, but randomly generates a sufficient amount of *Example Uttearances*.
 
 A *Template* is expanded by processing it left-to-right. Whenever [Template notation](/slu-examples/cheat-sheet/#template-notation) is encountered, the expansion algorithm expands the part in question according to its expansion rule. These are given below for Lists, Optional parts, Variables, and Permutations. The algorithm is applied recursively if applying the expansion rule resolves to something that can be further expanded.
 

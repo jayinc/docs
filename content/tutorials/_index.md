@@ -6,7 +6,7 @@ category: "User guide"
 menu:
   sidebar:
     title: "How-to guides"
-    weight: 6
+    weight: 60
 ---
 
 # Web Client Tutorial: SpeechToChess

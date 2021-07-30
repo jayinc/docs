@@ -10,7 +10,7 @@ menu:
     title: "Basic usage"
     parent: "Client Libraries"
 ---
-*Note that you also need a Speechly application id. This you can obtain from the [Dashboard](https://api.speechly.com/dashboard) for one of the ready-made example applications, or after having [configured](/slu-examples/) one yourself. And don't forget to deploy your application on the Dashboard as well!*
+*Note that you also need a Speechly application id. This you can obtain from the [Dashboard](https://api.speechly.com/dashboard) after [setting up the AppId](/slu-examples/). Also, don't forget to deploy your application on the Dashboard as well! The AppId will only work after it has been deployed.*
 
 # Install and import the client library
 
@@ -297,10 +297,3 @@ override fun onCreate(savedInstanceState: Bundle?) {
 For more details, please see our <a href="/client-libraries/client-api-reference/">Client API reference</a>,
 as well as the <a href="https://github.com/speechly/android-client/blob/main/client/src/main/kotlin/com/speechly/client/slu/Segment.kt">source code of Segment on Github</a>.
 </div>
-
-# Learn more!
-
-Learn how to [configure](/slu-examples/) your own application.
-
-For descriptions of complete example applications built using the client libraries,
-please see our [tutorials](/tutorials/).

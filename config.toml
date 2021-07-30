@@ -52,7 +52,7 @@ name = "Menu"
 weight = 1
 
 [[menu.main]]
-name = "Quick Start"
+name = "Getting Started"
 url = "/quick-start/"
 weight = 1
 parent = "Menu"
@@ -64,19 +64,13 @@ weight = 2
 parent = "Menu"
 
 [[menu.main]]
-name = "Speechly libraries"
-url = "/dev-tools/overview"
-weight = 1
-parent = "Development Tools"
-
-[[menu.main]]
 name = "Client Libraries"
 url = "/client-libraries/"
 weight = 3
 parent = "Menu"
 
 [[menu.main]]
-name = "Configuration"
+name = "AppId Setup"
 url = "/slu-examples/"
 weight = 4
 parent = "Menu"

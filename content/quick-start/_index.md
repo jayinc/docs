@@ -1,47 +1,44 @@
 ---
-title: Quick Start
-description: The Speechly Quick Start helps you get started on developing with Speechly.
+title: Getting Started
+description: Taking your first steps with Speechly.
 weight: 1
 display: article
 category: "User guide"
 menu:
   sidebar:
-    title: "Quick Start"
+    title: "Getting Started"
+    weight: 1
 ---
-Below are three different ways for you to start trying out Speechly. They are self-contained, and you can freely choose which one you would like to start with. However, the first one (Video Quick Start) is recommended for everyone.
+# Overview
+To take Speechly into use at your *website* or *mobile application*, you must:
+1. [Set up a Speechly AppId](/slu-examples/), and
+2. Integrate a suitable [Client library](/client-libraries/) to your website / app.
 
-# 1) Video Quick Start
+Integrating Speechly to a server-side application happens in the same way, except that you must directly access our [gRPC API](/speechly-api/) from your application.
 
-This Quick Start will guide you through the basics of building Spoken Language Understanding models with Speechly Dashboard. It covers the following steps:
+# 1. Set up an AppId on the Speechly Dashboard
 
-1. Creating an application
-2. Creating your first Configuration
-3. Trying out the application in the Speechly Playground
+Speechly AppIds are set up using the Speechly [Dashboard](https://www.speechly.com/dashboard). The video below will guide you through the basics of the Dashboard. You an sign-up on the Dashboard either with your Google or GitHub account. After viewing the video, you can set up a simple example application by following the *Quick start* instructions at the [AppId Setup page](/slu-examples).
 
 {{<youtube PVYEMqnykro>}}
 
-# 2) Web Integration Quick Start
+# 2. Integrate a suitable Client library
 
-Option 1: A walk-through on integrating the Speechly Browser-client to a Web based application can be found in this [simple but informative tutorial](https://speechly.github.io/browser-ui/v1/). You can either use the ready-made Application Id given on the page (Usage section), but we recommend replacing this with your own (maybe after completing the Video Quick Start).
+Once you've obtained an AppId, you can proceed with integrating Speechly to your application. We recommend using our [Client libraries](/client-libraries/).
 
-Option 2: As an alternative to the above tutorial, we also provide a [Web Speech API](https://wicg.github.io/speech-api/) compliant [speech recognition polyfill](https://github.com/speechly/speech-recognition-polyfill). This is especially recommended if you already have an application that uses the Web Speech API, and only need speech-to-text functionality. Instructions for deploying a speech-to-text Application ID can be found [here](/quick-start/stt-only).
+**Web tutorial:** A walk-through on integrating the Speechly Browser-client to a Web based application can be found in this [simple tutorial](https://speechly.github.io/browser-ui/v3/).
 
-# 3) Complete Integration
-Do you already have an application that you would like to integrate with Speechly?
+<!-- Option 2: As an alternative to the above tutorial, we also provide a [Web Speech API](https://wicg.github.io/speech-api/) compliant [speech recognition polyfill](https://github.com/speechly/speech-recognition-polyfill). This is especially recommended if you already have an application that uses the Web Speech API, and only need speech-to-text functionality. Instructions for deploying a speech-to-text Application ID can be found [here](/quick-start/stt-only). -->
 
-1. Sign-up on the [Speechly Dashboard](https://api.speechly.com/dashboard).
-2. Create a new application on the Dashboard, and deploy the Home Automation Configuration. (Also see the video tutorial above.)
-3. Install and take a [Client Library](/client-libraries/usage) of your choice into use. They are available for Web, React, iOS and Android. Use the Application Id that you obtained in step 2. above. There is no need to do anything in particular with the events returned by the API yet. Just log them to a console.
-4. Make a test utterance from your own application, and inspect the returned events to get an idea of how the API works.
+**Android / iOS:** If you're planning to use Speechly on a mobile device, we provide Client libraries for both Android and iOS. These, as well as simple usage instructions are available [here](/client-libraries/usage).
 
-After you've completed this, the next step is to [design a configuration](/slu-examples/) that is tailored for your application. (The reason to deploy the Home Automation example at first is to give an overview of the end-to-end integration process that you would follow when developing a voice UI with Speechly.)
-
-5. Once you have written a configuration on your own, you should change your application logic so that it reacts to the returned events in an appropriate manner.
+**Server-side applications:** If you need to access the Speechly API from a server-side application, you can do so using our [gRPC API](/speechly-api/). This is a more advanced use-case, however.
 
 # Learn more!
 
-- Take a look at our [Development tool offering](/dev-tools).
-- Read about how to [Configure](/slu-examples/) Speechly for the needs of your Application.
+- Read more about how to [Set up the AppId](/slu-examples/) for the needs of your Application.
 - Check out some [Example Configurations](/slu-examples/example-configuration/).
+- Read about our [UI design philosophy](/design-philosophy/).
+- Take a look at our [Development tool offering](/dev-tools).
 - Explore the [Documentation](/).
 - Browse our [public GitHub repositories](https://github.com/speechly/).

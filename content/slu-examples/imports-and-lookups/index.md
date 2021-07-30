@@ -7,7 +7,7 @@ aliases: [/editing-nlu-examples/imports-and-lookup/]
 menu:
   sidebar:
     title: "Imports and Lookups"
-    parent: "Configuring Your Application"
+    parent: "Setting up an AppId"
 ---
 
 ***Note!** These functionalities are not available on the Dashboard. Using Imports and Lookups requires deploying your application using the [Command Line Tool](/dev-tools/command-line-client/)!*

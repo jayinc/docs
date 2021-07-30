@@ -6,7 +6,7 @@ category: "User guide"
 menu:
   sidebar:
     title: "Entity Data Types"
-    parent: "Configuring Your Application"
+    parent: "Setting up an AppId"
 ---
 # Introduction
 Unless otherwise specified, the entity values returned from the Speechly API are *verbatim what the user said*. If you have configured the template

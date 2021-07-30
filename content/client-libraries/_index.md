@@ -1,7 +1,7 @@
 ---
 title: Client Libraries
 description: Available for Web, React, iOS, and Android.
-weight: 3
+weight: 30
 category: "References"
 display: article
 menu:
@@ -19,7 +19,7 @@ All Client libraries also adhere to the same [high-level API](client-api-referen
 We also provide a [polyfill](https://github.com/speechly/speech-recognition-polyfill) for the [SpeechRecognition W3C standard](https://wicg.github.io/speech-api/) on web, using Speechly as the underlying API. **Note!** It does not come bundled with UI components, nor does it provide any natural language processing functionalities that are available with the other Client Libraries. But it is a good choice if you only need cross-browser compliant speech-to-text in your web application.
 
 # More information
-Our Client libraries are open source. You can find more information about them as well as other usage examples on Github:
+Our Client libraries are open source. You can find more information about them as well as other usage examples on GitHub:
 - [Web client](https://github.com/speechly/browser-client)
 - [React client](https://github.com/speechly/react-client)
 - [iOS client](https://github.com/speechly/ios-client)

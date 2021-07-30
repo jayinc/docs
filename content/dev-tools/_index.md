@@ -1,7 +1,7 @@
 ---
 title: Development tools
 description: Speechly libraries, Dashboard, and Command line tool
-weight: 2
+weight: 40
 category: "References"
 display: article
 menu:
@@ -15,8 +15,8 @@ We offer [a variety of libraries](/dev-tools/overview) for integrating Speechly 
 
 # Dashboard
 
-The Speechly [Dashboard](/dev-tools/dashboard) is where you create, deplly and configure Speechly applications. The Dashboard provides some simple usage instructions when you log in for the first time.
+The Speechly [Dashboard](/dev-tools/dashboard) is where you create, set up, and deploy Speechly applications. The Dashboard provides some simple usage instructions when you log in for the first time.
 
 # Command line tool
 
-Our [Command Line Tool](/dev-tools/command-line-client/) lets you create, deploy and configure Speechly applications from the command line. Some of our more advanced features are only available when using the Command Line Tool. Beginners should start with the Dashboard.
+Our [Command Line Tool](/dev-tools/command-line-client/) lets you create, set up, and deploy Speechly applications from the command line. Some of our more advanced features are only available when using the Command Line Tool. We recommend beginners to start with the Dashboard.

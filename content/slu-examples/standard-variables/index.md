@@ -7,7 +7,7 @@ aliases: [/editing-nlu-examples/standard-variables/]
 menu:
   sidebar:
     title: "Standard Variables"
-    parent: "Configuring Your Application"
+    parent: "Setting up an AppId"
 ---
 
 # Introduction

@@ -1,6 +1,6 @@
 ---
 title: Client Library API Reference
-description: All speechly [client libraries](/client-libraries/) implement the same API, irrespectively of platform or programming language.
+description: All Speechly Client libraries implement this API subject to some minor platform specific variations.
 category: "References"
 display: article
 weight: 6
@@ -9,11 +9,19 @@ menu:
     title: "Client API Reference"
     parent: "Client Libraries"
 ---
-This is a high-level overview of the Client Library API. The specifics depend on the Client Library being used, but all Client Libraries implement this API subject to some platform specific variations.
+# About the API in general
+The purpose of this API is to provide a friendly access to the underlying [Speechly gRPC API](/speechaly-api/). Audio capture, network operations, and state management are handled behind the scenes by the Client library. The API is designed so that it is possible to *quickly react* to the intents and entities parsed from the user's utterance. This facilitates building user interfaces that give *rapid visual feedback* to the user while they are still speaking.
+
+To use the API, you should
+1. Initialise the client (by calling `initialize`),
+2. register a callback function (by calling `onSegmentChange`), and
+3. start sending audio (by calling `startContext`).
+
+Finally, you close the microphone and stop sending audio by calling `stopContext`.
+
+While audio is being sent, the function you registered is called multiple times (often *several times per second*) whenever the API detects something new from the users utterance. This could be an updated transcript, an intent, or an entity. 
 
 # Methods
-
-The most important methods especially for new users involve initialising the client, as well as registering a segment handler with `onSegmentChange`.
 
 ## initialize(app_id: string | proj_id: string)
 Creates and initialises the Client. In most of our Client Libraries this is implemented by the constructor of the client object. For most applications you must pass as argument the `app_id` (available from the Dashboard or Command Line Tool). All connections initated by the client will be targeted to this `app_id`.
@@ -43,7 +51,7 @@ Defines a callback function for handling client state changes.
 ---
 
 # The Segment data structures
-The callback function registered with `onSegmentChange` is called repeatedly with a `Segment` object that is updated with new transcript, intent, and entities as the user speaks.
+The callback function registered with `onSegmentChange` is called repeatedly with a `Segment` object that is updated with new transcript, intent, and entities as the user speaks. The idea of the `Segment` object is to provide a live view to the ongoing segment.
 
 ## Segment
 ```json

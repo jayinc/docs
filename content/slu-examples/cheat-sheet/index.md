@@ -4,7 +4,7 @@ description: Reference of all SAL features with simple usage examples
 weight: 2
 menu:
   sidebar:
-    parent: "Configuring Your Application"
+    parent: "Setting up an AppId"
     title: "SAL Syntax"
 ---
 SAL syntax consists of *Annotation syntax* and *Template notation*.
@@ -89,9 +89,9 @@ product_code = $digit $digit $symbol $digit $digit $digit $digit
 ```
 Above, `product_code` defines a template that expands to all possible utterances that start with two digits, followed by one of the symbols, followed by four digits, such as *"six four dash nine nine zero four"* or "*one two hash three four five six"*.
 
-*Note: We provide you with several predefined [Standard Variables](/slu-examples/standard-variables/) that you can take into use in your configuration! These are useful when your configuration must support numbers, dates, times, sequences of alphanumeric characters, email addresses, etc.*
+*Note: We provide you with several predefined [Standard Variables](/slu-examples/standard-variables/) that you can use in your example utterances! These are useful when your application must support numbers, dates, times, sequences of alphanumeric characters, email addresses, etc.*
 
-Note that any varible `x` *must* be declared in your configuration before it can be used with the `$x` notation. This is ok:
+Note that any varible `x` *must* be declared before it can be used with the `$x` notation. This is ok:
 ```
 x = [hello | hi | greetings]
 *greet $x
