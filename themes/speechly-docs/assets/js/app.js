@@ -1,5 +1,5 @@
-function openTab(evt, tabName, tabValue) {
-  changeQueryString(`?${tabName}=${tabValue}`, undefined);
+function openTab(evt, tabQueryStrings) {
+  changeQueryString(`?${tabQueryStrings}`, undefined);
   updateTab();
 }
 
@@ -45,35 +45,21 @@ $(() => {
   $('.no-zoom').trigger('zoom.destroy');
 });
 
-function updateTab() {
-  let urlParams = new URLSearchParams(window.location.search);
-  let id = urlParams.get("platform");
-  selectTab(id);
-}
-
-function selectTab(id) {
-  // if no value was given, let's take the first panel
+function selectTab(tabname, id) {
   if (!id) {
-    el = document.querySelectorAll(".tablinks")[0];
-    if (el.dataset.hash) id = el.dataset.hash;
-    if (!id) return;
+    return;
   }
 
   // remove the active class from the tabs,
   // and add it back to the one the user selected
-  document.querySelectorAll(".tablinks").forEach(el => {
-    var match = false;
-    if (el.hash) 
-      match = el.hash === id;
-    else if (el.dataset.hash) {
-      match = el.dataset.hash === id;
-    }
+  document.querySelectorAll(`.tablinks.${tabname}`).forEach(el => {
+    var match = el.classList.contains(id);
     el.classList[match ? 'add' : 'remove']('active');
   });
   
   // now hide all the panels, then filter to
   // the one we're interested in, and show it
-  document.querySelectorAll(".tabcontent").forEach(el => {
+  document.querySelectorAll(`.tabcontent.${tabname}`).forEach(el => {
     var match = el.classList.contains(id);
     el.style.display = match ? 'block' : 'none';
   });
