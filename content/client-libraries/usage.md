@@ -10,18 +10,26 @@ menu:
     title: "Basic usage"
     parent: "Client Libraries"
 ---
+<script>
+  // updateTab function specific to this pages' tabs; called by updateTab() in app.js
+  function updateTab() {
+    let urlParams = new URLSearchParams(window.location.search);
+    selectTab("platform", urlParams.get("platform"));
+  }
+</script>
+
 *Note that you also need a Speechly application id. This you can obtain from the [Dashboard](https://api.speechly.com/dashboard) for one of the ready-made example applications, or after having [configured](/slu-examples/) one yourself. And don't forget to deploy your application on the Dashboard as well!*
 
 # Install and import the client library
 
 <div class="tab">
-  <button class="tablinks WebClient active" onclick="openTab(event, 'WebClient')">Web Browser</button>
-  <button class="tablinks React" onclick="openTab(event, 'React')">React</button>
-  <button class="tablinks ios" onclick="openTab(event, 'ios')">iOS</button>
-  <button class="tablinks Android" onclick="openTab(event, 'Android')">Android</button>
+  <button class="tablinks platform WebClient active" onclick="openTab(event, 'platform=WebClient')">Web Browser</button>
+  <button class="tablinks platform React" onclick="openTab(event, 'platform=React')">React</button>
+  <button class="tablinks platform iOS" onclick="openTab(event, 'platform=iOS')">iOS</button>
+  <button class="tablinks platform Android" onclick="openTab(event, 'platform=Android')">Android</button>
 </div>
 
-<div class="WebClient tabcontent code" style="display: block;">
+<div class="WebClient tabcontent platform code" style="display: block;">
 Include the resources in your <code>head</code> block:
 {{< highlight html >}}
 <head>
@@ -32,7 +40,7 @@ Include the resources in your <code>head</code> block:
 {{< /highlight >}}
 </div>
 
-<div class="React tabcontent code">
+<div class="React tabcontent platform code">
 Install the client with npm:
 {{< highlight bash >}}
 npm install --save @speechly/react-client
@@ -45,7 +53,7 @@ import { SpeechProvider, useSpeechContext } from "@speechly/react-client";
 {{< /highlight >}}
 </div>
 
-<div class="ios tabcontent code">
+<div class="iOS tabcontent platform code">
 The Speechly iOS client is distributed using Swift Package Manager,
 add it as a dependency to your <code>Package.swift</code>:
 {{< highlight swift >}}
@@ -83,7 +91,7 @@ public init() {
 {{< /highlight >}}
 </div>
 
-<div class="Android tabcontent code">
+<div class="Android tabcontent platform code">
 <p>The client package is available from our Github repository:<br>
 <a href="https://github.com/speechly/android-client/releases/latest">https://github.com/speechly/android-client/releases/latest</a>.</p>
 Add android-client to your build.gradle dependencies.
@@ -118,13 +126,13 @@ private var button: SpeechlyButton? = null
 We provide ready-made UI components that implement a Push-to-Talk Button for
 starting and stopping voice recording, and a display component for showing the returned transcript (not yet available on Android). It is not necessary to use these, but we highly recommend this as a first step to get started quickly.
 <div class="tab">
-  <button class="tablinks WebClient active" onclick="openTab(event, 'WebClient')">Web Browser</button>
-  <button class="tablinks React" onclick="openTab(event, 'React')">React</button>
-  <button class="tablinks ios" onclick="openTab(event, 'ios')">iOS</button>
-  <button class="tablinks Android" onclick="openTab(event, 'Android')">Android</button>
+  <button class="tablinks platform WebClient active" onclick="openTab(event, 'platform=WebClient')">Web Browser</button>
+  <button class="tablinks platform React" onclick="openTab(event, 'platform=React')">React</button>
+  <button class="tablinks platform iOS" onclick="openTab(event, 'platform=iOS')">iOS</button>
+  <button class="tablinks platform Android" onclick="openTab(event, 'platform=Android')">Android</button>
 </div>
 
-<div class="WebClient tabcontent code" style="display: block;">
+<div class="WebClient tabcontent platform code" style="display: block;">
 Include the following lines in your <code>body</code>:
 {{< highlight html >}}
 <div class="BigTranscriptContainer">
@@ -136,7 +144,7 @@ Include the following lines in your <code>body</code>:
 {{< /highlight >}}
 </div>
 
-<div class="React tabcontent code">
+<div class="React tabcontent platform code">
 Import the components:
 {{< highlight typescript >}}
 import {
@@ -166,7 +174,7 @@ function App() {
 {{< /highlight >}}
 </div>
 
-<div class="ios tabcontent code">
+<div class="iOS tabcontent platform code">
 Initialise the <code>TranscriptView</code> and <code>MicrophoneButtonView</code>,
 and add them in the <code>addViews</code> function of your manager class.
 {{< highlight swift >}}
@@ -194,7 +202,7 @@ extension SpeechlyManager: MicrophoneButtonDelegate {
 {{< /highlight >}}
 </div>
 
-<div class="Android tabcontent code">
+<div class="Android tabcontent platform code">
 In your main activity,
 define a touch listener that
 activates and deactivates audio transmission.
@@ -229,13 +237,13 @@ The basic idea of the client-side API is to provide a “live view” to the ong
 
 After an audio context has started, callback is called every time the Speechly API returns an event that updates the currently ongoing segment.
 <div class="tab">
-  <button class="tablinks WebClient active" onclick="openTab(event, 'WebClient')">Web Browser</button>
-  <button class="tablinks React" onclick="openTab(event, 'React')">React</button>
-  <button class="tablinks ios" onclick="openTab(event, 'ios')">iOS</button>
-  <button class="tablinks Android" onclick="openTab(event, 'Android')">Android</button>
+  <button class="tablinks platform WebClient active" onclick="openTab(event, 'platform=WebClient')">Web Browser</button>
+  <button class="tablinks platform React" onclick="openTab(event, 'platform=React')">React</button>
+  <button class="tablinks platform iOS" onclick="openTab(event, 'platform=iOS')">iOS</button>
+  <button class="tablinks platform Android" onclick="openTab(event, 'platform=Android')">Android</button>
 </div>
 
-<div class="WebClient tabcontent code" style="display: block;">
+<div class="WebClient tabcontent platform code" style="display: block;">
 Listen for the broadcasted updates to <code>SpeechSegment</code>.
 {{< highlight html >}}
 <script type="text/javascript">
@@ -250,7 +258,7 @@ Listen for the broadcasted updates to <code>SpeechSegment</code>.
 {{< /highlight >}}
 </div>
 
-<div class="React tabcontent code">
+<div class="React tabcontent platform code">
 {{< highlight typescript >}}
 function SpeechlyApp() {
   const { segment } = useSpeechContext()
@@ -263,7 +271,7 @@ function SpeechlyApp() {
 {{< /highlight >}}
 </div>
 
-<div class="ios tabcontent code">
+<div class="iOS tabcontent platform code">
 Implement the `Speechly.SpeechlyDelegate` for reacting to recognition results.
 {{< highlight swift >}}
 extension SpeechlyManager: SpeechlyDelegate {
@@ -279,7 +287,7 @@ extension SpeechlyManager: SpeechlyDelegate {
 {{< /highlight >}}
 </div>
 
-<div class="Android tabcontent code">
+<div class="Android tabcontent platform code">
 In the <code>onCreate</code> method,
 define the callback to be used for handling a <code>Segment</code>.
 {{< highlight kotlin >}}

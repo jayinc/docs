@@ -1,25 +1,13 @@
-function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
+function openTab(evt, tabQueryStrings) {
+  changeQueryString(`?${tabQueryStrings}`, undefined);
+  updateTab();
+}
 
-    tabcontent = document.getElementsByClassName('code');
-    for (i = 0; i < tabcontent.length; i++) {
-        if (!tabcontent[i].className.includes(tabName)) {
-            tabcontent[i].style.display = "none";
-        }
-        else {
-            tabcontent[i].style.display = "block";
-        }
-    }
-
-    tablinks = document.getElementsByClassName('tablinks');
-    for (i = 0; i < tablinks.length; i++) {
-        if (!tablinks[i].className.includes(tabName)) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        else {
-            tablinks[i].className += " active";
-        }
-    }
+function changeQueryString(searchString, documentTitle){      
+  documentTitle = typeof documentTitle !== 'undefined' ? documentTitle : document.title;      
+  var urlSplit=( window.location.href ).split( "?" );      
+  var obj = { Title: documentTitle, Url: urlSplit[0] + searchString };      
+  history.pushState(obj, obj.Title, obj.Url);      
 }
 
 const navbarMenu = () => {
@@ -56,3 +44,28 @@ $(() => {
   $('.navbar-logo').trigger('zoom.destroy');
   $('.no-zoom').trigger('zoom.destroy');
 });
+
+function selectTab(tabname, id) {
+  if (!id) {
+    return;
+  }
+
+  // remove the active class from the tabs,
+  // and add it back to the one the user selected
+  document.querySelectorAll(`.tablinks.${tabname}`).forEach(el => {
+    var match = el.classList.contains(id);
+    el.classList[match ? 'add' : 'remove']('active');
+  });
+  
+  // now hide all the panels, then filter to
+  // the one we're interested in, and show it
+  document.querySelectorAll(`.tabcontent.${tabname}`).forEach(el => {
+    var match = el.classList.contains(id);
+    el.style.display = match ? 'block' : 'none';
+  });
+}
+
+// Check for back button presses to update tabs
+window.addEventListener('popstate', updateTab);
+// Update selected tab
+updateTab();
