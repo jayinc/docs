@@ -10,6 +10,13 @@ menu:
     weight: 8
     parent: "Development tools"
 ---
+<script>
+  // updateTab function specific to this pages' tabs; called by updateTab() in app.js
+  function updateTab() {
+    let urlParams = new URLSearchParams(window.location.search);
+    selectTab("platform", urlParams.get("platform"));
+  }
+</script>
 
 # What is the Command Line Tool and what does it do?
 
@@ -24,12 +31,12 @@ The tool is open-source and can be found at our [Github repository](https://gith
 
 Select your OS for quick installation instructions.
 <div class="tab">
-  <button class="tablinks macos active" onclick="openTab(event, 'macos')">MacOS</button>
-  <button class="tablinks windows" onclick="openTab(event, 'windows')">Windows</button>
-  <button class="tablinks linux" onclick="openTab(event, 'linux')">Linux</button>
+  <button class="tablinks platform macos active" onclick="openTab(event, 'platform=macos')">MacOS</button>
+  <button class="tablinks platform windows" onclick="openTab(event, 'platform=windows')">Windows</button>
+  <button class="tablinks platform linux" onclick="openTab(event, 'platform=linux')">Linux</button>
 </div>
 
-<div class="macos tabcontent code" style="display: block;">
+<div class="platform macos tabcontent code" style="display: block;">
 If you are using MacOS, the easiest way to install is by using <a href="https://brew.sh">Homebrew</a>. 
 
 ```bash
@@ -39,7 +46,7 @@ $ brew install speechly
 After tapping, brew updates will include the new versions of `speechly`.
 </div>
 
-<div class="windows tabcontent code">
+<div class="platform windows tabcontent code">
 If you are using Windows, the easiest way to install is by using <a href="https://github.com/lukesampson/scoop">Scoop</a>.
 
 ```posh
@@ -49,7 +56,7 @@ C:\> scoop install speechly
 You can update the tool by using `scoop update`.
 </div>
 
-<div class="linux tabcontent code">
+<div class="platform linux tabcontent code">
 For Linux, we provide a pre-compiled x86_64 binary at
 <a href="https://github.com/speechly/cli/releases/latest">https://github.com/speechly/cli/releases/latest</a>.
 The release package contains a README as well as the binary. Just put it anywhere on your PATH and you are good to go.
@@ -218,7 +225,7 @@ This will print hourly usage statistics for all applications in the current proj
 
 You can view statistics only of a given application by adding the flag `-a APP_ID`, where `APP_ID` is the relevant application id. To adjust the time interval of the results, use the `--start-date` and `--end-date` flags. For example
 ```bash
-speechly statys -a APPLICATION_ID --start-date 2021-03-01 --end-date 2021-04-01
+speechly stats -a APPLICATION_ID --start-date 2021-03-01 --end-date 2021-04-01
 ```
 shows usage statistics for March 2021 (the `--end-date` value is exclusive) for `APPLICATION_ID`.
 
