@@ -47,7 +47,7 @@ Intents capture the various functionalities of your voice UI. For example, a sho
 # What are entities?
 Entities are "local snippets of information" in an utterance that describe details relevant to the users need. An entity has a `name`, and a `value`. An utterance can contain several entities.
 
-They are defined using the syntax `[entity name](entity value)`.
+They are defined using the syntax `[entity value](entity name)`.
 
 In the shopping example above, the entities are `color` and `product` that have the values `blue` and `jackets`, respectively. An entity can take different values, and your configuration should give a variety of examples of these.
 
