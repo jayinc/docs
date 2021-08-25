@@ -24,7 +24,7 @@ In voice applications, immediate UI reaction is even more important. Immediate U
 
 When using voice effectively the user can control the UI an order of magnitude faster compared to tapping and clicking. This means that a lot of stuff might be happening in the UI. It is important that the user can keep up with these UI reactions.
 
-Typically UI reactions manifest themselves in some sort of visual queues, micro animations and transitions. There is an instinctive inclination in the human visual cognition system to move visual focus to where movement is happening.
+Typically UI reactions manifest themselves in some sort of visual cues, micro animations and transitions. There is an instinctive inclination in the human visual cognition system to move visual focus to where movement is happening.
 
 Therefore it is an antipattern to scatter visual ui reactions all over the visual field of the user, e.g. streaming transcription animation on top of the screen and other ui reactions at the bottom of the screen. This will result in the user's gaze bouncing back and forth on the screen making it very hard to understand what is happening in the user interface and inflicting unnecessary cognitive load and annoyance to the user.
 
