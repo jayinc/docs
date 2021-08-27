@@ -238,8 +238,8 @@ speechly sample . -a app-id
 ```
 and again replace `app-id` with a valid app-id from your current project.
 
-By default the above command returns 100 randomly generated Example utterances from the configuration. If you want to see a larger sample, you can specify the number of Example utterances to generate with the `--batch-size` (or `-s` for short) flag:
+By default the above command returns 100 randomly generated Example utterances from the configuration. If you want to see a larger sample, you can specify the number of Example utterances to generate with the `--batch_size` (or `-s` for short) flag:
 ```bash
-speechly sample . -a app-id --batch-size 1000
+speechly sample . -a app-id --batch_size 1000
 ```
 samples 1000 Example utterances.
