@@ -8,7 +8,7 @@ menu:
     title: "Entity Data Types"
     parent: "Configuring Your Application"
 ---
-# Introduction
+# Why do we need Entity Data Types
 Unless otherwise specified, the entity values returned from the Speechly API are *verbatim what the user said*. If you have configured the template
 ```
 *book book a flight for $SPEECHLY.DATE(departure)
@@ -34,9 +34,11 @@ And while [Standard Variables](/slu-examples/standard-variables/) and Data Types
 
 # Entity Data Type Reference
 
-Here are all Entity Data Types that we support, a brief description of what they do, and with what [Standard Variable](/slu-examples/standard-variables/) they are designed to work.
+Here are all Entity Data Types that we support, a brief description of what they do, and what [Standard Variable](/slu-examples/standard-variables/) they are designed to work with.
 
-* `Date` — expressions that define a date are converted into ISO-8601 as a string (e.g., _January fifth twenty twenty_ → _2020-01-05_). Relative expressions like _tomorrow_ or _next Friday_ are parsed relative to the current date. If the year is missing from the expression, the current year will be used. Works together with the `$SPEECHLY.DATE` standard variable.
+* `Date` — expressions that define a date are converted into ISO-8601 formatted strings (e.g., _January fifth twenty twenty_ → _2020-01-05_). Relative expressions like _tomorrow_ or _next Friday_ are parsed relative to the current date. Works together with the `$SPEECHLY.DATE` standard variable.
+
+**Note:** On the Dashboard you can choose from two Date types: `Date (Prefer Future Dates)` and `Date (Prefer Past Dates)`. They only differ in their behaviour with relative date expressions where it is unknown whether the user speaks about the future or the past. For example, the phrase "on Monday" can either refer to the previous Monday (in the past), or the following Monday (in the future). Likewise, "January fifth" can either refer to the previous or next January. By choosing the variant that prefers future dates, such phrases are mapped to a date in the future, while the one that prefers the past will return a date in the past, respectively. Which variant you should use depends on the application in question, and whether your users are more likely to talk about the future or the past.
 
 * `Time` - expressions that define a time of day are returned as a `hh:mm` formatted string using a 24-hour clock (e.g., _three thirty pm_ → _15:30_, _quarter past two in the morning_ → _02:15_, _twenty past nine pm_ → _21:20_). Works together with `$SPEECHLY.TIME`.
 
