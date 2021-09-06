@@ -157,7 +157,7 @@ entities:
  - name: product_amount
    type: number
  - name: delivery_date
-   type: date
+   type: date_future
 templates: |
   product = [apples | oranges | bananas | grapefruits | mangoes | apricots | peaches]
   amount = [1..99]
