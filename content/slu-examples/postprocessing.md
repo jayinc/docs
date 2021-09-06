@@ -8,7 +8,7 @@ menu:
     title: "Entity Data Types"
     parent: "Configuring Your Application"
 ---
-# Why do we need Entity Data Types
+# Why do we need Entity Data Types?
 Unless otherwise specified, the entity values returned from the Speechly API are *verbatim what the user said*. If you have configured the template
 ```
 *book book a flight for $SPEECHLY.DATE(departure)

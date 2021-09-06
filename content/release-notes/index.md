@@ -9,6 +9,14 @@ menu:
     weight: 999
 ---
 
+# September 6, 2021
+
+- **Speechly API** Improved handling of initial latency when streaming audio to a new app_id, improved handling of client connections.
+- **SLU Engine** New Standard Variable and Entity Type for handling (US style) street addresses.
+- **Speechly CLI Tool** Version 0.4.2 released.
+- **Browser client** Version 1.0.17 released (with automatic gain control of audio)
+- **Several small other improvements and bugfixes across all services**
+
 # June 18, 2021
 
 - **Speechly API** A new and improved load balancer.
