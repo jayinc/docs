@@ -51,3 +51,5 @@ Here are all Entity Data Types that we support, a brief description of what they
 * `Email` formats the returned entity value as an email address (_john dot smith at company dot com_ → _john.smith@company.com_, this data type also supports spelling parts of the entity: _a n t t i at speechly dot com_ → _antti@speechly.com_). Works together with `$SPEECHLY.EMAIL_ADDRESS` standard variable.
 
 * `Website` formats the returned entity value as a website URL (_h t t p s colon slash slash docs dot speechly dot com_ → _https://docs.speechly.com_). Works together with `$SPEECHLY.WEB_ADDRESS` standard variable.
+
+* `Street address` formats the returned entity value as a (US style) street address (_one twenty three michigan avenue_ → _123 Michigan Av._). Works together with `$SPEECHLY.STREET_ADDRESS` standard variable.

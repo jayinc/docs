@@ -29,7 +29,7 @@ The above *Template* can expand for example to the following (just to name a few
 
 While Standard Variables can be used as such, if they appear as entity values, we also recommend assigning the entity in question the appropriate [Data Type](/slu-examples/postprocessing).
 
-
+Below in the examples column individually spelled letters (e.g. h t t p) indicate that the user utterance can contain spelling.
 
 # Supported Standard Variables
 
@@ -53,3 +53,4 @@ While Standard Variables can be used as such, if they appear as entity values, w
 |`$SPEECHLY.PERSON_NAME`            | Person names              | _amelia m earhart_, _john smith_, _c o n a n o'brien |
 |`$SPEECHLY.EMAIL_ADDRESS`          | Email addresses           | _hello at speechly dot com_, _john dot smith at company dot com_ |
 |`$SPEECHLY.WEB_ADDRESS`            | Website addresses         | _w w w dot speechly dot com_, _h t t p s colon slash slash docs dot speechly dot com_ |
+| `$SPEECHLY.STREET_ADDRESS`        | (US style) Street addresses | _one twenty three michigan avenue_, _sixty four east twenty second street_|
