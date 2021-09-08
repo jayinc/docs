@@ -33,9 +33,9 @@ menu:
 Include the resources in your <code>head</code> block:
 {{< highlight html >}}
 <head>
-  <script type="text/javascript" src="https://speechly.github.io/browser-ui/v1/push-to-talk-button.js"></script>
-  <script type="text/javascript" src="https://speechly.github.io/browser-ui/v1/big-transcript.js"></script>
-  <link rel="stylesheet" href="https://speechly.github.io/browser-ui/v1/speechly-ui.css">
+  <script type="text/javascript" src="https://speechly.github.io/browser-ui/v3/push-to-talk-button.js"></script>
+  <script type="text/javascript" src="https://speechly.github.io/browser-ui/v3/big-transcript.js"></script>
+  <link rel="stylesheet" href="https://speechly.github.io/browser-ui/v3/speechly-ui.css">
 </head>
 {{< /highlight >}}
 </div>
@@ -245,15 +245,24 @@ After an audio context has started, callback is called every time the Speechly A
 
 <div class="WebClient tabcontent platform code" style="display: block;">
 Listen for the broadcasted updates to <code>SpeechSegment</code>.
+Assign a listener to the <code>push-to-talk-button</code> that handles broadcasted updates
+to the ongoing <code>SpeechSegment</code>.
 {{< highlight html >}}
 <script type="text/javascript">
-  window.addEventListener("message", (e) => {
-    if (e.data.type === "segment-update") {
-      const segment = e.data.segment;
-      // segment handling logic goes here
-      ...
+document
+  .getElementsByTagName("push-to-talk-button")[0]
+  .addEventListener("speechsegment", (e) => {
+    const segment = e.detail;
+
+    // Handle speech segment and make tentative changes to app state
+    console.log("speechsegment message:", segment);
+
+    if (segment.isFinal) {
+      // Handle speech segment and make permanent changes to app state
+      // Optionally show confirmation
+      window.postMessage({ type: "speechhandled", success: true }, "*");
     }
-  });
+ });
 </script>
 {{< /highlight >}}
 </div>
