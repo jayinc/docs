@@ -23,7 +23,7 @@ The video below will teach you the basics of using the Speechly [Dashboard](http
 
 Note that these steps are also related to the three parts of the architecture figure above.
 
-{{<youtube chRO5S94Ofs>}}
+{{<youtube QmpFAJmF1gk>}}
 
 <br>
 
