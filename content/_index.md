@@ -6,7 +6,7 @@ display: article
 
 The documentation is divided into the following sections (also shown in the menu to the left):
 
-- [Quick Start](/quick-start/) goes through the basic steps to set up your first voice application in the Speechly Dashboard.
+- [Quick Start](/quick-start/) goes through the basic steps to set up your first voice application in the Speechly Dashboard. Also check out our five-part video tutorial about [How Speechly Works](quick-start/how-speechly-works).
 - [Development Tools](/dev-tools/) gives an overview of our library offering, as well as provides instructions on how to use our Dashboard and Command Line Tool.
 - [Client Libraries](/client-libraries/) shows how to start integrating Speechly to your application using our Client libraries (available for Web, React, iOS and Android).
 - [Configuration](/slu-examples/) teaches you how to provide training data for the machine learning models that underlie everything that happens behind the scenes.
