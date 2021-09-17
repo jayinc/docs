@@ -29,6 +29,8 @@ Note that these steps are also related to the three parts of the architecture fi
 
 The Codepen example used in the video can be accessed [here](https://codepen.io/hheikinh/pen/ExmMxpZ).
 
+Also, the video is the fifth part of a [five-part series](how-speechly-works) where we introduce our technology, introduce some basic concepts and briefly explain how things work under the hood.
+
 More details about the Speechly Web Toolkit can be found in [this tutorial](https://speechly.github.io/browser-ui/v3/). Note that it is only one of the many [Client Libraries](/client-libraries/) that we provide.
 
 # Learn more!
