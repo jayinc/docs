@@ -12,7 +12,7 @@ menu:
 
 See how Speechly applications are programmed, what the overall architecture of a Speechly application is, and how to use the Speechly Web Toolkit to easily add voice features to a website.
 
-The Video Tutorial Series takes less than 17 minutes but if you don't have that much time, just check out Part 5 at the bottom of this page!
+The Video Tutorial Series takes less than 17 minutes but if you don't have that much time, just check out [Part 5](#55-deploying-speechly-to-a-website) at the bottom of this page!
 
 ## 1/5 Demo of Speechly in action 
 
