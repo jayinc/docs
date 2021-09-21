@@ -1,6 +1,6 @@
 ---
 title: How Speechly Works - The Video Tutorial Series 
-description: Take a quick tour of Speechly's technology. The tutorial shows example applications, explains how Speechly applications are programmed, what the overall architecture of a Speechly application is, and concludes with a tutorial on how to use the Speechly Web Toolkit to easily add voice features to a website.
+description: Take a quick tour of Speechly's technology and see how Speechly applications are programmed, what the overall architecture of a Speechly application is, and how to use the Speechly Web Toolkit to easily add voice features to a website.
 weight: 1
 display: article
 category: "User guide"
@@ -10,7 +10,7 @@ menu:
     parent: "Quick Start"
 ---
 
-The videos are embedded below. You can also view the entire [playlist on Youtube](https://www.youtube.com/watch?v=AlI47qnvip4&list=PLhhkCt5KRs0_xsBYuJl-Y4EnU1x2Me5ue), it takes less than 17 minutes! (If you don't have that much time, at least check out Part 5 at the bottom of this page!)
+The Video Tutorial Series takes less than 17 minutes! If you don't have that much time, just check out Part 5 at the bottom of this page!
 
 ## 1/5 Demo of Speechly in action 
 
