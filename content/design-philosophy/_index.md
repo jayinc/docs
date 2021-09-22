@@ -20,7 +20,7 @@ They are split into four short "chapters", with the following content:
 
 # [Chapter 2: Receiving Commands from the User](/design-philosophy/receive-commands/)
 - Onboard the user
-- Avoid using a wake word
+- When a pressable button is available wake word is not needed
 - Prefer a push-to-talk button mechanism
 - Signal clearly when the microphone button is pushed down
 
