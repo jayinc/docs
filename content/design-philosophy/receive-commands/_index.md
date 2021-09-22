@@ -14,11 +14,11 @@ When your users first see your voice UI, they will need some guidance on how to 
 
 These examples should be placed close to where the visual feedback will appear. You can hide the examples after the user has tried the voice user interface.
 
-# Avoid using a wake word
+# When a pressable button is available wake word is not needed
 
-While voice assistants use a wake word so that they can be activated from a distance, your touch screen application doesn’t need to. Repeating the wake word every time makes the experience jarring, adds latency and decreases the reliability.
+While voice assistants use a wake word so that they can be activated from a distance, your touch screen application doesn’t need to. Repeating the wake word every time makes the experience jarring, adds latency and decreases the reliability. Moreover, there are privacy risks associated with a wake word.
 
-The hands free scenario is far less relevant than you might initially think, as the user is already holding the device. There are also privacy risks involved with a wake word.
+The hands free scenario is far less relevant than you might initially think. With a touch screen device the user is already holding the device in their hand. Even in the context of driving a car a button in the steering wheel will work much better than a wake word. 
 
 # Prefer a push-to-talk button mechanism
 
