@@ -15,7 +15,7 @@ But as a developer you can still focus on defining what happens when the user sa
 
 {{< figure src="speechly_architecture.jpg" alt="Speechly Application Architecture Overview" title="Speechly Application Architecture Overview" >}}
 
-# Getting started with the Speechly Web Toolkit
+# Getting started with the Speechly Web Components
 The video below will teach you the basics of using the Speechly [Dashboard](https://www.speechly.com/dashboard) and Playground, as well as guide you through the three steps of
 1. setting up the Speechly microphone UI component,
 2. configuring an Appid, and
@@ -31,7 +31,7 @@ The Codepen example used in the video can be accessed [here](https://codepen.io/
 
 Also, the video is the fifth part of a [five-part series](how-speechly-works) where we introduce our technology, introduce some basic concepts and briefly explain how things work under the hood.
 
-More details about the Speechly Web Toolkit can be found in [this tutorial](https://speechly.github.io/browser-ui/v3/). Note that it is only one of the many [Client Libraries](/client-libraries/) that we provide.
+More details about the Speechly Web Components can be found in [this tutorial](https://speechly.github.io/browser-ui/v3/). Note that it is only one of the many [Client Libraries](/client-libraries/) that we provide.
 
 # Learn more!
 
