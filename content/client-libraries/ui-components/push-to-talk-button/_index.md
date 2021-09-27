@@ -42,8 +42,6 @@ You can also control the visibility, colors and hint texts on the button.
   <script type="text/javascript" src="https://speechly.github.io/browser-ui/v3/push-to-talk-button.js"></script>
 </head>
 
-...
-
 <body>
   <push-to-talk-button
     appid="YOUR_APP_ID_FROM_SPEECHLY_DASHBOARD"
@@ -82,9 +80,7 @@ import {
 
 {{< /highlight >}}
 
-<!-- from
-https://raw.githubusercontent.com/speechly/react-ui/main/docs/modules/_components_pushtotalkbutton_d_.md
--->
+### Properties
 
 {{< include-md "api-for-react.md" >}}
 

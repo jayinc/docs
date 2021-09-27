@@ -1,11 +1,11 @@
 ---
-title: Big Transcript
-weight: 2
+title: Transcript Drawer
+weight: 3
 category: "References"
 display: article
 menu:
   sidebar:
-    title: "Big Transcript"
+    title: "Transcript Drawer"
     parent: "UI components"
 ---
 <script>
@@ -16,7 +16,7 @@ menu:
   }
 </script>
 
-Big Transcript is an overlay-style component that displays real-time speech-to-text transcript and feedback to the user. Recognized entities are highlighted.
+Transcript Drawer is an alternative for Big Transcript that slides down from the top of the viewport. It displays usage tips along with the real-time speech-to-text transcript and feedback.
 
 The component is momentarily displayed when speech input is used and automatically hidden shortly after. The recommended placement is near top-left corner of the screen.
 
@@ -36,14 +36,14 @@ You can customise the appearance of the component.
 {{< highlight html >}}
 
 <head>
-  <script type="text/javascript" src="https://speechly.github.io/browser-ui/v3/big-transcript.js"></script>
+  <script type="text/javascript" src="https://speechly.github.io/browser-ui/v3/transcript-drawer.js"></script>
 </head>
 
 <body>
-  <big-transcript
-    placement="top"
+  <transcript-drawer
+    hint='["Try: 1st hint", "Try: 2nd hint"]'
     formattext="false" >
-  </big-transcript>
+  </transcript-drawer> 
 </body>
 {{< /highlight >}}
 
@@ -53,40 +53,25 @@ You can customise the appearance of the component.
 
 <div class="React tabcontent platform code">
 
-Place `<BigTranscript>` component inside your `<SpeechProvider>`. `<BigTranscriptContainer>` is a CSS wrapper for positioning the component. For app setup, please refer to [Basic usage](/client-libraries/usage/?platform=React).
+Place `<BigTranscript>` component inside your `<SpeechProvider>`. For app setup, please refer to [Basic usage](/client-libraries/usage/?platform=React).
 
 {{< highlight tsx >}}
 
 import {
-  BigTranscript,
-  BigTranscriptContainer,
+  TranscriptDrawer,
 } from "@speechly/react-ui";
 
 ...
 
-<BigTranscriptContainer
-  position="fixed"
-  margin="3rem 2rem 0 2rem"
->
-  <BigTranscript
-    formatText={false}
-  />
-</BigTranscriptContainer>
+<TranscriptDrawer
+  hint='["Try: 1st hint", "Try: 2nd hint"]'
+  formatText={false}
+/>
 
 {{< /highlight >}}
 
-### Properties for BigTranscript
+### Properties
 
 {{< include-md "api-for-react.md" >}}
-
-### Window messages listened
-
-<ul>
-  <li><code>{type: "speechhandled", success: boolean}</code> - Optional. Shows an indication to the user that the voice command was successfully understood by the app. Use window.postMessage to send it on segment.isFinal.</li>
-</ul>
-
-### Properties for BigTranscriptContainer
-
-{{< include-md "api-for-react-bigtranscriptcontainer.md" >}}
 
 </div>

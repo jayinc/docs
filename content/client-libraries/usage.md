@@ -37,7 +37,6 @@ Speechly Web Components help you get started quickly. Push-To-Talk Button compon
 <head>
   <script type="text/javascript" src="https://speechly.github.io/browser-ui/v3/push-to-talk-button.js"></script>
   <script type="text/javascript" src="https://speechly.github.io/browser-ui/v3/big-transcript.js"></script>
-  <link rel="stylesheet" href="https://speechly.github.io/browser-ui/v3/speechly-ui.css">
 </head>
 {{< /highlight >}}
 </div>
@@ -139,13 +138,13 @@ starting and stopping listening for speech, and a display component for showing 
 <div class="WebClient tabcontent platform code" style="display: block;">
 Include the following lines in your <code>body</code>:
 {{< highlight html >}}
-<div class="BigTranscriptContainer">
-  <big-transcript></big-transcript>
-</div>
+<big-transcript
+  placement="top" >
+</big-transcript>
 
 <push-to-talk-button
   appid="YOUR_APP_ID_FROM_SPEECHLY_DASHBOARD"
-  placement="bottom">
+  placement="bottom" >
 </push-to-talk-button>
 {{< /highlight >}}
 </div>
