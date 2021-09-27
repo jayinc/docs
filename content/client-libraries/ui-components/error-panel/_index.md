@@ -35,8 +35,6 @@ Error Panel automatically unhides upon pressing the Push-To-Talk Button if there
   <script type="text/javascript" src="https://speechly.github.io/browser-ui/dev/error-panel.js"></script>
 </head>
 
-...
-
 <body>
   <error-panel
     placement="bottom" >
