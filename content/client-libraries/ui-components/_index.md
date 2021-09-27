@@ -1,7 +1,7 @@
 ---
 title: "UI components"
 description: Speechly UI components provide the visual interface to support voice functionality.
-weight: 2
+weight: 3
 category: "References"
 display: article
 menu:
@@ -9,6 +9,7 @@ menu:
     title: "UI components"
     parent: "Client Libraries"
 ---
+
 <script>
   // updateTab function specific to this pages' tabs; called by updateTab() in app.js
   function updateTab() {
