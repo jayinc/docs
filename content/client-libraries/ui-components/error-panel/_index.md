@@ -16,13 +16,9 @@ menu:
   }
 </script>
 
-Use Error Panel to help users diagnose and recover from voice-related issues.
+Use Error Panel to help users diagnose and fix common problems preventing the use of voice.
 
-Error Panel automatically unhides upon pressing the Push-To-Talk Button if there a problem preventing the use of voice functions. It also displays recovery instructions for the following:
-
-- No microphone permission
-- Unsupported browser (required browser APIs not available)
-- Web app accessed without HTTPS
+Error Panel automatically unhides when the user presses Push-To-Talk Button if <code>SpeechState</code> indicates an initialization error.
 
 ## Usage
 
@@ -66,3 +62,15 @@ import { ErrorPanel } from "@speechly/react-ui";
 {{< /highlight >}}
 
 </div>
+
+## Error Panel provides the following recovery instructions
+
+- No microphone permission
+  - Cause: The user has denied the use of microphone
+  - Proposed fix: To use the voice interface, please allow your web browser access the microphone and reload.
+- Unsupported browser
+  - Cause: Required browser APIs for using voice functions are not available
+  - Proposed fix: To use the voice interface, please visit this site using a supported browser.
+- Page accessed without HTTPS
+  - Cause: The site that contains voice functions is accessed with file:// or http:// protocol causing the browser to prevent access to required browser APIs.
+  - Proposed fix: To use the voice interface, please visit this site using the secure https:// protocol.
