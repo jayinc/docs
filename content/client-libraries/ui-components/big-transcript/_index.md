@@ -53,29 +53,23 @@ You can customise the appearance of the component.
 
 <div class="React tabcontent platform code">
 
-Place `<BigTranscript>` component inside your `<SpeechProvider>`. `<BigTranscriptContainer>` is a CSS wrapper for positioning the component. For app setup, please refer to [Basic usage](/client-libraries/usage/?platform=React).
+Place `<BigTranscript>` component inside your `<SpeechProvider>` block. Please see [Basic usage](/client-libraries/usage/?platform=React) for a full app example.
 
 {{< highlight tsx >}}
 
-import {
-  BigTranscript,
-  BigTranscriptContainer,
-} from "@speechly/react-ui";
+import { BigTranscript } from "@speechly/react-ui";
 
 ...
-
-<BigTranscriptContainer
-  position="fixed"
-  margin="3rem 2rem 0 2rem"
->
+<SpeechProvider appId="YOUR_APP_ID_FROM_SPEECHLY_DASHBOARD">
   <BigTranscript
+    placement="top"
     formatText={false}
   />
-</BigTranscriptContainer>
-
+</SpeechProvider>
+...
 {{< /highlight >}}
 
-### Properties for BigTranscript
+### Properties
 
 {{< include-md "api-for-react.md" >}}
 
@@ -84,9 +78,5 @@ import {
 <ul>
   <li><code>{type: "speechhandled", success: boolean}</code> - Optional. Shows an indication to the user that the voice command was successfully understood by the app. Use window.postMessage to send it on segment.isFinal.</li>
 </ul>
-
-### Properties for BigTranscriptContainer
-
-{{< include-md "api-for-react-bigtranscriptcontainer.md" >}}
 
 </div>

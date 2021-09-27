@@ -54,23 +54,23 @@ You can toggle visibility and customise the appearance and the hint texts on the
 
 <div class="React tabcontent platform code">
 
-Place `<PushToTalkButton>` component inside your `<SpeechProvider>`. Please refer to [Basic usage](/client-libraries/usage/?platform=React) for app setup.
+Place `<PushToTalkButton>` component inside your `<SpeechProvider>` block. Please see [Basic usage](/client-libraries/usage/?platform=React) for a full app example.
 
 {{< highlight tsx >}}
 
-import {
-  PushToTalkButton,
-} from "@speechly/react-ui";
+import { PushToTalkButton } from "@speechly/react-ui";
 
 ...
-
-<PushToTalkButton
-  placement="bottom"
-  hide="false"
-  captureKey=" "
-  intro="Push to talk"
-  size="80px" >
-</PushToTalkButton>
+<SpeechProvider appId="YOUR_APP_ID_FROM_SPEECHLY_DASHBOARD">
+  <PushToTalkButton
+    placement="bottom"
+    hide="false"
+    captureKey=" "
+    intro="Push to talk"
+    size="80px" >
+  </PushToTalkButton>
+</<SpeechProvider>
+...
 
 {{< /highlight >}}
 

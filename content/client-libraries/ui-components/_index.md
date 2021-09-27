@@ -32,13 +32,11 @@ Big Transcript is an overlay-style component that displays real-time speech-to-t
 
 Transcript Drawer is an alternative for Big Transcript that slides down from the top of the viewport. It displays usage tips along with the real-time speech-to-text transcript and feedback.
 
-## Other UI components
-
 ### [Error Panel](/client-libraries/ui-components/error-panel)
 
-Use Error Panel to help users diagnose and recover from voice-related issues.
+Error Panel displays recovery instructions for common voice-related problems.
 
-## Figma and Sketch files
+## Figma and Sketch design files
 
-- [Speechly UI components and layout designs in Figma](https://www.figma.com/file/CqXMKQX6LNSnSai00P5xbz/Speechly-UI?node-id=0%3A1)
-- [Download Speechly UI Components and layout designs for Sketch](https://speechly.github.io/speechly-ui-assets/speechly-ui.sketch)
+- [Speechly UI components and layout templates in Figma](https://www.figma.com/file/CqXMKQX6LNSnSai00P5xbz/Speechly-UI?node-id=0%3A1)
+- [Download Speechly UI Components and layout templates for Sketch](https://speechly.github.io/speechly-ui-assets/speechly-ui.sketch)

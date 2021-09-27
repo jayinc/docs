@@ -14,7 +14,7 @@ display: article
 
 ## Web Client Quick Start
 
-{{< info title="Supported browsers">}} Please refer to [Supported Browsers](/client-libraries/supported-browsers/) to learn about compability. {{</info>}}
+{{< info title="Supported browsers">}} Please see [Supported Browsers](/client-libraries/supported-browsers/) to learn about compability. {{</info>}}
 
 {{<warning title="Developing on Windows?">}}If you are developing on Windows, you can install Linux on a virtual machine by following [these instructions](https://itsfoss.com/install-linux-in-virtualbox/). {{</warning>}}
 

@@ -57,16 +57,16 @@ Place `<BigTranscript>` component inside your `<SpeechProvider>`. For app setup,
 
 {{< highlight tsx >}}
 
-import {
-  TranscriptDrawer,
-} from "@speechly/react-ui";
+import { TranscriptDrawer } from "@speechly/react-ui";
 
 ...
-
-<TranscriptDrawer
-  hint='["Try: 1st hint", "Try: 2nd hint"]'
-  formatText={false}
-/>
+<SpeechProvider appId="YOUR_APP_ID_FROM_SPEECHLY_DASHBOARD">
+  <TranscriptDrawer
+    hint='["Try: 1st hint", "Try: 2nd hint"]'
+    formatText={false}
+  />
+</SpeechProvider>
+...
 
 {{< /highlight >}}
 

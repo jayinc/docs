@@ -18,7 +18,11 @@ menu:
 
 Use Error Panel to help users diagnose and recover from voice-related issues.
 
-Error Panel automatically unhides upon pressing the Push-To-Talk Button if there is a voice-related error. It also displays recovery instructions.
+Error Panel automatically unhides upon pressing the Push-To-Talk Button if there a problem preventing the use of voice functions. It also displays recovery instructions for the following:
+
+- No microphone permission
+- Unsupported browser (required browser APIs not available)
+- Web app accessed without HTTPS
 
 ## Usage
 
@@ -46,20 +50,19 @@ Error Panel automatically unhides upon pressing the Push-To-Talk Button if there
 
 <div class="React tabcontent platform code">
 
-Place `<ErrorPanel>` component inside your `<SpeechProvider>`. Please refer to [Basic usage](/client-libraries/usage/?platform=React) for app setup.
+Place `<ErrorPanel>` component inside your `<SpeechProvider>`. Please see [Basic usage](/client-libraries/usage/?platform=React) for a full app example.
 
 {{< highlight tsx >}}
 
-import {
-  ErrorPanel,
-} from "@speechly/react-ui";
+import { ErrorPanel } from "@speechly/react-ui";
 
 ...
-
-<ErrorPanel
-  placement="bottom"
-/>
-
+<SpeechProvider appId="YOUR_APP_ID_FROM_SPEECHLY_DASHBOARD">
+  <ErrorPanel
+    placement="bottom"
+  />
+</SpeechProvider>
+...
 {{< /highlight >}}
 
 </div>
