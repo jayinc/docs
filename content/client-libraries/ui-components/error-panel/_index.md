@@ -18,7 +18,7 @@ menu:
 
 Use Error Panel to help users diagnose and fix common problems preventing the use of voice.
 
-Error Panel automatically unhides when the user presses Push-To-Talk Button if <code>SpeechState</code> indicates an initialization error.
+Error Panel automatically unhides when the user presses Push-To-Talk Button if <code>ClientState</code> indicates an initialisation error.
 
 ## Usage
 
