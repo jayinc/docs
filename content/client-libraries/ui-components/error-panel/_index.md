@@ -30,16 +30,11 @@ Error Panel automatically unhides when the user presses Push-To-Talk Button if <
 <div class="WebClient tabcontent platform code" style="display: block;">
 
 {{< highlight html >}}
+<script type="text/javascript" src="https://speechly.github.io/browser-ui/dev/error-panel.js"></script>
 
-<head>
-  <script type="text/javascript" src="https://speechly.github.io/browser-ui/dev/error-panel.js"></script>
-</head>
-
-<body>
-  <error-panel
-    placement="bottom" >
-  </error-panel>
-</body>
+<error-panel
+  placement="bottom" >
+</error-panel>
 {{< /highlight >}}
 
 </div>
@@ -63,13 +58,13 @@ import { ErrorPanel } from "@speechly/react-ui";
 
 </div>
 
-## Error Panel provides the following recovery instructions
+## Error Messages
 
 - No microphone permission
   - Cause: The user has denied the use of microphone
   - Proposed fix: To use the voice interface, please allow your web browser access the microphone and reload.
 - Unsupported browser
-  - Cause: Required browser APIs for using voice functions are not available
+  - Cause: Required browser APIs for voice functions are not available
   - Proposed fix: To use the voice interface, please visit this site using a supported browser.
 - Page accessed without HTTPS
   - Cause: The site that contains voice functions is accessed with file:// or http:// protocol causing the browser to prevent access to required browser APIs.

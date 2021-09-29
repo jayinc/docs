@@ -16,13 +16,13 @@ menu:
   }
 </script>
 
-Transcript Drawer is an alternative for Big Transcript that slides down from the top of the viewport. It displays usage tips along with the real-time speech-to-text transcript and feedback.
+Transcript Drawer is an alternative for Big Transcript that slides down from the top of the viewport. It displays usage hints along with the real-time speech-to-text transcript and feedback.
 
-The component is momentarily displayed when speech input is used and automatically hidden shortly after. The recommended placement is near top-left corner of the screen.
+The component is momentarily displayed when speech input is used and automatically hidden shortly after.
 
-Once the application has successfully responded to the voice input, send a <code>speechhandled</code> message to display the confirmation mark: <code>window.postMessage({ type: "speechhandled", success: true }, "*");</code>.
+The application code can [signal the component](#displaying-the-confirmation-checkmark) to display a confirmation mark to let the user know that the voice command was successfully responded to.
 
-You can customise the appearance of the component.
+The voice command hints can be provided as an array of strings. You can also customise the appearance of the component.
 
 ## Usage
 
@@ -33,45 +33,50 @@ You can customise the appearance of the component.
 
 <div class="WebClient tabcontent platform code" style="display: block;">
 
-{{< highlight html >}}
+  {{< highlight html >}}
+  <script type="text/javascript" src="https://speechly.github.io/browser-ui/latest/transcript-drawer.js"></script>
 
-<head>
-  <script type="text/javascript" src="https://speechly.github.io/browser-ui/v3/transcript-drawer.js"></script>
-</head>
-
-<body>
   <transcript-drawer
     hint='["Try: 1st hint", "Try: 2nd hint"]'
     formattext="false" >
   </transcript-drawer> 
-</body>
-{{< /highlight >}}
+  {{< /highlight >}}
 
-{{< include-html "api-for-web-components.html" >}}
+  {{< include-html "api-for-web-components.html" >}}
 
 </div>
 
 <div class="React tabcontent platform code">
 
-Place `<BigTranscript>` component inside your `<SpeechProvider>`. For app setup, please refer to [Basic usage](/client-libraries/usage/?platform=React).
+  Place `<BigTranscript>` component inside your `<SpeechProvider>`. For app setup, please refer to [Basic usage](/client-libraries/usage/?platform=React).
+
+  {{< highlight tsx >}}
+
+  import { TranscriptDrawer } from "@speechly/react-ui/components/TranscriptDrawer";
+
+  ...
+  <SpeechProvider appId="YOUR_APP_ID_FROM_SPEECHLY_DASHBOARD">
+    <TranscriptDrawer
+      hint={["Try: 1st hint", "Try: 2nd hint"]}
+      formatText={false}
+    />
+  </SpeechProvider>
+  ...
+
+  {{< /highlight >}}
+
+  ### Properties
+
+  {{< include-md "api-for-react.md" >}}
+
+</div>
+
+## Displaying the confirmation checkmark
+
+Once the application has successfully responded to the voice input, send a <code>speechhandled</code> message to display the confirmation mark:
 
 {{< highlight tsx >}}
 
-import { TranscriptDrawer } from "@speechly/react-ui";
-
-...
-<SpeechProvider appId="YOUR_APP_ID_FROM_SPEECHLY_DASHBOARD">
-  <TranscriptDrawer
-    hint='["Try: 1st hint", "Try: 2nd hint"]'
-    formatText={false}
-  />
-</SpeechProvider>
-...
+window.postMessage({ type: "speechhandled", success: true }, "*");
 
 {{< /highlight >}}
-
-### Properties
-
-{{< include-md "api-for-react.md" >}}
-
-</div>

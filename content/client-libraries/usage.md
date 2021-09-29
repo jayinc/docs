@@ -35,8 +35,8 @@ Speechly Web Components help you get started quickly. Push-To-Talk Button compon
 
 {{< highlight html >}}
 <head>
-  <script type="text/javascript" src="https://speechly.github.io/browser-ui/v3/push-to-talk-button.js"></script>
-  <script type="text/javascript" src="https://speechly.github.io/browser-ui/v3/big-transcript.js"></script>
+  <script type="text/javascript" src="https://speechly.github.io/browser-ui/latest/push-to-talk-button.js"></script>
+  <script type="text/javascript" src="https://speechly.github.io/browser-ui/latest/big-transcript.js"></script>
 </head>
 {{< /highlight >}}
 </div>
@@ -154,9 +154,7 @@ Import the components:
 {{< highlight typescript >}}
 import {
   PushToTalkButton,
-  PushToTalkButtonContainer,
   BigTranscript,
-  BigTranscriptContainer,
   ErrorPanel
 } from "@speechly/react-ui";
 {{< /highlight >}}
@@ -165,14 +163,9 @@ Place the components inside your <SpeechProvider> block
 function App() {
   return (
     <SpeechProvider appId="014ce3a6-9bbf-4605-976f-087a8f3ec178" language="en-US">
-      <BigTranscriptContainer>
-        <BigTranscript />
-      </BigTranscriptContainer>
-
-      <PushToTalkButtonContainer>
-        <PushToTalkButton captureKey=" " />
-        <ErrorPanel/>
-      </PushToTalkButtonContainer>
+      <BigTranscript placement="top"/>
+      <PushToTalkButton placement="bottom" captureKey=" "/>
+      <ErrorPanel placement="bottom"/>
     </SpeechProvider>
   );
 }
@@ -270,7 +263,7 @@ document
 </script>
 {{< /highlight >}}
 
-You can find more details about the Speechly Web Components in [this tutorial](https://speechly.github.io/browser-ui/v3/).
+You can find more details about the Speechly Web Components in [this tutorial](https://speechly.github.io/browser-ui/latest/).
 </div>
 
 <div class="React tabcontent platform code">

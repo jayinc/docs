@@ -31,7 +31,7 @@ The Codepen example used in the video can be accessed [here](https://codepen.io/
 
 Also, the video is the fifth part of a [five-part series](how-speechly-works) where we introduce our technology, introduce some basic concepts and briefly explain how things work under the hood.
 
-More details about the Speechly Web Components can be found in [this tutorial](https://speechly.github.io/browser-ui/v3/). Note that it is only one of the many [Client Libraries](/client-libraries/) that we provide.
+More details about the Speechly Web Components can be found in [this tutorial](https://speechly.github.io/browser-ui/latest/). Note that it is only one of the many [Client Libraries](/client-libraries/) that we provide.
 
 # Learn more!
 
