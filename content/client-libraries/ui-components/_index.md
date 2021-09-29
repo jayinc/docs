@@ -7,7 +7,7 @@ display: article
 menu:
   sidebar:
     title: "UI components"
-    parent: "Client Libraries"
+    parent: "Client Libraries [Remove me to unhide]"
 ---
 
 <script>
