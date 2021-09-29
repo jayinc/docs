@@ -3,7 +3,7 @@ title: Client Library API Reference
 description: All speechly [client libraries](/client-libraries/) implement the same API, irrespectively of platform or programming language.
 category: "References"
 display: article
-weight: 6
+weight: 2
 menu:
   sidebar:
     title: "Client API Reference"

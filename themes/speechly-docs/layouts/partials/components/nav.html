@@ -46,6 +46,15 @@
             <ul class="nav-section-links">
             {{ range .Children }}
               {{ template "submenu" (dict "title" .Title "url" .URL "here" $here) }}
+              {{ if or ($currentPage.IsMenuCurrent "sidebar" .) ($currentPage.HasMenuCurrent "sidebar" .)}} 
+                {{ if .HasChildren }} 
+                  <ul class="nav-section-links">
+                    {{ range .Children }}
+                      {{ template "submenu" (dict "title" .Title "url" .URL "here" $here) }}
+                    {{ end }}
+                  </ul>
+                {{ end }}
+              {{ end }}
             {{end }}
             </ul>
           {{ end }}

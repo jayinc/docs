@@ -56,15 +56,20 @@ You can verify everything is working (alt tags correctly placed, no incorrect ur
 
 ## Automatic page generation with `./build-docs.sh`
 
-Fetches docs content from other sources (e.g. GitHub repositories) and transforms it to Speechly Docs pages. The generated page files are put in their respective places in the Docs folder, so you can check the diffs with `git status` and `git diff` before committing and pushing.
+Fetches docs content from other sources (e.g. GitHub repositories) and transforms it to Speechly Docs pages. The generated page files are put in their respective places in the `content` folder, so you can check the diffs with `git status` and `git diff` before committing and pushing.
 
-The source addresses and pages are defined in `build-docs.sh` file.
+The script requires a Unix-like environment with `bash`, `curl`, `cat` and `sed` commands.
+
+The source addresses and pages are defined in `./build-docs.sh` file.
 
 If there is an error fetching the content (e.g. content is not available), an error will be displayed.
 
-### Generated pages
+### Generated files
 
-- `content/client-libraries/react/ui-components`
+- `content/client-libraries/ui-components/push-to-talk-button/api-for-web-components.html`
+- `content/client-libraries/ui-components/big-transcript/api-for-web-components.html`
+- `content/client-libraries/ui-components/transcript-drawer/api-for-web-components.html`
+- `content/client-libraries/ui-components/push-to-talk-button/api-for-react.md`
+- `content/client-libraries/ui-components/big-transcript/api-for-react.md`
+- `content/client-libraries/ui-components/transcript-drawer/api-for-react.md`
 - `content/speechly-api/api-reference.md`
-
-Requires a Unix-like environment with `bash`, `curl` and `cat` commands.

@@ -23,19 +23,20 @@ menu:
 # Install and import the client library
 
 <div class="tab">
-  <button class="tablinks platform WebClient active" onclick="openTab(event, 'platform=WebClient')">Web Toolkit</button>
+  <button class="tablinks platform WebClient active" onclick="openTab(event, 'platform=WebClient')">Web Components</button>
   <button class="tablinks platform React" onclick="openTab(event, 'platform=React')">React</button>
   <button class="tablinks platform iOS" onclick="openTab(event, 'platform=iOS')">iOS</button>
   <button class="tablinks platform Android" onclick="openTab(event, 'platform=Android')">Android</button>
 </div>
 
 <div class="WebClient tabcontent platform code" style="display: block;">
-The Speechly Web Toolkit provides a number of components to help you get started quickly. Just add the resources in your <code>head</code> block:
+
+Speechly Web Components help you get started quickly. Push-To-Talk Button component integrates [browser-client](https://www.npmjs.com/package/@speechly/browser-client) library and requires no other dependencies to work. Just add the resources in your <code>head</code> block:
+
 {{< highlight html >}}
 <head>
-  <script type="text/javascript" src="https://speechly.github.io/browser-ui/v3/push-to-talk-button.js"></script>
-  <script type="text/javascript" src="https://speechly.github.io/browser-ui/v3/big-transcript.js"></script>
-  <link rel="stylesheet" href="https://speechly.github.io/browser-ui/v3/speechly-ui.css">
+  <script type="text/javascript" src="https://speechly.github.io/browser-ui/latest/push-to-talk-button.js"></script>
+  <script type="text/javascript" src="https://speechly.github.io/browser-ui/latest/big-transcript.js"></script>
 </head>
 {{< /highlight >}}
 </div>
@@ -123,10 +124,12 @@ private var button: SpeechlyButton? = null
 </div>
 
 # Take UI components to use
-We provide ready-made UI components that implement a Push-to-Talk Button for
-starting and stopping voice recording, and a display component for showing the returned transcript (not yet available on Android). It is not necessary to use these, but we highly recommend this as a first step to get started quickly.
+
+Ready-made [UI components](/client-libraries/ui-components/) provide a Push-To-Talk Button for
+starting and stopping listening for speech, and a display component for showing the returned transcript (not yet available on Android). It is not necessary to use these, but we highly recommend this as a first step to get started quickly.
+
 <div class="tab">
-  <button class="tablinks platform WebClient active" onclick="openTab(event, 'platform=WebClient')">Web Toolkit</button>
+  <button class="tablinks platform WebClient active" onclick="openTab(event, 'platform=WebClient')">Web Components</button>
   <button class="tablinks platform React" onclick="openTab(event, 'platform=React')">React</button>
   <button class="tablinks platform iOS" onclick="openTab(event, 'platform=iOS')">iOS</button>
   <button class="tablinks platform Android" onclick="openTab(event, 'platform=Android')">Android</button>
@@ -135,12 +138,14 @@ starting and stopping voice recording, and a display component for showing the r
 <div class="WebClient tabcontent platform code" style="display: block;">
 Include the following lines in your <code>body</code>:
 {{< highlight html >}}
-<div class="BigTranscriptContainer">
-  <big-transcript></big-transcript>
-</div>
-<div class="PushToTalkContainer">
-  <push-to-talk-button appid="YOUR_APP_ID_HERE"></push-to-talk-button>
-</div>
+<big-transcript
+  placement="top" >
+</big-transcript>
+
+<push-to-talk-button
+  appid="YOUR_APP_ID_FROM_SPEECHLY_DASHBOARD"
+  placement="bottom" >
+</push-to-talk-button>
 {{< /highlight >}}
 </div>
 
@@ -149,9 +154,7 @@ Import the components:
 {{< highlight typescript >}}
 import {
   PushToTalkButton,
-  PushToTalkButtonContainer,
   BigTranscript,
-  BigTranscriptContainer,
   ErrorPanel
 } from "@speechly/react-ui";
 {{< /highlight >}}
@@ -160,14 +163,9 @@ Place the components inside your <SpeechProvider> block
 function App() {
   return (
     <SpeechProvider appId="014ce3a6-9bbf-4605-976f-087a8f3ec178" language="en-US">
-      <BigTranscriptContainer>
-        <BigTranscript />
-      </BigTranscriptContainer>
-
-      <PushToTalkButtonContainer>
-        <PushToTalkButton captureKey=" " />
-        <ErrorPanel/>
-      </PushToTalkButtonContainer>
+      <BigTranscript placement="top"/>
+      <PushToTalkButton placement="bottom" captureKey=" "/>
+      <ErrorPanel placement="bottom"/>
     </SpeechProvider>
   );
 }
@@ -237,7 +235,7 @@ The basic idea of the client-side API is to provide a “live view” to the ong
 
 After an audio context has started, callback is called every time the Speechly API returns an event that updates the currently ongoing segment.
 <div class="tab">
-  <button class="tablinks platform WebClient active" onclick="openTab(event, 'platform=WebClient')">Web Toolkit</button>
+  <button class="tablinks platform WebClient active" onclick="openTab(event, 'platform=WebClient')">Web Components</button>
   <button class="tablinks platform React" onclick="openTab(event, 'platform=React')">React</button>
   <button class="tablinks platform iOS" onclick="openTab(event, 'platform=iOS')">iOS</button>
   <button class="tablinks platform Android" onclick="openTab(event, 'platform=Android')">Android</button>
@@ -265,7 +263,7 @@ document
 </script>
 {{< /highlight >}}
 
-You can find more details about the Speechly Web Toolkit in [this tutorial](https://speechly.github.io/browser-ui/v3/).
+You can find more details about the Speechly Web Components in [this tutorial](https://speechly.github.io/browser-ui/latest/).
 </div>
 
 <div class="React tabcontent platform code">
