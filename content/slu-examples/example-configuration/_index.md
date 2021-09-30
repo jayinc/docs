@@ -1,6 +1,6 @@
 ---
-title: Example configurations
-description: See some examples of SAL configurations. Use them as the scaffold for your application, or learn how to improve your own configuration.
+title: Example configurations for the Web
+description: These examples each demonstrate different use-cases of Speechly on the Web.
 weight: 4
 aliases: [/editing-nlu-examples/example-configuration/]
 menu:
@@ -8,86 +8,82 @@ menu:
     title: "Example Configurations"
     parent: "Configuring Your Application"
 ---
-The [SAL Syntax Reference](/slu-examples/cheat-sheet/) should come in handy as well.
+You can choose these as a starting point when creating a new application on the [Speechly Dashboard](https://www.speechly.com/dashboard). The examples can be expanded further to build more complex applications.
+# Speech-to-text: an empty configuration
+<table>
+<tr>
+<td>
+<p>
+An empty configuration provides a transcript, but no intents or entities. Use this
+<ul>
+<li>if your application only needs basic transcription capabilities,
+<li>for trying out our non-adapted speech-to-text-service, or
+<li>when you want to build your own configuration with custom intents and entities from scratch.
+</ul>
+</p>
+<p>
+(Note that also speech-to-text accuracy is affected by the configuration. Especially accuracy on domain-specific vocabulary can be significantly increased by providing these as part of your configuration.)
+</p>
+</td>
+</tr>
+</table>
 
-# Home Automation
-A simple home automation application for turning devices located in different rooms on and off.
+# Ecommerce Voice FAQ
+<table>
+<tr>
+<td width="66%">
+<p>Users not finding a piece of information on a complex website is a common UX frustration. This example demonstrates how a voice FAQ service can make your site easier to navigate.</p>
+<p>Supports utterances such as
+<ul>
+<li><i>what is your email address</i></li>
+<li><i>tell me about delivery options</i></li>
+<li><i>i want to know about your return policy</i></li>
+</ul>
+</p>
+<p>
+Click <a href="voice-faq">here for more details</a>.
+</p>
+</td>
+<td><img src="voice-faq.png"><br><a href="https://codepen.io/aukkonen/pen/powYbMd?editors=1010" target="_new">View in Codepen.</a></td>
+</tr>
+</table>
 
-- Intents: `turn_on`, `turn_off`
-- Entities: `device`, `location`
+# Sneaker Shop Search Filters
+<table>
+<tr>
+<td width="66%">
+<p>This example demonstrates the technology that underlies our Fashion demo. At the core is a regular faceted search engine, and voice is simply used to manipulate the drop-down filters.</p>
+<p>Supports utterances such as
+<ul>
+<li><i>brand is converse</i></li>
+<li><i>color blue</i></li>
+<li><i>red sneakers by new balance</i></li>
+</ul>
+</p>
+<p>
+Click <a href="search-filters">here for more details</a>.
+</p>
+</td>
+<td><img src="sneaker-filters.png"><br><a href="https://codepen.io/aukkonen/pen/QWgoKWM?editors=1010" target="_new">View in Codepen.</a></td>
+</tr>
+</table>
 
-## Example utterances
-- turn on the lights in the kitchen
-- turn off the lights in the bedroom and in the living room
-- turn everything off
-
-[Try in Playground &raquo;](https://www.speechly.com/dashboard/#/playground/a0e00927-51e6-4f7f-9259-d3efaf19ddc4?language=en-US&title=Home%20Automation&example=turn%20on%20the%20lights%20in%20the%20kitchen&example=turn%20off%20the%20lights%20in%20the%20bedroom%20and%20in%20the%20living%20room&example=turn%20everything%20off)
-
-## Configuration
-```
-rooms = [kitchen|bedroom|living room|closet|pantry|hallway|everywhere|all rooms|every room](location)
-room = [{in} {the} $rooms]
-list_of_rooms = [$room {{and} $room {{and} $room}}]
-devices = [lights|television|radio|everything|all devices|every device](device)
-device = [{the} {$rooms} $devices]
-list_of_devices = [$device {and $device {and $device}}]
-command = [turn|set|switch|put]
-intent = [
-    *turn_on {$command} $list_of_devices on {$list_of_rooms}
-    *turn_on $command on $list_of_devices {$list_of_rooms}
-    *turn_off {$command} $list_of_devices off {$list_of_rooms}
-    *turn_off $command off $list_of_devices {$list_of_rooms}
-]
-$intent {and $intent}
-```
-
----
-
-# Coffee Ordering
-A simple customer service application for placing orders for different types of coffee.
-
-- Intents: `order`
-- Entities: `size`, `type`, `addition`, `shot`
-
-## Example utterances
-- can I have a double espresso please
-- large cappuccino
-- make me a large cappuccino and a regular coffee
-
-[Try in Playground &raquo;](https://www.speechly.com/dashboard/#/playground/c994d68e-4504-459b-9029-4078274023a5?language=en-US&title=Coffee%20Order&example=can%20I%20have%20a%20double%20Espresso%20please&example=large%20Capuccino&example=make%20me%20a%20large%20cappuccino%20and%20regular%20coffee)
-
-## Configuration
-```
-ask = [i'd like to have | make me | order | i want | can I have | may I have] {[a | an]}
-size = [small | medium | large](size)
-shot = [single | double | triple](shot)
-coffee = [coffee|regular coffee|americano|cappuccino|espresso|latte|cafe latte](coffee)
-addition = [milk | cream | sugar | syrup](addition)
-order = *order {$ask} {$size} {$shot} $coffee {with $addition {and $addition}} {please}
-$order {{and} $order}
-```
-
----
-
-# Calculator
-A simple voice calculator that supports basic arithmetic operations (`+`, `-`, `x`, `/`, and raising to a power).
-
-- Intents: `calculate`, `append`
-- Entities: `number`, `operation`
-
-## Example utterances
-- 36 plus 5
-- 4 times 20 plus 5
-- 77 plus 9 plus 4
-
-[Try in Playground &raquo;](https://www.speechly.com/dashboard/#/playground/1d657c98-ec00-4ac6-88af-1e21648262fd?language=en-US&title=Calculator&example=36%20plus%205&example=4%20times%2020%20plus%205&example=77%20plus%209%20plus%204)
-
-## Configuration
-```
-number = $SPEECHLY.CARDINAL_NUMBER(number)
-operation = [plus|minus|times|divided by|to the power of](operation)
-calculate = *calculate $number $operation $number
-append = *append $operation $number
-$calculate {$append {$append {$append}}}
-$append
-```
+# Customer Contact Form
+<table>
+<tr>
+<td width="66%">
+<p>Entering data into a Web form can be a daunting task, especially on a mobile device. This example shows how to set up a form so that it can be filled out with voice.</p>
+<p>Supports utterances such as
+<ul>
+<li><i>my name is sherlock holmes</i></li>
+<li><i>i live at one twenty two baker street</i>/li>
+<li><i>email sherlock at gmail dot com</i></li>
+</ul>
+</p>
+<p>
+Click <a href="contact-form">here for more details</a>.
+</p>
+</td>
+<td><img src="contact-form.png"><br><a href="https://codepen.io/aukkonen/pen/abwMmNM?editors=1010" target="_new">View in Codepen.</a></td>
+</tr>
+</table>
