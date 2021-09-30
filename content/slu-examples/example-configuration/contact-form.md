@@ -6,7 +6,7 @@ weight: 4
 # Basic information
 This configuration demonstrates how to implement a simple contact form that can be filled by using voice.
 
-It defines five entities (`name`, `street_address`, `email_address`, `phone_number` and `dob`), that are all implemented using our [standard variables](/slu-examples/standard-variables/). The idea is to map each of these entities to a different field in a form. The [Codepen example](https://codepen.io/aukkonen/pen/gORjbBp?editors=1010) related to this configuration does this simply by using the name of the entity as the identifier of the form component, to which the entity value is written.
+It defines five entities (`name`, `street_address`, `email_address`, `phone_number` and `dob`) that are all implemented using our [standard variables](/slu-examples/standard-variables/). The idea is to assign each of these entities to a different field in a form. The [Codepen demo](https://codepen.io/aukkonen/pen/abwMmNM?editors=1010) related to this configuration does this simply by using the name of the entity as the identifier of the form component, to which the entity value is written.
 
 The configuration supports utterances such as
 - *"my name is sherlock holmes"*
@@ -15,7 +15,7 @@ The configuration supports utterances such as
 
 # Complete SAL sources
 Things to note:
-1. The entities must be assigned a correct [Entity Data Type](/slu-examples/postprocessing), otherwise the Speechly API just returns everything as a string that verbatim captures what the user said. If you open this example configuration on the Dashboard, the entities are already assigned their correct types.
+1. The entities must be assigned a correct [Entity Data Type](/slu-examples/postprocessing), otherwise the Speechly API returns the entity value as a string that verbatim contains what the user said. If you create a new application using this example configuration on the Dashboard, the entities are already assigned their correct types.
 2. All example phrases are collected in a list called `phrases`. The last line, `$phrases {{and} $phrases}` defines that a single utterance can consist of up to two of these phrases spoken one after the other. (Optionally with the word "and" in between.)
 ```
 phrases = [

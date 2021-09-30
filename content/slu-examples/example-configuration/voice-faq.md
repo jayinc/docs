@@ -4,7 +4,7 @@ description: Maps users questions to a number of intents that can be used to tri
 weight: 4
 ---
 # Basic information
-This configuration demonstrates voice activated navigation shortcuts to different parts of a website. For example, the user utterance *"what is your return policy"* triggers the intent `return_plicy`, which can be used to redirect the user to a relevant page.
+This configuration demonstrates voice activated navigation shortcuts. For example, the user utterance *"what is your return policy"* triggers the intent `return_plicy`, which the front-end can use to redirect the user to a relevant page.
 
 There are seven intents in total, these are:
 
@@ -22,7 +22,7 @@ This configuration does not use any entities.
 
 # Complete SAL sources
 Things to note:
-1. For each intent, the phrases that capture the intent are all grouped to the same list. For example, the `hello` intent phrases are all in the same list that is assigned to the variable `hello_phrases`.
+1. For each intent, the phrases that capture the intent are all grouped to a list. For example, the `hello` intent phrases are all in the same list that is assigned to the variable `hello_phrases`.
 2. The intents are all collected together to another list, called `all_intents`.
 3. The last line of the configuration that says `$all_intents`, is the "entry point" for the [template expansion algorithm](/slu-examples/semantics#template-expansion). (Don't worry, this is an advanced topic that new users can safely ignore.)
 
