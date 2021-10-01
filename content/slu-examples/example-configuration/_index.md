@@ -2,7 +2,7 @@
 title: Example configurations for the Web
 description: These examples each demonstrate different use-cases of Speechly on the Web.
 weight: 4
-aliases: [/editing-nlu-examples/example-configuration/]
+aliases: ["/editing-nlu-examples/example-configuration/", "/web-examples/"]
 menu:
   sidebar:
     title: "Example Configurations"
