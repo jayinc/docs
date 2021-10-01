@@ -29,14 +29,14 @@ Note that these steps are also related to the three parts of the architecture fi
 
 The Codepen example used in the video can be accessed [here](https://codepen.io/hheikinh/pen/ExmMxpZ).
 
-Also, the video is the fifth part of a [five-part series](how-speechly-works) where we introduce our technology, introduce some basic concepts and briefly explain how things work under the hood.
-
-More details about the Speechly Web Components can be found in [this tutorial](https://speechly.github.io/browser-ui/latest/). Note that it is only one of the many [Client Libraries](/client-libraries/) that we provide.
+What next:
+1. Check out [Example Configurations for the Web](/web-examples/).
+2. More details about the Speechly Web Components can be found in [this tutorial](https://speechly.github.io/browser-ui/latest/). Note that it is only one of the many [Client Libraries](/client-libraries/) that we provide.
+3. The above video is the fifth part of a [five-part series](how-speechly-works) where we introduce our technology, introduce some basic concepts and briefly explain how things work under the hood.
 
 # Learn more!
 
 - Read about how to [Configure](/slu-examples/) Speechly for the needs of your Application.
 - Take a look at our [Development tool offering](/dev-tools).
-- Check out some [Example Configurations](/slu-examples/example-configuration/).
 - Explore the [Documentation](/).
 - Browse our [public GitHub repositories](https://github.com/speechly/).
