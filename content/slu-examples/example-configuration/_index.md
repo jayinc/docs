@@ -76,7 +76,7 @@ Click <a href="search-filters">here for more details</a>.
 <p>Supports utterances such as
 <ul>
 <li><i>my name is sherlock holmes</i></li>
-<li><i>i live at one twenty two baker street</i>/li>
+<li><i>i live at one twenty two baker street</i></li>
 <li><i>email sherlock at gmail dot com</i></li>
 </ul>
 </p>
