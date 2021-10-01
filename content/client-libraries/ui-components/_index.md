@@ -14,11 +14,27 @@ menu:
   // updateTab function specific to this pages' tabs; called by updateTab() in app.js
   function updateTab() {
     let urlParams = new URLSearchParams(window.location.search);
-    selectTab("platform", urlParams.get("platform"));
+    selectTab("view", urlParams.get("view"));
   }
 </script>
 
-{{< figure src="ui-components-intro.png" alt="Introduction to Speechly UI Components" >}}
+<div class="tab">
+  <button class="view ComponentIntroduction tablinks active" onclick="openTab(event, 'view=ComponentIntroduction')">Push-To-Talk Button and Big Transcript</button>
+  <button class="view TranscriptDrawer tablinks" onclick="openTab(event, 'view=TranscriptDrawer')">Transcript Drawer</button>
+</div>
+
+<div class="view ComponentIntroduction tabcontent" style="display: block;">
+
+  {{< figure src="Component introduction.png" alt="Introduction to Speechly UI Components" >}}
+
+</div>
+
+<div class="view TranscriptDrawer tabcontent">
+
+  {{< figure src="Transcript Drawer.png" alt="Introduction to Speechly UI Components" >}}
+
+</div>
+
 
 ### [Push-to-Talk Button](/client-libraries/ui-components/push-to-talk-button)
 
