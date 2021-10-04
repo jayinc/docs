@@ -11,9 +11,9 @@ Setting it up is very simple.
 
 1. Log-in to the Speechly [Dashboard](https://api.speechly.com/dashboard).
 2. Create a new application by clicking the "CREATE APP" button in the bottom right corner.
-3. Give the application a descriptive name, choose the language, and ensure that "Initial configuration" is set to "Empty". Click "CREATE".
+3. Give the application a descriptive name, choose the language, and choose `Speech-to-text (Empty configuration)` as the initial configuration.
 4. In the screen that opens, *only* click the "DEPLOY" button found in the bottom right corner. Wait until the Status text (shown in the bottom *left* side of the screen) says "Deployed" with a little green symbol next to it.
-5. You can grab the App ID from the top part of the screen, it is right below the name of your application.
+5. You can grab the App ID from the Basic information part.
 
 And you're done!
 
