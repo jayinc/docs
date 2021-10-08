@@ -9,6 +9,12 @@ menu:
     weight: 999
 ---
 
+# October 8, 2021
+
+- **Speechly Dashboard**: Updated look of main application listing and SAL configuration view with small usability improvements. Three new example configurations for [common use-cases of Voice UIs on the Web](/web-examples/).
+- **Speechly Web UI Components**: New versions of our [UI Components](/client-libraries/ui-components/) for web developers, including the [Push-to-Talk Button](/client-libraries/ui-components/push-to-talk-button), [Big Transcript](/client-libraries/ui-components/big-transcript), [Transcript Drawer](/client-libraries/ui-components/transcript-drawer) and [Error Panel](/client-libraries/ui-components/error-panel).
+- **Documentation**: [How Speechly Works - The Video Tutorial Series](/quick-start/how-speechly-works/) is a collection of brief introductory videos to help you get started developing with Speechly.
+
 # September 6, 2021
 
 - **Speechly API** Improved handling of initial latency when streaming audio to a new app_id, improved handling of client connections.
