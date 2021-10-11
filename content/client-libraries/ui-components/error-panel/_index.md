@@ -60,6 +60,9 @@ import { ErrorPanel } from "@speechly/react-ui";
 
 ## Error Messages
 
+- Failed to connect Speechly
+  - Cause: Either the Speechly application id is invalid or the configuration has not been deployed successfully.
+  - Proposed fix: Check that the Speechly application id is spelled exactly as shown in the Dashboard. If this is the first time you use the app id, check in the Dashboard that the speech model has finished training and try again once it has been deployed. Training usually takes some 5-10 minutes.
 - No microphone permission
   - Cause: The user has denied the use of microphone
   - Proposed fix: To use the voice interface, please allow your web browser access the microphone and reload.
