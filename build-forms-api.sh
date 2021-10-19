@@ -3,7 +3,7 @@ echo Building API docs from local sources...
 echo
 
 # ----------- Voice form local build step start -----------------
-TARGET_PATH=content/client-libraries/ui-components/voice-input
+TARGET_PATH=content/client-libraries/voice-forms/voice-input
 TARGET_NAME=api-for-react.md
 LOCAL_SOURCE=../speechly-demos/libraries/react-voice-forms/docs/modules/components_VoiceInput.md
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$LOCAL_SOURCE\"...
@@ -16,7 +16,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Voice form local step end-----------------
 
 # ----------- Voice form local build step start -----------------
-TARGET_PATH=content/client-libraries/ui-components/voice-select
+TARGET_PATH=content/client-libraries/voice-forms/voice-select
 TARGET_NAME=api-for-react.md
 LOCAL_SOURCE=../speechly-demos/libraries/react-voice-forms/docs/modules/components_VoiceSelect.md
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$LOCAL_SOURCE\"...
@@ -29,7 +29,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Voice form local step end-----------------
 
 # ----------- Voice form local build step start -----------------
-TARGET_PATH=content/client-libraries/ui-components/voice-toggle
+TARGET_PATH=content/client-libraries/voice-forms/voice-toggle
 TARGET_NAME=api-for-react.md
 LOCAL_SOURCE=../speechly-demos/libraries/react-voice-forms/docs/modules/components_VoiceToggle.md
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$LOCAL_SOURCE\"...
@@ -42,7 +42,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Voice form local step end-----------------
 
 # ----------- Voice form local build step start -----------------
-TARGET_PATH=content/client-libraries/ui-components/voice-checkbox
+TARGET_PATH=content/client-libraries/voice-forms/voice-checkbox
 TARGET_NAME=api-for-react.md
 LOCAL_SOURCE=../speechly-demos/libraries/react-voice-forms/docs/modules/components_VoiceCheckbox.md
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$LOCAL_SOURCE\"...
@@ -55,7 +55,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Voice form local step end-----------------
 
 # ----------- Voice form local build step start -----------------
-TARGET_PATH=content/client-libraries/ui-components/voice-date-picker
+TARGET_PATH=content/client-libraries/voice-forms/voice-date-picker
 TARGET_NAME=api-for-react.md
 LOCAL_SOURCE=../speechly-demos/libraries/react-voice-forms/docs/modules/components_VoiceDatePicker.md
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$LOCAL_SOURCE\"...
