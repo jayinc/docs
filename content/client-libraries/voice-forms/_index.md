@@ -7,7 +7,7 @@ display: article
 menu:
   sidebar:
     title: "Voice forms"
-    parent: "Client Libraries [Remove to unhide]"
+    parent: "Client Libraries"
 ---
 
 ### [Voice Input](/client-libraries/voice-forms/voice-input)
