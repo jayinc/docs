@@ -23,14 +23,12 @@ Add either `voice-form-theme-mui.css` or `voice-form-theme-capsule.css` with the
 import "voice-form-theme-mui.css";
 {{< /highlight >}}
 
-`voice-form-theme-mui.css`
+## voice-form-theme-mui.css
 {{< highlight css >}}
 {{< include-html "voice-form-theme-mui.css" >}}
 {{< /highlight >}}
 
-`voice-form-theme-capsule.css`
+## voice-form-theme-capsule.css
 {{< highlight css >}}
 {{< include-html "voice-form-theme-capsule.css" >}}
 {{< /highlight >}}
-
-</div>
