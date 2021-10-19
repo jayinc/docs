@@ -6,7 +6,7 @@ display: article
 menu:
   sidebar:
     title: "Voice Select"
-    parent: "UI components"
+    parent: "Voice form components"
 ---
 
 <script>

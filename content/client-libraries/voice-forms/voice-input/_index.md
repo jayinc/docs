@@ -1,12 +1,12 @@
 ---
-title: Voice Date Picker
-weight: 104
+title: Voice Input
+weight: 100
 category: "References"
 display: article
 menu:
   sidebar:
-    title: "Voice Date Picker"
-    parent: "UI components"
+    title: "Voice Input"
+    parent: "Voice form components"
 ---
 
 <script>
@@ -17,7 +17,7 @@ menu:
   }
 </script>
 
-Voice Date Picker is a voice-enabled date picker component. It can automatically change the date if the specified _entity type_ with a [Speechly Date](/slu-examples/standard-variables/#supported-standard-variables) as the _entity value_ is found in the SpeechSegment.
+Voice Input is a voice-enabled text field component. It can automatically react to _entity values_ in SpeechSegments.
 
 You can [customise the appearance](#styling-the-components) the component with `css`.
 
@@ -40,17 +40,14 @@ npm i @speechly/react-voice-forms
 Import the component:
 
 {{< highlight tsx >}}
-import { VoiceDatePicker } from '@speechly/react-voice-forms'
+import { VoiceInput } from '@speechly/react-voice-forms'
 {{< /highlight >}}
 
 Place the form component somewhere inside your `SpeechProvider` block:
 
 {{< highlight tsx >}}
 <SpeechProvider appId="YOUR_APP_ID_FROM_SPEECHLY_DASHBOARD">
-  <VoiceDatePicker
-    label="Departure"
-    changeOnEntityType="depart"
-  />
+  <VoiceInput label="From" changeOnEntityType="from" />
 </SpeechProvider>
 {{< /highlight >}}
 

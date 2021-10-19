@@ -1,12 +1,12 @@
 ---
-title: Voice Toggle
-weight: 102
+title: Voice Checkbox
+weight: 103
 category: "References"
 display: article
 menu:
   sidebar:
-    title: "Voice Toggle"
-    parent: "UI components"
+    title: "Voice Checkbox"
+    parent: "Voice form components"
 ---
 
 <script>
@@ -17,7 +17,7 @@ menu:
   }
 </script>
 
-Voice Toggle is a voice-enabled single-select button group component. It can automatically change the selection based on the _intent_, _entity type_ or _entity value_ found in the SpeechSegment.
+Voice Checkbox is a voice-enabled checkbox component. It can automatically change to checked if the specified _entity type_ is found in the SpeechSegment.
 
 You can [customise the appearance](#styling-the-components) the component with `css`.
 
@@ -40,17 +40,16 @@ npm i @speechly/react-voice-forms
 Import the component:
 
 {{< highlight tsx >}}
-import { VoiceToggle } from '@speechly/react-voice-forms'
+import { VoiceCheckbox } from '@speechly/react-voice-forms'
 {{< /highlight >}}
 
 Place the form component somewhere inside your `SpeechProvider` block:
 
 {{< highlight tsx >}}
 <SpeechProvider appId="YOUR_APP_ID_FROM_SPEECHLY_DASHBOARD">
-  <VoiceToggle
-    options={["my_one_way_id", "my_round_trip_id"]}
-    displayNames={["One way", "Round trip"]}
-    changeOnEntityType={["one_way", "round_trip"]}
+  <VoiceCheckbox
+    label="Direct"
+    changeOnEntityType="direct"
   />
 </SpeechProvider>
 {{< /highlight >}}

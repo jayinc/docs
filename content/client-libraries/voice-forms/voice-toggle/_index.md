@@ -1,12 +1,12 @@
 ---
-title: Voice Input
-weight: 100
+title: Voice Toggle
+weight: 102
 category: "References"
 display: article
 menu:
   sidebar:
-    title: "Voice Input"
-    parent: "UI components"
+    title: "Voice Toggle"
+    parent: "Voice form components"
 ---
 
 <script>
@@ -17,7 +17,7 @@ menu:
   }
 </script>
 
-Voice Input is a voice-enabled text field component. It can automatically react to _entity values_ in SpeechSegments.
+Voice Toggle is a voice-enabled single-select button group component. It can automatically change the selection based on the _intent_, _entity type_ or _entity value_ found in the SpeechSegment.
 
 You can [customise the appearance](#styling-the-components) the component with `css`.
 
@@ -40,14 +40,18 @@ npm i @speechly/react-voice-forms
 Import the component:
 
 {{< highlight tsx >}}
-import { VoiceInput } from '@speechly/react-voice-forms'
+import { VoiceToggle } from '@speechly/react-voice-forms'
 {{< /highlight >}}
 
 Place the form component somewhere inside your `SpeechProvider` block:
 
 {{< highlight tsx >}}
 <SpeechProvider appId="YOUR_APP_ID_FROM_SPEECHLY_DASHBOARD">
-  <VoiceInput label="From" changeOnEntityType="from" />
+  <VoiceToggle
+    options={["my_one_way_id", "my_round_trip_id"]}
+    displayNames={["One way", "Round trip"]}
+    changeOnEntityType={["one_way", "round_trip"]}
+  />
 </SpeechProvider>
 {{< /highlight >}}
 

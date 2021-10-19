@@ -1,12 +1,12 @@
 ---
-title: Voice Checkbox
-weight: 103
+title: Voice Date Picker
+weight: 104
 category: "References"
 display: article
 menu:
   sidebar:
-    title: "Voice Checkbox"
-    parent: "UI components"
+    title: "Voice Date Picker"
+    parent: "Voice form components"
 ---
 
 <script>
@@ -17,7 +17,7 @@ menu:
   }
 </script>
 
-Voice Checkbox is a voice-enabled checkbox component. It can automatically change to checked if the specified _entity type_ is found in the SpeechSegment.
+Voice Date Picker is a voice-enabled date picker component. It can automatically change the date if the specified _entity type_ with a [Speechly Date](/slu-examples/standard-variables/#supported-standard-variables) as the _entity value_ is found in the SpeechSegment.
 
 You can [customise the appearance](#styling-the-components) the component with `css`.
 
@@ -40,16 +40,16 @@ npm i @speechly/react-voice-forms
 Import the component:
 
 {{< highlight tsx >}}
-import { VoiceCheckbox } from '@speechly/react-voice-forms'
+import { VoiceDatePicker } from '@speechly/react-voice-forms'
 {{< /highlight >}}
 
 Place the form component somewhere inside your `SpeechProvider` block:
 
 {{< highlight tsx >}}
 <SpeechProvider appId="YOUR_APP_ID_FROM_SPEECHLY_DASHBOARD">
-  <VoiceCheckbox
-    label="Direct"
-    changeOnEntityType="direct"
+  <VoiceDatePicker
+    label="Departure"
+    changeOnEntityType="depart"
   />
 </SpeechProvider>
 {{< /highlight >}}
