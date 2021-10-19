@@ -1,6 +1,6 @@
 ---
 title: "Voice form components"
-description: Speechly Voice form components are multi-modal browser widgets that can be controlled with speech, tap and keyboard.
+description: Speechly Voice form components are multi-modal browser widgets that can be controlled with speech, tap, pointer and keyboard.
 weight: 4
 category: "References"
 display: article
