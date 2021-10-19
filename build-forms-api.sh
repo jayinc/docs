@@ -67,6 +67,28 @@ sed -i.bak '/^\s*$/,$d' $TARGET_PATH/$TARGET_NAME
 rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Voice form local step end-----------------
 
+# ----------- Voice form local build step start -----------------
+TARGET_PATH=content/client-libraries/voice-forms/voice-date-picker
+TARGET_NAME=voice-form-component-calendar.css
+LOCAL_SOURCE=../speechly-demos/libraries/react-voice-forms/src/css/voice-form-component-calendar.css
+cat $LOCAL_SOURCE > $TARGET_PATH/$TARGET_NAME
+# ----------- Voice form local step end-----------------
+
+# ----------- Voice form local build step start -----------------
+TARGET_PATH=content/client-libraries/voice-forms/styling-the-components
+TARGET_NAME=voice-form-theme-mui.css
+LOCAL_SOURCE=../speechly-demos/libraries/react-voice-forms/src/css/voice-form-theme-mui.css
+cat $LOCAL_SOURCE > $TARGET_PATH/$TARGET_NAME
+# ----------- Voice form local step end-----------------
+
+# ----------- Voice form local build step start -----------------
+TARGET_PATH=content/client-libraries/voice-forms/styling-the-components
+TARGET_NAME=voice-form-theme-capsule.css
+LOCAL_SOURCE=../speechly-demos/libraries/react-voice-forms/src/css/voice-form-theme-capsule.css
+cat $LOCAL_SOURCE > $TARGET_PATH/$TARGET_NAME
+# ----------- Voice form local step end-----------------
+
+
 echo
 echo OK
 echo

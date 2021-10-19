@@ -1,5 +1,1 @@
-Add a `voice-form-theme-mui.css` to your `src` folder, then include it in `index.tsx`:
-
-```
-import "voice-form-theme-mui.css";
-```
+See [Styling the components](/client-libraries/voice-forms/styling-the-components/) for `css` templates.

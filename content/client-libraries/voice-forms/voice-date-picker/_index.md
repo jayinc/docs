@@ -60,6 +60,18 @@ Place the form component somewhere inside your `SpeechProvider` block:
 
 ## Styling the components
 
+Copy `voice-form-component-calendar.css` with the following content to your `src` folder and import it. Tweak to your liking!
+
+{{< highlight tsx >}}
+import "voice-form-component-calendar.css";
+{{< /highlight >}}
+
+`voice-form-component-calendar.css`
+{{< highlight css >}}
+{{< include-html "voice-form-component-calendar.css" >}}
+{{< /highlight >}}
+
+
 {{< include-md "../react-voice-forms-styling.md" >}}
 
 </div>
