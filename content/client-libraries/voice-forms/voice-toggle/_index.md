@@ -17,7 +17,7 @@ menu:
   }
 </script>
 
-Voice Toggle is a voice-enabled single-select button group component. It can automatically change the selection based on the _intent_, _entity type_ or _entity value_ found in the SpeechSegment.
+Voice Toggle is a voice-enabled single-select button group component. It changes the selection based on the _intent_, _entity type_ or _entity value_ found in the SpeechSegment.
 
 You can [customise the appearance](#styling-the-components) the component with `css`.
 

@@ -17,7 +17,7 @@ menu:
   }
 </script>
 
-Voice Checkbox is a voice-enabled checkbox component. It can automatically change to checked if the specified _entity type_ is found in the SpeechSegment.
+Voice Checkbox is a voice-enabled checkbox component. It changes to checked if the specified _entity type_ is found in the SpeechSegment.
 
 You can [customise the appearance](#styling-the-components) the component with `css`.
 

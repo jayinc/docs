@@ -17,7 +17,7 @@ menu:
   }
 </script>
 
-Voice Input is a voice-enabled text field component. It can automatically react to _entity values_ in SpeechSegments.
+Voice Input is a voice-enabled text field component. Its value changes whenever the specified _entity type_ is found in the SpeechSegment. The new value will be the _entity's value_.
 
 You can [customise the appearance](#styling-the-components) the component with `css`.
 

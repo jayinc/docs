@@ -17,7 +17,7 @@ menu:
   }
 </script>
 
-Voice Date Picker is a voice-enabled date picker component. It can automatically change the date if the specified _entity type_ with a [Speechly Date](/slu-examples/standard-variables/#supported-standard-variables) as the _entity value_ is found in the SpeechSegment.
+Voice Date Picker is a voice-enabled date picker component. It changes the date if the specified _entity type_ with a [Speechly Date](/slu-examples/standard-variables/#supported-standard-variables) as the _entity value_ is found in the SpeechSegment.
 
 You can [customise the appearance](#styling-the-components) the component with `css`.
 
