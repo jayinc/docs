@@ -193,6 +193,102 @@ You can generate a new API token by following steps 1-4 in [Adding an API token]
 If you have several projects, you must separately replace the API token for each of these by creating a new token for every project in the Dashboard, and pasting it in the config file.
 
 
+# Evaluate the accuracy of your configuration
+
+Once you have deployed a configuration, it is useful to evaluate the configuration with a set of test utterances that users of your application might say. Evaluation helps you to verify that these utterances work on your app, and identify those test utterances that are not recognized properly. To use the evaluation feature, you need both the set of test utterances, as well as ground truth annotations (correct intents and entities) for these.
+
+Evaluation consists two steps:
+1) Run `speechly annotate` to submit your test utterances to the API to be annotated.
+2) Run `speechly evaluate` to compute accuracy between the API annotations and the ground truth annotations.
+
+## Annotate test utterances with the API
+
+To run this command, you need a text file with a single utterance on each line (without any annotations!). Suppose the file `test_utterances.txt` contains four test utterances:
+
+```txt
+can i see blue sneakers
+i want two of those
+my address is one twenty three imaginary road
+delivery tomorrow
+```
+
+Run the following command, where `APP_ID` is the App id to which you have deployed the configuration you want to test.
+
+```bash
+speechly annotate -a APP_ID --input test_utterances.txt > annotated_utterances.txt
+```
+
+The resulting `annotated_utterances.txt` contains the test utterances as annotated by the API in the same order as `test_utterances.txt`. For example, depending on how the intents and entities are configured, it might contain:
+
+```yaml
+*search can i see [blue|blue](color) [sneakers|category_sneaker](product)
+*add_to_cart i want two of those
+*set_address my address is [one twenty three imaginary road|123 Imaginary Rd.](address)
+*set_delivery_date delivery [tomorrow|2021-10-19](delivery_date)
+```
+
+The annotations are given in a syntax similar to [Speechly Annotation Language](/slu-examples/cheat-sheet/), with the exception that each entity has two values that are separated by a `|` character. Of these, the first is the original transcript, while the second is the post-processed value that depends on the [Entity data type](/slu-examples/postprocessing/). If an entity has type `string`, then both the transcript and post-processed value are equal.
+
+For example, above in the first test utterance, the entity `color` has the value `[blue|blue]` meaning that `color` has type `string`, while the entity `product` has the value `[sneakers|category_sneaker]`, meaning that `product` must have a lookup table to map `sneakers` to the canonical name `category_sneaker`. Likewise, the remaining entities, `address` and `delivery_date`, have a suitable type associated with them.
+
+### Annotate with reference date
+
+The entities with type *date* let users to utter dates relative to the current date. For example, the utterance "today" normally resolves to the current date. The postprocessed value therefore depends on the day you test the utterance. When you test such utterances, specify a `reference_date` to fix the resolved dates.
+
+```bash
+speechly annotate -a APP_ID --reference-date 2021-09-12 --input test_utterances.txt
+```
+This command applied to previous example now yields a different annotation for `delivery_date` that is type *date*.
+```yaml
+...
+*set_delivery_date delivery [tomorrow|2021-09-13](delivery_date)
+...
+```
+
+## Compute accuracy
+
+To compute accuracy, you need both the annotations from the Speechly API, as obtained in previous step, as well as ground truth annotations. The ground truth annotations must be given using the same syntax as the API returns. For example, suppose the file `ground_truth.txt` contains:
+```yaml
+*search can i see [blue|blue](color) [sneakers|category_sneaker](product)
+*add_to_cart i want [two|2](amount) of those
+*set_address my address is [one twenty three imaginary road|123 Imaginary Rd.](address)
+*set_delivery_date delivery [tomorrow|2021-09-12](delivery_date)
+```
+These are compared against the API generated annotations by running:
+
+```bash
+speechly evaluate --input annotated_utterances.txt --ground-truth ground_truth.txt
+```
+the command outputs:
+```
+Ground truth had:
+  *add_to_cart i want [two|2](amount) of those
+but prediction was:
+  *add_to_cart i want two of those
+
+Ground truth had:
+  *set_delivery_date delivery [tomorrow|2021-09-12](delivery_date)
+but prediction was:
+  *set_delivery_date delivery [tomorrow|2021-10-19](delivery_date)
+
+Matching rows out of total:
+2 / 4
+Accuracy:
+0.50
+```
+In the first case the prediction is missing the `amount` entity. This type of errors can be mitigated by ensuring that the utterance appears in the configuraiton and is properly annotated. In the second case the `delivery_date` entity was correctly recognized (from the word "tomorrow"), but since the return value of relative dates resolves to the current day, it is a good idea to make sure all the relative dates in your ground truth data are computed against some fixed reference date, and then use that when running `speechly annotate` as described above.
+
+If you modify and re-deploy your application, you can run the evaluation again with the same test utterances (`test_utterances.txt`) and ground truths (`ground_truth.csv`). Note that you always have to first run `speechly evaluate annotate` to get the API annotations, and then `speechly evaluate accuracy` to compare these against the ground truths.
+
+## Tip: Prepare ground truth by pre-annotating the test utterances
+
+Creating the ground truth annotations manually from scratch can be tedious. To reduce the amount of work this requires, you can use the annotations generated by `speechly evaluate annotate` as a starting point. Assuming you already have the non-annotated test utterances in `test_utterances.txt`, run
+```bash
+speechly annotate -a APP_ID --input test_utterances.txt > ground_truth.txt
+```
+Next, go through the content of `ground_truth.txt` and fix all errors in intents or entities that you find.
+
+
 # CLI Reference
 The Command Line Tool has a built-in help functionality. This is a brief reference of the most important commands.
 
@@ -212,9 +308,9 @@ where you should replace `name-of-my-app` with a descriptive name of the applica
 ## Deploy a configuration
 The simplest way is to enter the directory that contains your configuration files, and run
 ```bash
-speechly deploy . -a app-id
+speechly deploy . -a APP_ID
 ```
-where `app-id` is replaced with the app_id to which you want to deploy the configuration. (Note that `app_id` must belong to the project that is currently active in the Command Line Tool. See also `speechly config`.)
+where `APP_ID` is replaced with the app_id to which you want to deploy the configuration. (Note that `APP_ID` must belong to the project that is currently active in the Command Line Tool. See also `speechly config`.)
 
 ## See usage statistics
 You can view statistics about the usage of your applications by typing
@@ -225,7 +321,7 @@ This will print hourly usage statistics for all applications in the current proj
 
 You can view statistics only of a given application by adding the flag `-a APP_ID`, where `APP_ID` is the relevant application id. To adjust the time interval of the results, use the `--start-date` and `--end-date` flags. For example
 ```bash
-speechly stats -a APPLICATION_ID --start-date 2021-03-01 --end-date 2021-04-01
+speechly stats -a APP_ID --start-date 2021-03-01 --end-date 2021-04-01
 ```
 shows usage statistics for March 2021 (the `--end-date` value is exclusive) for `APPLICATION_ID`.
 
@@ -234,12 +330,23 @@ When working on a configuration, it can be very useful to inspect the Example ut
 
 Enter the directory that contains your configuration files, and run
 ```bash
-speechly sample . -a app-id
+speechly sample . -a APP_ID
 ```
-and again replace `app-id` with a valid app-id from your current project.
+and again replace `APP_ID` with a valid app id from your current project.
 
 By default the above command returns 100 randomly generated Example utterances from the configuration. If you want to see a larger sample, you can specify the number of Example utterances to generate with the `--batch_size` (or `-s` for short) flag:
 ```bash
-speechly sample . -a app-id --batch_size 1000
+speechly sample . -a APP_ID --batch_size 1000
 ```
 samples 1000 Example utterances.
+
+## Evaluate your configuration
+You can evaluate a deployed configuration with the CLI. Assuming you have a set of test utterances in file `test_utterances.txt`, the corresponding ground truth annotations in file `ground_truth.txt`, and the configuration you want to test deployed to `APP_ID` (replace this with your actual App id), first run
+```bash
+speechly annotate -a APP_ID --input test_utterances.txt > annotated_utterances.txt
+```
+and then
+```bash
+speechly evaluate --input annotated_utterances.txt --ground-truth ground_truth.txt
+```
+The command will output those test utterances that failed, as well as the total number of thest utterances that passed without error. For more details about evaluation, please see [above](#evaluate-the-accuracy-of-your-configuration).
