@@ -29,7 +29,7 @@ $facebook-blue: rgb(59, 89, 152)
 $primary: {{ $primary }}
 $secondary: {{ $secondary }}
 $link: $primary
-$family-sans-serif: "{{ $sansSerifFont }}", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+$family-sans-serif: "{{ $sansSerifFont }}", sans-serif
 $family-monospace: "{{ $monospaceFont }}", monospace
 $family-bold: "{{ $boldFont }}", sans-serif
 $navbar-dropdown-border-top: none
@@ -48,7 +48,7 @@ $input-icon-color: $dark
 $dropdown-menu-min-width: 16rem
 $dropdown-content-offset: .5rem
 $border: 2px solid $light
-$body-size: 1.1rem
+$body-size: 1rem
 $box-padding: 2rem 1rem
 
 // Site-specific variables (no direct usage by Bulma)
@@ -80,11 +80,12 @@ $max-character-width: 80ch
 
 // Custom styles
 
-// font-family: Sansation
-
 .hero-body
   padding: 1.5rem !important
   padding-top: 3rem !important
+
+  .subtitle
+    line-height: 1.5
 
 .is-size-2
   font-size: 22px !important
@@ -116,21 +117,21 @@ $max-character-width: 80ch
 code
   font-size: 13px !important
 
-h3,h4,h5,h6 
+h3,h4,h5,h6
   color: #888 !important
 
 .footer
   margin-top: 1.5rem
 
-.button 
+.button
   margin-top: 0.5rem
 
-.release-notes h3 
+.release-notes h3
   font-size: 1rem
   font-weight: 600
   padding-top: 1.25rem
 
-.release-notes h5 
+.release-notes h5
   font-size: 1rem
   font-weight: 100
 
@@ -166,6 +167,6 @@ h3,h4,h5,h6
   // border-top: 1px solid #ccc
   // border-bottom: 1px solid #ccc
 
-@keyframes fadeEffect 
+@keyframes fadeEffect
   from {opacity: 0;}
   to {opacity: 1;}

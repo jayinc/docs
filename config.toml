@@ -33,7 +33,7 @@ primary = "#53A3F9"
 home = ["HTML", "JSON"]
 
 [[params.fonts]]
-name = "Avenir"
+name = "Inter"
 sizes = [400]
 type = "sans_serif"
 
