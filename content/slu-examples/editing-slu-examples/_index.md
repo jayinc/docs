@@ -15,7 +15,7 @@ This page is about the basics of Speechly Annotation Language (SAL). SAL is the 
 
 On this page, you'll learn about configuring your application through example utterances, basic concepts intents and entities and the Speechly Dashboard basic functionalities
 
-{{< info title="Example configurations" >}} If you want to get up and running fast, you can copypaste our [example configurations](/slu-examples/example-configuration/) and try them out.{{< /info >}}
+{{< info title="Example configurations" >}} If you want to get up and running fast, you can copy paste our [example configurations](/slu-examples/example-configuration/) and try them out.{{< /info >}}
 
 
 ## Example utterances
@@ -61,7 +61,7 @@ You may want to include more than one intent to your model to enable more functi
 *turn_lights_off switch the lights off
 ```
 
-Here we made the `*turn_lights_off` utterances simply by copypasting the example utterances for the `*turn_lights_on` intent, and then replaced the word "on" with the word "off". Please note that there is no need for the examples of different intents to look almost identical, as they do here. In fact, it's better if the utterances of different intents were unsimilar, but sometimes that's just not feasible.
+Here we made the `*turn_lights_off` utterances simply by copy pasting the example utterances for the `*turn_lights_on` intent, and then replaced the word "on" with the word "off". Please note that there is no need for the examples of different intents to look almost identical, as they do here. In fact, it's better if the utterances of different intents were unsimilar, but sometimes that's just not feasible.
 
 So far, we haven't identified any entities in our examples. Consider now building an application where the users could control multiple devices at home, such as the air conditioner or the music player, in addition to just lights. Now, you may see that the use of entities in the configuration could be useful.
 
