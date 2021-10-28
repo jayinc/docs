@@ -30,7 +30,7 @@ Multimodality enables users to use the graphical user interface to correct thems
 
 # Use touch for corrections
 
-Another way to make corrections is touch. Touch corrections are typically best done by offering the user a short list of vibale options based on what they have said or done earlier.
+Another way to make corrections is touch. Touch corrections are typically best done by offering the user a short list of viable options based on what they have said or done earlier.
 
 If your user is filling a form by using voice commands, for example, they might only need to correct one field. It can be the most intuitive to tap the correct field and make the correction by using touch. Make sure you support both ways for corrections.
 

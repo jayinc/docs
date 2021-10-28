@@ -16,7 +16,7 @@ This is a high-level overview of the Client Library API. The specifics depend on
 The most important methods especially for new users involve initialising the client, as well as registering a segment handler with `onSegmentChange`.
 
 ## initialize(app_id: string | proj_id: string)
-Creates and initialises the Client. In most of our Client Libraries this is implemented by the constructor of the client object. For most applications you must pass as argument the `app_id` (available from the Dashboard or Command Line Tool). All connections initated by the client will be targeted to this `app_id`.
+Creates and initialises the Client. In most of our Client Libraries this is implemented by the constructor of the client object. For most applications you must pass as argument the `app_id` (available from the Dashboard or Command Line Tool). All connections initiated by the client will be targeted to this `app_id`.
 
 You can also pass a `project_id`. This is a more advanced feature, where you must identify the application for each context separately (see `startContext`).
 

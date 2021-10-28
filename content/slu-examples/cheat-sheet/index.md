@@ -91,7 +91,7 @@ Above, `product_code` defines a template that expands to all possible utterances
 
 *Note: We provide you with several predefined [Standard Variables](/slu-examples/standard-variables/) that you can take into use in your configuration! These are useful when your configuration must support numbers, dates, times, sequences of alphanumeric characters, email addresses, etc.*
 
-Note that any varible `x` *must* be declared in your configuration before it can be used with the `$x` notation. This is ok:
+Note that any variable `x` *must* be declared in your configuration before it can be used with the `$x` notation. This is ok:
 ```
 x = [hello | hi | greetings]
 *greet $x

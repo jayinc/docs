@@ -438,7 +438,7 @@ extension SpeechlyManager: SpeechClientDelegate {
 }
 ```
 
-You can define whichever methods you consider useful in your delegate, according to your logic. These methods can be handy if you would like to perform e.g. incremental searches or UI updates, where you use e.g. entities to filter throught a list of items and save the filtered results and then filter them again once more entities arrive.
+You can define whichever methods you consider useful in your delegate, according to your logic. These methods can be handy if you would like to perform e.g. incremental searches or UI updates, where you use e.g. entities to filter through a list of items and save the filtered results and then filter them again once more entities arrive.
 
 ### Parsing the results
 
