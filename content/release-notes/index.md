@@ -31,7 +31,7 @@ menu:
 
 # May 25, 2021
 
-- **ASR improvements** New basline ASR model.
+- **ASR improvements** New baseline ASR model.
 - **Dashboard** The dashboard now has a button ("SHOW SAMPLE") that displays a set of random example utterances generated from the given SAL configuration.
 - **Web UI components** Major update with a unified API for both JS and React, a new TranscriptDrawer component with just-in-time usage hints for an improved user onboarding experience, a listening prompt to indicate when the app is listening, and a developer-triggerable command to acknowledge that an utterance was received.
 
@@ -57,14 +57,14 @@ menu:
 - **SLU engine** Update to entity detection model with increased accuracy.
 - **Documentation** More examples of gRPC API usage.
 - **Browser client** More robust audio recording.
-- **ASR improvements** New basline ASR model.
+- **ASR improvements** New baseline ASR model.
 - **Small bugfixes**
 
 # March 5, 2021
 
 - **Training time estimates** Changed the way how we estimate deployment times when training the models.
 - **Playground** Pressing 'alt' temporarily enables the Try-button so that one can use the Playground with an old model while a new one is being trained.
-- **Model deployment** More robust tranining infrastructure that reduces model training times in certain situations.
+- **Model deployment** More robust training infrastructure that reduces model training times in certain situations.
 
 # February 22, 2021
 
@@ -75,7 +75,7 @@ menu:
 
 # February 8, 2021
 
-- **Debugging models in Speechly CLI tool** New debugging feature in Speechly CLI tool displays example utterances for a given configuration and calculates statistics about occurences of intents and entities.
+- **Debugging models in Speechly CLI tool** New debugging feature in Speechly CLI tool displays example utterances for a given configuration and calculates statistics about occurrences of intents and entities.
 - **Support for unadapted ASR** Typically Speechly SLU models are adapted for a specific use case, which helps improve speech recognition accuracy. Now you can also use unadapted ASR for pure transcription use cases. You can test the speech recognition performance [here](https://api.speechly.com/dashboard/#/playground/ead4b9e7-e5c4-48ed-9dae-3c530916ed76?language=en-US)
 - **Support for new entities** Speechly Annotation Language supports natively phone numbers, emails, person names and website addresses. This enables developers to easily build voice experiences that contain these data types, for example something like "Add contact with name Jack Johnston and email address jack dot johnston at gmail dot com"
 - **Minor bugfixes**
