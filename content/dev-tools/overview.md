@@ -12,7 +12,7 @@ menu:
 
 Our development library offering consists of
 - Client libraries,
-- precomplied gRPC stubs, and
+- precompiled gRPC stubs, and
 - raw gRPC protocol definitions.
 
 # Which one should I use?
