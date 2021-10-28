@@ -131,7 +131,7 @@ Open the index.html file in Chrome browser. You will see the ‘Microphone’ bu
 Create a new Client and initialize it: 
 ```javascript
 const client = new Client({
- appId: ‘HereIs-AppId-From-The-Dashbord’,
+ appId: ‘HereIs-AppId-From-The-Dashboard’,
  language: ‘en-US’,
 });
 client.initialize();
