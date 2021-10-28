@@ -18,11 +18,8 @@ $top-margin: $navbar-height + $toc-scroll-margin
     &-page-link
       word-break: break-word
 
-      &.is-active-link
-        color: $dark
-
-        &::before
-          background-color: $primary
+      &.is-active-link::before
+        background-color: $primary
 
 .content
   h1::before, h2::before, h3::before, h4::before, h5::before, h6::before

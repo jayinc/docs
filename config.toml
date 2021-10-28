@@ -26,8 +26,8 @@ description = "Speechly is the Fast, Accurate, and Simple Voice Interface API fo
 icon_set = "ionicons"
 
 [params.colors]
-secondary = "#302666"
-primary = "#53A3F9"
+secondary = "#060D13"
+primary = "#009FFA"
 
 [outputs]
 home = ["HTML", "JSON"]

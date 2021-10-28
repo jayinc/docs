@@ -38,7 +38,7 @@ $input-color: $black
 $footer-background-color: #0e181c
 $footer-padding: 0;
 $code: $primary
-$dark: rgb(8, 35, 51)
+$dark: #212121
 
 @import "bulma/sass/utilities/derived-variables"
 
@@ -84,35 +84,40 @@ $max-character-width: 80ch
   padding: 1.5rem !important
   padding-top: 3rem !important
 
+  .title
+    color: $dark !important
+
   .subtitle
     line-height: 1.5
 
-.is-size-2
-  font-size: 22px !important
-  font-weight: 600 !important
+  .is-size-2
+    font-size: 2rem !important
+    font-weight: 700 !important
 
-.is-size-4
-  font-size: 1.15rem !important
+  .is-size-4
+    font-size: 1.15rem !important
 
 .content
+  h1, h2, h3, h4
+    margin-top: 2em !important
+    font-weight: 600
+
   h1
-    font-size: 22px !important
-    margin-top: 2em !important
+    font-size: 1.5rem !important
+
   h2
-    font-size: 18px !important
-    margin-top: 2em !important
+    font-size: 1.125rem !important
+
   h3
     font-size: 14px !important
-    font-weight: bold
     text-transform: uppercase
     letter-spacing: 0.1em
-    margin-top: 2em !important
+
   h4
     font-size: 14px !important
     font-weight: bold
     text-transform: uppercase
     letter-spacing: 0.1em
-    margin-top: 2em !important
 
 code
   font-size: 13px !important
