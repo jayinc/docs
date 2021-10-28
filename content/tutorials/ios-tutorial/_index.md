@@ -419,7 +419,7 @@ struct ToggleButton<Content: View>: View {
 }
 ```
 
-And for the trasncript, let's add the following to `TranscriptText.swift`:
+And for the transcript, let's add the following to `TranscriptText.swift`:
 
 ```swift
 import SwiftUI
