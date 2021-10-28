@@ -4,7 +4,7 @@ description: Picks entities from the users utterance that can be used for exampl
 weight: 4
 ---
 # Basic information
-This confguration defines simple phrases from which the Speechly API will extract two types of entities: `brand` and `color`. These can be used in a downstream application in different ways. The [Codepen demo](https://codepen.io/aukkonen/pen/QWgoKWM?editors=1010) related to this example uses the entities to change the values of two drop-down UI components, one for brand, another for color. These drop-downs could be further mapped to control for example a faceted search engine.
+This configuration defines simple phrases from which the Speechly API will extract two types of entities: `brand` and `color`. These can be used in a downstream application in different ways. The [Codepen demo](https://codepen.io/aukkonen/pen/QWgoKWM?editors=1010) related to this example uses the entities to change the values of two drop-down UI components, one for brand, another for color. These drop-downs could be further mapped to control for example a faceted search engine.
 
 While this may seem trivial, this same general idea underlies our [Fashion Demo](https://fashion.speechly.com). This example is just a simplified version of the configuration used there.
 
