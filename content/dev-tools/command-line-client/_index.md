@@ -276,7 +276,7 @@ Matching rows out of total:
 Accuracy:
 0.50
 ```
-In the first case the prediction is missing the `amount` entity. This type of errors can be mitigated by ensuring that the utterance appears in the configuraiton and is properly annotated. In the second case the `delivery_date` entity was correctly recognized (from the word "tomorrow"), but since the return value of relative dates resolves to the current day, it is a good idea to make sure all the relative dates in your ground truth data are computed against some fixed reference date, and then use that when running `speechly annotate` as described above.
+In the first case the prediction is missing the `amount` entity. This type of errors can be mitigated by ensuring that the utterance appears in the configuration and is properly annotated. In the second case the `delivery_date` entity was correctly recognized (from the word "tomorrow"), but since the return value of relative dates resolves to the current day, it is a good idea to make sure all the relative dates in your ground truth data are computed against some fixed reference date, and then use that when running `speechly annotate` as described above.
 
 If you modify and re-deploy your application, you can run the evaluation again with the same test utterances (`test_utterances.txt`) and ground truths (`ground_truth.csv`). Note that you always have to first run `speechly evaluate annotate` to get the API annotations, and then `speechly evaluate accuracy` to compare these against the ground truths.
 
@@ -349,4 +349,4 @@ and then
 ```bash
 speechly evaluate --input annotated_utterances.txt --ground-truth ground_truth.txt
 ```
-The command will output those test utterances that failed, as well as the total number of thest utterances that passed without error. For more details about evaluation, please see [above](#evaluate-the-accuracy-of-your-configuration).
+The command will output those test utterances that failed, as well as the total number of these utterances that passed without error. For more details about evaluation, please see [above](#evaluate-the-accuracy-of-your-configuration).
