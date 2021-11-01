@@ -9,6 +9,12 @@ menu:
     weight: 999
 ---
 
+# November 1, 2021
+
+- **React Voice Form Components**: A new UI library with multi-modal browser widgets that can be controlled with speech, tap, pointer, and keyboard. Available [with npm](https://www.npmjs.com/package/@speechly/react-voice-forms). Documentation [here](/client-libraries/voice-forms/).
+- **Speechly Web UI Components**: Latest version adds support for "Tap-to-Talk" feature. A short tap on the microphone button will start recording, and the connection is closed automatically when the user stops talking.
+- **Speechly Command Line Tools**: Version 0.5.4 introduces functionality for evaluating a deployed Speechly configuration using a list of test utterances (text only). Documentation [here](/dev-tools/command-line-client/#evaluate-the-accuracy-of-your-configuration).
+
 # October 8, 2021
 
 - **Speechly Dashboard**: Updated look of main application listing and SAL configuration view with small usability improvements. Three new example configurations for [common use-cases of Voice UIs on the Web](/web-examples/).

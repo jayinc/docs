@@ -20,7 +20,7 @@ We also provide a [polyfill](https://github.com/speechly/speech-recognition-poly
 
 # More information
 Our Client libraries are open source. You can find more information about them as well as other usage examples on Github:
-- [Web client](https://github.com/speechly/browser-client)
+- [Web client](https://github.com/speechly/speechly)
 - [React client](https://github.com/speechly/react-client)
 - [iOS client](https://github.com/speechly/ios-client)
 - [Android client](https://github.com/speechly/android-client)
