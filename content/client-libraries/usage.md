@@ -1,13 +1,13 @@
 ---
-title: Basic usage
-description: How to install, instantiate and use Speechly Client Libraries
+title: Getting started
+description: How to install and use Speechly Client Libraries
 display: article
 category: "User guide"
 weight: 1
-aliases: [/client-libraries/web-client/, /client-libraries/react/tutorial/, /client-libraries/ios/tutorial/, /client-libraries/react-native/]
+aliases: [/client-libraries/web-client/, /client-libraries/react/tutorial/, /client-libraries/ios/tutorial/, /client-libraries/react-native/, /client-libraries/usage/]
 menu:
   sidebar:
-    title: "Basic usage"
+    title: "Getting started"
     parent: "Client Libraries"
 ---
 <script>
