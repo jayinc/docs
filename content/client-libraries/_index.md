@@ -11,7 +11,7 @@ menu:
 The Client libraries take care of audio capture, bidirectional streaming, authentication, and other technical complexities. They also come bundled with common UI components (a microphone button, transcript view).
 
 # Installing and using the Client Libraries
-See [Basic usage instructions](usage) to learn how to install and use the Client libraries.
+See [Getting started](usage) to learn how to install and use the Client libraries.
 
 All Client libraries also adhere to the same [high-level API](client-api-reference). There are some platform specific differences, but conceptually we have tried to make the Clients as similar as possible. If you know how to use one, getting started with another should be easy (provided both platforms are familiar to you).
 
@@ -20,10 +20,10 @@ We also provide a [polyfill](https://github.com/speechly/speech-recognition-poly
 
 # More information
 Our Client libraries are open source. You can find more information about them as well as other usage examples on Github:
-- [Web client](https://github.com/speechly/speechly)
-- [React client](https://github.com/speechly/react-client)
+- [Browser client](https://github.com/speechly/speechly/tree/main/libraries/browser-client)
+- [React client](https://github.com/speechly/speechly/tree/main/libraries/react-client)
 - [iOS client](https://github.com/speechly/ios-client)
 - [Android client](https://github.com/speechly/android-client)
 - [Web Speech API polyfill](https://github.com/speechly/speech-recognition-polyfill)
 
-We are very happy to receive pull requests to the above repositories, but it is a good idea to be in touch with us first, for example by opening an issue or by sending email to hello@speechly.com.
+We are very happy to receive pull requests to the above repositories! More information about how to contribute is [here](https://github.com/speechly/speechly#contributions).

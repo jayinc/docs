@@ -31,7 +31,7 @@ menu:
 
 <div class="WebClient tabcontent platform code" style="display: block;">
 
-Speechly Web Components help you get started quickly. Push-To-Talk Button component integrates [browser-client](https://www.npmjs.com/package/@speechly/browser-client) library and requires no other dependencies to work. Just add the resources in your <code>head</code> block:
+Speechly Web Components help you get started quickly. Push-To-Talk Button component integrates [browser-client](https://www.npmjs.com/package/@speechly/browser-client) library (which you can of course install via npm as well) and requires no other dependencies to work. Just add the resources in your <code>head</code> block:
 
 {{< highlight html >}}
 <head>
@@ -321,7 +321,6 @@ as well as the <a href="https://github.com/speechly/android-client/blob/main/cli
 
 # Learn more!
 
-Learn how to [configure](/slu-examples/) your own application.
+Check out our [examples](https://github.com/speechly/speechly/tree/main/examples) and [demos](https://github.com/speechly/speechly/tree/main/demos) on GitHub.
 
-For descriptions of complete example applications built using the client libraries,
-please see our [tutorials](/tutorials/).
+Also, learn how to [configure](/slu-examples/) your own application.

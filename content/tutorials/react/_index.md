@@ -399,7 +399,7 @@ export const SpeechApp: React.FC = (): JSX.Element => {
 };
 ```
 
-Here we use the other main part of Speechly React client - a custom hook that consumes the state preserved in `SpeechProvider`. Feel free to check the [API documentation of React client](https://github.com/speechly/react-client/blob/master/docs/modules/_index_d_.md) to see what other properties are returned by the hook.
+Here we use the other main part of Speechly React client - a custom hook that consumes the state preserved in `SpeechProvider`. Feel free to check the [API documentation of React client](https://github.com/speechly/speechly/blob/main/libraries/react-client/docs/modules/_index_d_.md) to see what other properties are returned by the hook.
 
 Now you can go ahead and try talking to the app and see what you get back in the transcript. Congratulations, you've just integrated Speechly into the app.
 
