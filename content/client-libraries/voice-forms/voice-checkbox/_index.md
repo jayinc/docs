@@ -19,7 +19,11 @@ menu:
 
 Voice Checkbox is a voice-enabled checkbox component. It changes to checked if the specified _entity type_ is found in the SpeechSegment.
 
-You can [customise the appearance](#styling-the-components) the component with `css`.
+## Preview
+
+<img src="preview.png" alt="Voice Checkbox" >
+
+Voice Checkbox dressed in `capsule` and `mui` themes. See [styling the components](../styling-the-components) for more information.
 
 ## Usage
 
@@ -37,10 +41,11 @@ Ensure you have added the `@speechly/react-voice-forms` dependency:
 npm i @speechly/react-voice-forms
 {{< /highlight >}}
 
-Import the component:
+Import the component and a css theme:
 
 {{< highlight tsx >}}
 import { VoiceCheckbox } from '@speechly/react-voice-forms'
+import '@speechly/react-voice-forms/css/theme/mui.css'
 {{< /highlight >}}
 
 Place the form component somewhere inside your `SpeechProvider` block:
@@ -57,9 +62,5 @@ Place the form component somewhere inside your `SpeechProvider` block:
 ### Properties
 
 {{< include-md "api-for-react.md" >}}
-
-## Styling the components
-
-{{< include-md "../react-voice-forms-styling.md" >}}
 
 </div>

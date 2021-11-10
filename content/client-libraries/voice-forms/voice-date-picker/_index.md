@@ -19,7 +19,11 @@ menu:
 
 Voice Date Picker is a voice-enabled date picker component. It changes the date if the specified _entity type_ with a [Speechly Date](/slu-examples/standard-variables/#supported-standard-variables) as the _entity value_ is found in the SpeechSegment.
 
-You can [customise the appearance](#styling-the-components) the component with `css`.
+## Preview
+
+<img src="preview.png" alt="Voice Date Picker" >
+
+Voice Date Picker dressed in `capsule` and `mui` themes. See [styling the components](../styling-the-components) for more information.
 
 ## Usage
 
@@ -37,10 +41,12 @@ Ensure you have added the `@speechly/react-voice-forms` dependency:
 npm i @speechly/react-voice-forms
 {{< /highlight >}}
 
-Import the component:
+Import the component, a css theme and component styling:
 
 {{< highlight tsx >}}
 import { VoiceDatePicker } from '@speechly/react-voice-forms'
+import '@speechly/react-voice-forms/css/components/VoiceDatePicker.css'
+import '@speechly/react-voice-forms/css/theme/mui.css'
 {{< /highlight >}}
 
 Place the form component somewhere inside your `SpeechProvider` block:
@@ -57,21 +63,5 @@ Place the form component somewhere inside your `SpeechProvider` block:
 ### Properties
 
 {{< include-md "api-for-react.md" >}}
-
-## Styling the components
-
-Copy `voice-form-component-calendar.css` with the following content to your `src` folder and import it. Tweak to your liking!
-
-{{< highlight tsx >}}
-import "voice-form-component-calendar.css";
-{{< /highlight >}}
-
-`voice-form-component-calendar.css`
-{{< highlight css >}}
-{{< include-html "voice-form-component-calendar.css" >}}
-{{< /highlight >}}
-
-
-{{< include-md "../react-voice-forms-styling.md" >}}
 
 </div>

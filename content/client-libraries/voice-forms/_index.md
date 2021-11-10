@@ -12,20 +12,30 @@ menu:
 
 ### [Voice Input](/client-libraries/voice-forms/voice-input)
 
-Voice Input is a voice-enabled text field component. Its value changes whenever the specified _entity type_ is found in the SpeechSegment. The new value will be the _entity's value_.
+<img src="voice-input/preview.png" alt="Voice Input" >
+
+Voice-enabled text field component
 
 ### [Voice Select](/client-libraries/voice-forms/voice-select)
 
-Voice Select is a voice-enabled single-select dropdown component. It changes the selection based on the _intent_, _entity type_ or _entity value_ found in the SpeechSegment.
+<img src="voice-select/preview.png" alt="Voice Select" >
+
+Voice-enabled single-select dropdown component
 
 ### [Voice Toggle](/client-libraries/voice-forms/voice-toggle)
 
-Voice Toggle is a voice-enabled single-select button group component. It changes the selection based on the _intent_, _entity type_ or _entity value_ found in the SpeechSegment.
+<img src="voice-toggle/preview.png" alt="Voice Toggle" >
+
+Voice-enabled single-select button group component
 
 ### [Voice Checkbox](/client-libraries/voice-forms/voice-checkbox)
 
-Voice Checkbox is a voice-enabled checkbox component. It changes to checked if the specified _entity type_ is found in the SpeechSegment.
+<img src="voice-checkbox/preview.png" alt="Voice Checkbox" >
+
+Voice-enabled checkbox component
 
 ### [Voice Date Picker](/client-libraries/voice-forms/voice-date-picker)
 
-Voice Date Picker is a voice-enabled date picker component. It changes the date if the specified _entity type_ with a [Speechly Date](/slu-examples/standard-variables/#supported-standard-variables) as the _entity value_ is found in the SpeechSegment.
+<img src="voice-date-picker/preview.png" alt="Voice Date Picker" >
+
+Voice-enabled date picker component
