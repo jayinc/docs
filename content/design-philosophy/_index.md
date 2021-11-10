@@ -13,25 +13,24 @@ Speechly is solving voice in a completely novel way. Our API is fully streaming 
 They are split into four short "chapters", with the following content:
 
 # [Chapter 1: Setting the right Context](/design-philosophy/set-right-context/)
-- Resist the temptation to build an assistant
-- Design the interactions around commanding not conversing
+- Don't build a Voice Assistant
+- Design for Command & Control
 - Give visual guidance on what the user can say
-- Use voice for the tasks it is good for
+- Use voice ONLY for the tasks it's good for
 
 # [Chapter 2: Receiving Commands from the User](/design-philosophy/receive-commands/)
 - Onboard the user
-- When a pressable button is available wake word is not needed
-- Prefer a push-to-talk button mechanism
+- Avoid using a wake word
+- Use a Push-to-Talk button
 - Signal clearly when the microphone button is pushed down
 
 # [Chapter 3: Giving Feedback to the User](/design-philosophy/give-feedback/)
 - Use non-interruptive modalities for feedback
-- Minimize latency with streaming natural language understanding
-- Steer user’s gaze and visual attention
-- Minimize visual unrest in triggered events
+- Minimize latency with Spoken Language Understanding
+- Steer user’s gaze and minimize visual unrest
 
 # [Chapter 4: Recovering from Mistakes](/design-philosophy/mitigate-fails/)
-- Show the text transcript
-- Fail fast
-- Enable corrections both verbally and by using touch
-- Offer an alternative way to complete the task
+- Show the transcript
+- Produce results fast, but offer opportunity to correct
+- Have an intent for verbal corrections
+- Offer alternative ways to complete tasks without Voice
