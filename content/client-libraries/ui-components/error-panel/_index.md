@@ -30,7 +30,7 @@ Error Panel automatically unhides when the user presses Push-To-Talk Button if <
 <div class="WebClient tabcontent platform code" style="display: block;">
 
 {{< highlight html >}}
-<script type="text/javascript" src="https://speechly.github.io/browser-ui/dev/error-panel.js"></script>
+<script type="text/javascript" src="https://unpkg.com/@speechly/browser-ui/core/error-panel.js"></script>
 
 <error-panel
   placement="bottom" >

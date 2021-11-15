@@ -5,7 +5,7 @@ echo
 # ----------- Voice form local build step start -----------------
 TARGET_PATH=content/client-libraries/voice-forms/voice-input
 TARGET_NAME=api-for-react.md
-LOCAL_SOURCE=../speechly-demos/libraries/react-voice-forms/docs/modules/components_VoiceInput.md
+LOCAL_SOURCE=../speechly/libraries/react-voice-forms/docs/modules/components_VoiceInput.md
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$LOCAL_SOURCE\"...
 cat $LOCAL_SOURCE > $TARGET_PATH/$TARGET_NAME
 # Remove lines until line containing the matched str
@@ -18,7 +18,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Voice form local build step start -----------------
 TARGET_PATH=content/client-libraries/voice-forms/voice-select
 TARGET_NAME=api-for-react.md
-LOCAL_SOURCE=../speechly-demos/libraries/react-voice-forms/docs/modules/components_VoiceSelect.md
+LOCAL_SOURCE=../speechly/libraries/react-voice-forms/docs/modules/components_VoiceSelect.md
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$LOCAL_SOURCE\"...
 cat $LOCAL_SOURCE > $TARGET_PATH/$TARGET_NAME
 # Remove lines until line containing the matched str
@@ -31,7 +31,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Voice form local build step start -----------------
 TARGET_PATH=content/client-libraries/voice-forms/voice-toggle
 TARGET_NAME=api-for-react.md
-LOCAL_SOURCE=../speechly-demos/libraries/react-voice-forms/docs/modules/components_VoiceToggle.md
+LOCAL_SOURCE=../speechly/libraries/react-voice-forms/docs/modules/components_VoiceToggle.md
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$LOCAL_SOURCE\"...
 cat $LOCAL_SOURCE > $TARGET_PATH/$TARGET_NAME
 # Remove lines until line containing the matched str
@@ -44,7 +44,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Voice form local build step start -----------------
 TARGET_PATH=content/client-libraries/voice-forms/voice-checkbox
 TARGET_NAME=api-for-react.md
-LOCAL_SOURCE=../speechly-demos/libraries/react-voice-forms/docs/modules/components_VoiceCheckbox.md
+LOCAL_SOURCE=../speechly/libraries/react-voice-forms/docs/modules/components_VoiceCheckbox.md
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$LOCAL_SOURCE\"...
 cat $LOCAL_SOURCE > $TARGET_PATH/$TARGET_NAME
 # Remove lines until line containing the matched str
@@ -57,7 +57,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Voice form local build step start -----------------
 TARGET_PATH=content/client-libraries/voice-forms/voice-date-picker
 TARGET_NAME=api-for-react.md
-LOCAL_SOURCE=../speechly-demos/libraries/react-voice-forms/docs/modules/components_VoiceDatePicker.md
+LOCAL_SOURCE=../speechly/libraries/react-voice-forms/docs/modules/components_VoiceDatePicker.md
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$LOCAL_SOURCE\"...
 cat $LOCAL_SOURCE > $TARGET_PATH/$TARGET_NAME
 # Remove lines until line containing the matched str

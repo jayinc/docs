@@ -31,7 +31,7 @@ You can toggle visibility and customise the appearance and the hint texts on the
 <div class="WebClient tabcontent platform code" style="display: block;">
 
 {{< highlight html >}}
-<script type="text/javascript" src="https://speechly.github.io/browser-ui/latest/push-to-talk-button.js"></script>
+<script type="text/javascript" src="https://unpkg.com/@speechly/browser-ui/core/push-to-talk-button.js"></script>
 
 <push-to-talk-button
   appid="YOUR_APP_ID_FROM_SPEECHLY_DASHBOARD"

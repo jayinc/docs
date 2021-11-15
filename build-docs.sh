@@ -7,7 +7,7 @@ CURL="curl --fail --silent --show-error"
 # ----------- Build step start -----------------
 TARGET_PATH=content/client-libraries/ui-components/push-to-talk-button
 TARGET_NAME=api-for-web-components.html
-SOURCE=https://speechly.github.io/browser-ui/dev/index.html
+SOURCE=https://unpkg.com/@speechly/browser-ui/core/index.html
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$SOURCE\"...
 $CURL $SOURCE > $TARGET_PATH/$TARGET_NAME
 # Remove lines until line containing the matched str
@@ -21,7 +21,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Build step start -----------------
 TARGET_PATH=content/client-libraries/ui-components/big-transcript
 TARGET_NAME=api-for-web-components.html
-SOURCE=https://speechly.github.io/browser-ui/dev/index.html
+SOURCE=https://unpkg.com/@speechly/browser-ui/core/index.html
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$SOURCE\"...
 $CURL $SOURCE > $TARGET_PATH/$TARGET_NAME
 # Remove lines until line containing the matched str
@@ -35,7 +35,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Build step start -----------------
 TARGET_PATH=content/client-libraries/ui-components/transcript-drawer
 TARGET_NAME=api-for-web-components.html
-SOURCE=https://speechly.github.io/browser-ui/dev/extras.html
+SOURCE=https://unpkg.com/@speechly/browser-ui/core/extras.html
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$SOURCE\"...
 $CURL $SOURCE > $TARGET_PATH/$TARGET_NAME
 # Remove lines until line containing the matched str

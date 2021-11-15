@@ -34,7 +34,7 @@ You can customise the appearance of the component.
 <div class="WebClient tabcontent platform code" style="display: block;">
 
   {{< highlight html >}}
-  <script type="text/javascript" src="https://speechly.github.io/browser-ui/latest/big-transcript.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/@speechly/browser-ui/core/big-transcript.js"></script>
 
   <big-transcript
     placement="top"

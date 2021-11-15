@@ -34,7 +34,7 @@ The voice command hints can be provided as an array of strings. You can also cus
 <div class="WebClient tabcontent platform code" style="display: block;">
 
   {{< highlight html >}}
-  <script type="text/javascript" src="https://speechly.github.io/browser-ui/latest/transcript-drawer.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/@speechly/browser-ui/core/transcript-drawer.js"></script>
 
   <transcript-drawer
     hint='["Try: 1st hint", "Try: 2nd hint"]'

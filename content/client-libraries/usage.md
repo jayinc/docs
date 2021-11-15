@@ -35,9 +35,9 @@ Speechly Web Components help you get started quickly. Push-To-Talk Button compon
 
 {{< highlight html >}}
 <head>
-  <script type="text/javascript" src="https://speechly.github.io/browser-ui/latest/push-to-talk-button.js"></script>
-  <script type="text/javascript" src="https://speechly.github.io/browser-ui/latest/big-transcript.js"></script>
-  <script type="text/javascript" src="https://speechly.github.io/browser-ui/latest/error-panel.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/@speechly/browser-ui/core/push-to-talk-button.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/@speechly/browser-ui/core/big-transcript.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/@speechly/browser-ui/core/error-panel.js"></script>
 </head>
 {{< /highlight >}}
 </div>
@@ -268,7 +268,7 @@ document
 </script>
 {{< /highlight >}}
 
-You can find more details about the Speechly Web Components in [this tutorial](https://speechly.github.io/browser-ui/latest/).
+You can find more details about the Speechly Web Components in [this tutorial](https://unpkg.com/@speechly/browser-ui/core/).
 </div>
 
 <div class="React tabcontent platform code">
