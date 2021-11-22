@@ -28,8 +28,8 @@ When developing a Speechly Voice UI you can focus on defining what happens when 
 {{< figure src="speechly_architecture.jpg" alt="Speechly Application Architecture Overview" title="Speechly Application Architecture Overview" >}}
 
 # What next
-1. Check out [Example Configurations for the Web](/web-examples/).
-2. More details about the Speechly Web Components can be found in [this tutorial](https://unpkg.com/@speechly/browser-ui/core/). Note that it is only one of the many [Client Libraries](/client-libraries/) that we provide.
+1. Check out [Example Configurations for the Web](/web-examples/) and try them out in CodePen.
+2. Have a look at Speechly's [Client Libraries](/client-libraries/) to discover the best way to introduce voice input to your app. For example, the above CodePens use the [Web Components](https://docs.speechly.com/client-libraries/usage/?platform=WebClient).
 3. The above video is the fifth part of a [five-part series](how-speechly-works) where we introduce our technology, introduce some basic concepts and briefly explain how things work under the hood.
 4. Read about how to [Configure](/slu-examples/) Speechly for the needs of your Application.
 5. Take a look at our [Development tool offering](/dev-tools).

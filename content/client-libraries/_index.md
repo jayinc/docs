@@ -25,5 +25,6 @@ Our Client libraries are open source. You can find more information about them a
 - [iOS client](https://github.com/speechly/ios-client)
 - [Android client](https://github.com/speechly/android-client)
 - [Web Speech API polyfill](https://github.com/speechly/speech-recognition-polyfill)
+- [Web components](https://github.com/speechly/speechly/tree/main/libraries/browser-ui)
 
 We are very happy to receive pull requests to the above repositories! More information about how to contribute is [here](https://github.com/speechly/speechly#contributions).

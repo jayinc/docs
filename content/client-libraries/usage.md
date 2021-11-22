@@ -267,8 +267,6 @@ document
  });
 </script>
 {{< /highlight >}}
-
-You can find more details about the Speechly Web Components in [this tutorial](https://unpkg.com/@speechly/browser-ui/core/).
 </div>
 
 <div class="React tabcontent platform code">
