@@ -18,7 +18,7 @@ The video below will in five minutes teach you the basics of using the Speechly 
 
 <br>
 
-The Codepen example used in the video can be accessed [here](https://codepen.io/speechly/pen/MWvNEoM).
+The Codepen example used in the video can be accessed [here](https://codepen.io/speechly/pen/MWvNEoM?editors=1010).
 
 # System Overview
 Adding voice functionalities to a website (or mobile application) with Speechly is similar to traditional event driven UI programming. In "non-voice" UIs callbacks are triggered by the user interacting with some UI component on the website / application. In Speechly powered UIs this event triggering happens via the user talking.
