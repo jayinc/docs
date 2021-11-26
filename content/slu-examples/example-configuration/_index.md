@@ -44,7 +44,7 @@ An empty configuration provides a transcript, but no intents or entities. Use th
 Click <a href="voice-faq">here for more details</a>.
 </p>
 </td>
-<td><img src="voice-faq.png"><br><a href="https://codepen.io/aukkonen/pen/powYbMd?editors=1010" target="_new">View in Codepen.</a></td>
+<td><img src="voice-faq.png"><br><a href="https://codepen.io/speechly/pen/JjygryK?editors=1010" target="_new">View in Codepen.</a></td>
 </tr>
 </table>
 
@@ -64,7 +64,7 @@ Click <a href="voice-faq">here for more details</a>.
 Click <a href="search-filters">here for more details</a>.
 </p>
 </td>
-<td><img src="sneaker-filters.png"><br><a href="https://codepen.io/aukkonen/pen/QWgoKWM?editors=1010" target="_new">View in Codepen.</a></td>
+<td><img src="sneaker-filters.png"><br><a href="https://codepen.io/speechly/pen/dyzxVzv?editors=1010" target="_new">View in Codepen.</a></td>
 </tr>
 </table>
 
@@ -84,6 +84,6 @@ Click <a href="search-filters">here for more details</a>.
 Click <a href="contact-form">here for more details</a>.
 </p>
 </td>
-<td><img src="contact-form.png"><br><a href="https://codepen.io/aukkonen/pen/abwMmNM?editors=1010" target="_new">View in Codepen.</a></td>
+<td><img src="contact-form.png"><br><a href="https://codepen.io/speechly/pen/wvqVrqx?editors=1010" target="_new">View in Codepen.</a></td>
 </tr>
 </table>
