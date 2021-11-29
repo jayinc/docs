@@ -9,6 +9,13 @@ menu:
     weight: 999
 ---
 
+# November 29, 2021
+
+- **Dashboard**: New sign-up flow and new application configuration view.
+- **Speechly API**: New data centers in the US (east and west coasts), UK and Singapore. This reduces transcript latency in client applications.
+- **Client libraries and demos**: All of our open-source Client libraries, example applications, and demos are now in the same [GitHub repository](https://github.com/speechly/speechly). Our developer community engagement will in the future be focused around this repository.
+- **Other small improvements and bugfixes.**
+
 # November 1, 2021
 
 - **React Voice Form Components**: A new UI library with multi-modal browser widgets that can be controlled with speech, tap, pointer, and keyboard. Available [with npm](https://www.npmjs.com/package/@speechly/react-voice-forms). Documentation [here](/client-libraries/voice-forms/).
