@@ -312,6 +312,13 @@ speechly deploy . -a APP_ID
 ```
 where `APP_ID` is replaced with the app_id to which you want to deploy the configuration. (Note that `APP_ID` must belong to the project that is currently active in the Command Line Tool. See also `speechly config`.)
 
+## Download a deployed configuration
+To download a local copy of a deployed configuration into OUTPUT_DIR, run
+```bash
+speechly download -a APP_ID -o OUTPUT_DIR
+```
+Note: This is important if you have updated and deployed the configuration on the Dashboard!
+
 ## See usage statistics
 You can view statistics about the usage of your applications by typing
 ```bash
