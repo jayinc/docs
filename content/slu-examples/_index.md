@@ -15,10 +15,10 @@ When "configuring" a Speechly application, you are essentially providing this tr
 
 # Getting started
 - [Configuration basics](basics) gives a brief introduction to basic configuration concepts.
-- [Video Tutorial Series](https://www.youtube.com/watch?v=V9NatIsd4O4&list=PLhhkCt5KRs0_nCHsFwm3JmBSoF8ZZcnMB) walks you through Speechly configuration using  flight booking as an example.
-- [Example configurations](/slu-examples/example-configuration/) are useful learning material.
+- [Speechly Annotation Language Video Tutorial Series](https://www.youtube.com/watch?v=V9NatIsd4O4&list=PLhhkCt5KRs0_nCHsFwm3JmBSoF8ZZcnMB) walks you through Speechly configuration using a flight booking example.
 - [Speechly Annotation Language Syntax](/slu-examples/cheat-sheet/) explains the details of SAL syntax.
 - [Speechly Annotation Language Semantics](/slu-examples/semantics) explains the details of SAL semantics.
+- [Example configurations](/slu-examples/example-configuration/) are useful learning material.
 - [Standard Variables](/slu-examples/standard-variables) are useful when your configuration must support numbers, dates, times, etc.
 - [Entity Data Types](/slu-examples/postprocessing) are useful when combined with the Standard Variables to obtain entity values in a normalized format.
 - [Imports and Lookups](/slu-examples/imports-and-lookups/) allow you to import external data to your configuration, and have the API return normalised entity values by using simple lookup tables.
