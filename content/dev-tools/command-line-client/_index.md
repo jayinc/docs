@@ -193,9 +193,35 @@ You can generate a new API token by following steps 1-4 in [Adding an API token]
 If you have several projects, you must separately replace the API token for each of these by creating a new token for every project in the Dashboard, and pasting it in the config file.
 
 
+# Converting an Alexa Model [Beta]
+
+To convert an Alexa Interaction Model to a Speechly configuration,
+1. copy the Interaction Model JSON from the Alexa Developer Console and save it into a file (e.g. `alexa-model.json`),
+1. enter the directory in which you want the Speechly configuration files to be stored, and
+1. and then run
+```bash
+speechly convert /path/to/my-alexa-model.json
+```
+Depending on what kind of intents and slots the original Interaction Model had, the directory should now contain a `config.yaml` file, and possibly a number of `.csv` files. The `config.yaml` file contains the configuration, and the `.csv` files contain [imported entity values and lookup mappings](/slu-examples/imports-and-lookups). These can be deployed with the `deploy` command as any other Speechly configuration.
+
+## Supported Alexa slot types
+The Alexa slot types are mapped to Speechly [Standard Variables](/slu-examples/standard-variables) and [Entity Types](/slu-examples/postprocessing)  as follows:
+| Alexa slot type | Speecly Standard Variable / Entity Type   |
+|-----------------|-------------------------------------------|
+| AMAZON.NUMBER      | SPEECHLY.NUMBER / Number               |
+| AMAZON.ORDINAL     | SPEECHLY.SMALL_ORDINAL_NUMBER / Number |
+| AMAZON.DATE        | SPEECHLY.DATE / Date                   |
+| AMAZON.TIME        | SPEECHLY.TIME / Time                   |
+| AMAZON.PhoneNumber | SPEECHLY.PHONE_NUMBER / Phone          |
+
+The conversion will fail if the input contains any other Alexa slot type.
+
+Also note that the converter *does not support dialogue management features* that Alexa skills sometimes rely on. The resulting Speechly application can recognize the intents and slots as they appear in the Alexa Interaction Model, however, Speechly will not trigger follow-up questions for instance if the user’s utterance is missing a required slot.
+
+
 # Evaluate the accuracy of your configuration
 
-Once you have deployed a configuration, it is useful to evaluate the configuration with a set of test utterances that users of your application might say. Evaluation helps you to verify that these utterances work on your app, and identify those test utterances that are not recognized properly. To use the evaluation feature, you need both the set of test utterances, as well as ground truth annotations (correct intents and entities) for these.
+Once you have deployed a configuration, it is useful to evaluate its accuracy with a set of test utterances that users of your application might say. Evaluation helps you to verify that these utterances work on your app, and identify those test utterances that are not recognized properly. To use the evaluation feature, you need both the set of test utterances, as well as ground truth annotations (correct intents and entities) for these.
 
 Evaluation consists two steps:
 1) Run `speechly annotate` to submit your test utterances to the API to be annotated.
