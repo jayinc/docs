@@ -4,7 +4,8 @@
     {
     "title": {{ .Title | jsonify }},
     "date": {{ .Date | jsonify }},
-    "content": {{ .RawContent | jsonify }}
+    "content": {{ .RawContent | jsonify }},
+    "url": {{ .Permalink | jsonify }}
     }
     {{ end }}
 ]
