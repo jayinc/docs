@@ -7,5 +7,8 @@ menu:
   sidebar:
     title: "Product updates"
     weight: 999
+outputs: 
+  - html
+  - json
 ---
 
