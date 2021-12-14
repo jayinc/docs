@@ -48,10 +48,20 @@ Install the client with npm:
 npm install --save @speechly/react-client
 npm install --save @speechly/react-ui
 {{< /highlight >}}
-And import the components into your application:
+And import the context provider into your application:
 {{< highlight typescript >}}
+// index.js
 import React from "react";
-import { SpeechProvider, useSpeechContext } from "@speechly/react-client";
+import { SpeechProvider } from "@speechly/react-client";
+
+ReactDOM.render(
+  <React.StrictMode>
+    <SpeechProvider appId="YOUR-APP-ID">
+      <App />
+    </SpeechProvider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 {{< /highlight >}}
 </div>
 
@@ -157,21 +167,21 @@ Include the following lines in your <code>body</code>:
 <div class="React tabcontent platform code">
 Import the components:
 {{< highlight typescript >}}
+// App.js
 import {
   PushToTalkButton,
   BigTranscript,
   ErrorPanel
 } from "@speechly/react-ui";
-{{< /highlight >}}
-Place the components inside your <SpeechProvider> block
-{{< highlight typescript >}}
+
 function App() {
   return (
-    <SpeechProvider appId="014ce3a6-9bbf-4605-976f-087a8f3ec178" language="en-US">
+    <div className="App">
       <BigTranscript placement="top"/>
       <PushToTalkButton placement="bottom" captureKey=" "/>
       <ErrorPanel placement="bottom"/>
-    </SpeechProvider>
+      <SpeechlyApp />
+    </App>
   );
 }
 {{< /highlight >}}
@@ -271,13 +281,21 @@ document
 
 <div class="React tabcontent platform code">
 {{< highlight typescript >}}
+// SpeechlyApp.js
+import { useSpeechContext } from "@speechly/react-client";
+
 function SpeechlyApp() {
   const { segment } = useSpeechContext()
-  return (
-    <div>
-      {segment ? <div className="segment">{segment.words.map(w => w.value).join(' ')}</div> : null}
-    </div>
-  )
+
+  useEffect(() => {
+    if (segment) {
+      const plainString = segment.words.filter(w => w.value).map(w => w.value).join(' ')
+      console.log(plainString)
+      if (segment.isFinal) {
+        console.log("✅", plainString)
+      }
+    }
+  }, [segment])
 }
 {{< /highlight >}}
 </div>
