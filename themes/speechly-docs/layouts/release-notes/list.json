@@ -1,0 +1,11 @@
+[
+    {{ range $index, $e := .Data.Pages }}
+    {{ if $index }}, {{ end }}
+    {
+    "title": {{ .Title | jsonify }},
+    "date": {{ .Date | jsonify }},
+    "content": {{ .RawContent | jsonify }},
+    "url": {{ .Permalink | jsonify }}
+    }
+    {{ end }}
+]
