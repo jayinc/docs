@@ -42,7 +42,7 @@ You can customise the appearance of the component.
   </big-transcript>
   {{< /highlight >}}
 
-  {{< include-html "api-for-web-components.html" >}}
+  {{< include-md "api-for-web-components.md" >}}
 
 </div>
 
@@ -70,18 +70,14 @@ You can customise the appearance of the component.
 
   ### Window messages listened
 
-  <ul>
-    <li><code>{type: "speechhandled", success: boolean}</code> - Optional. Shows an indication to the user that the voice command was successfully understood by the app. Use window.postMessage to send it on segment.isFinal.</li>
-  </ul>
+  - `{type: "speechhandled", success: boolean}` - Optional. Shows an indication to the user that the voice command was successfully understood by the app. Use window.postMessage to send it on segment.isFinal.
 
 </div>
 
 ## Displaying the confirmation checkmark
 
-Once the application has successfully responded to the voice input, send a <code>speechhandled</code> message to display the confirmation mark:
+Once the application has successfully responded to the voice input, send a `speechhandled` message to display the confirmation mark:
 
 {{< highlight tsx >}}
-
 window.postMessage({ type: "speechhandled", success: true }, "*");
-
 {{< /highlight >}}

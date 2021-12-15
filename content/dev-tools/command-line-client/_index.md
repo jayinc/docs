@@ -206,7 +206,7 @@ Depending on what kind of intents and slots the original Interaction Model had, 
 
 ## Supported Alexa slot types
 The Alexa slot types are mapped to Speechly [Standard Variables](/slu-examples/standard-variables) and [Entity Types](/slu-examples/postprocessing)  as follows:
-| Alexa slot type | Speecly Standard Variable / Entity Type   |
+| Alexa slot type | Speechly Standard Variable / Entity Type   |
 |-----------------|-------------------------------------------|
 | AMAZON.NUMBER      | SPEECHLY.NUMBER / Number               |
 | AMAZON.ORDINAL     | SPEECHLY.SMALL_ORDINAL_NUMBER / Number |

@@ -32,8 +32,8 @@ import '@speechly/react-voice-forms/css/theme/capsule.css'
 
 Set typography for the input elements to define custom typography:
 
-<code>app.css</code>
 {{< highlight css >}}
+/* app.css */
 select, button, input, label {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: regular;
@@ -49,8 +49,8 @@ select, input, button {
 
 Some properties of the themes are exposed as `css` variables. If you override them, be sure to include your `css` file *after* the themes.
 
-<code>app.css</code>
 {{< highlight css >}}
+/* app.css */
 body {
   --color-input-bg: #f2f7fa;
   --color-input-active-bg: #00a2ad;

@@ -31,7 +31,7 @@ menu:
 
 <div class="WebClient tabcontent platform code" style="display: block;">
 
-Speechly Web Components help you get started quickly. Push-To-Talk Button component integrates [browser-client](https://github.com/speechly/speechly/tree/main/libraries/browser-client) library (which you can of course install via npm as well) and requires no other dependencies to work. Just add the resources in your <code>head</code> block:
+Speechly Web Components help you get started quickly. Push-To-Talk Button component integrates [browser-client](https://github.com/speechly/speechly/tree/main/libraries/browser-client) library (which you can of course install via npm as well) and requires no other dependencies to work. Just add the resources in your `head` block:
 
 {{< highlight html >}}
 <head>
@@ -43,12 +43,16 @@ Speechly Web Components help you get started quickly. Push-To-Talk Button compon
 </div>
 
 <div class="React tabcontent platform code">
+
 Install the client with npm:
+
 {{< highlight bash >}}
 npm install --save @speechly/react-client
 npm install --save @speechly/react-ui
 {{< /highlight >}}
+
 And import the context provider into your application:
+
 {{< highlight typescript >}}
 // index.js
 import React from "react";
@@ -56,7 +60,7 @@ import { SpeechProvider } from "@speechly/react-client";
 
 ReactDOM.render(
   <React.StrictMode>
-    <SpeechProvider appId="YOUR-APP-ID">
+    <SpeechProvider appId="YOUR_APP_ID_FROM_SPEECHLY_DASHBOARD">
       <App />
     </SpeechProvider>
   </React.StrictMode>,
@@ -66,8 +70,9 @@ ReactDOM.render(
 </div>
 
 <div class="iOS tabcontent platform code">
-The Speechly iOS client is distributed using Swift Package Manager,
-add it as a dependency to your <code>Package.swift</code>:
+
+The Speechly iOS client is distributed using Swift Package Manager, add it as a dependency to your `Package.swift`:
+
 {{< highlight swift >}}
 // swift-tools-version:5.3
 import PackageDescription
@@ -85,17 +90,21 @@ let package = Package(
 {{< /highlight >}}
 
 Import the client...
+
 {{< highlight swift >}}
+
 import Speechly
+
 {{< /highlight >}}
 
 ... and instantiate it in your manager class:
+
 {{< highlight swift >}}
 let client: Speechly.Client
 
 public init() {
     client = try! Speechly.Client(
-        appId: UUID(uuidString: "YOUR_APP_ID_HERE")!,
+        appId: UUID(uuidString: "YOUR_APP_ID_FROM_SPEECHLY_DASHBOARD")!,
     )
     client.delegate = self
     ...
@@ -104,30 +113,31 @@ public init() {
 </div>
 
 <div class="Android tabcontent platform code">
-<p>The client package is available from our Github repository:<br>
-<a href="https://github.com/speechly/android-client/releases/latest">https://github.com/speechly/android-client/releases/latest</a>.</p>
+
+The client package is available from our [Github repository](https://github.com/speechly/android-client/releases/latest)
+
 Add android-client to your build.gradle dependencies.
+
 {{< highlight gradle >}}
 dependencies {
   implementation 'com.speechly:android-client:latest'
 }
 {{< /highlight >}}
 
-Import the client, as well as the <code>SpeechlyButton</code>.
+Import the client, as well as the `SpeechlyButton`.
+
 {{< highlight kotlin >}}
 import com.speechly.client.speech.Client
 import com.speechly.client.slu.*
 import com.speechly.ui.SpeechlyButton
 {{< /highlight >}}
 
-Instantiate the client in your main activity
-and add a <code>SpeechlyButton</code>.
-Make sure to replace <code>YOUR_APP_ID_HERE</code>
-with the correct Speecly app id.
+Instantiate the client in your main activity and add a `SpeechlyButton`. Make sure to replace `YOUR_APP_ID_FROM_SPEECHLY_DASHBOARD` with the correct Speechly App ID.
+
 {{< highlight kotlin >}}
 private val speechlyClient: Client = Client.fromActivity(
         activity = this,
-        UUID.fromString("YOUR_APP_ID_HERE")
+        UUID.fromString("YOUR_APP_ID_FROM_SPEECHLY_DASHBOARD")
 )
 
 private var button: SpeechlyButton? = null
@@ -147,25 +157,27 @@ starting and stopping listening for speech, and a display component for showing 
 </div>
 
 <div class="WebClient tabcontent platform code" style="display: block;">
-Include the following lines in your <code>body</code>:
+
+Include the following lines in your `body`:
+
 {{< highlight html >}}
 <big-transcript
-  placement="top" >
+  placement="top">
 </big-transcript>
-
 <push-to-talk-button
   appid="YOUR_APP_ID_FROM_SPEECHLY_DASHBOARD"
-  placement="bottom" >
+  placement="bottom">
 </push-to-talk-button>
-
 <error-panel
-  placement="bottom" >
+  placement="bottom">
 </error-panel>
 {{< /highlight >}}
 </div>
 
 <div class="React tabcontent platform code">
+
 Import the components:
+
 {{< highlight typescript >}}
 // App.js
 import {
@@ -188,8 +200,9 @@ function App() {
 </div>
 
 <div class="iOS tabcontent platform code">
-Initialise the <code>TranscriptView</code> and <code>MicrophoneButtonView</code>,
-and add them in the <code>addViews</code> function of your manager class.
+
+Initialise the `TranscriptView` and `MicrophoneButtonView`, and add them in the `addViews` function of your manager class.
+
 {{< highlight swift >}}
 let transcriptView = TranscriptView()
 lazy var speechButton = MicrophoneButtonView(delegate: self)
@@ -203,6 +216,7 @@ public func addViews(view: UIView) {
 
 Implement an extension that maps the microphone button to
 starting and stopping the client.
+
 {{< highlight swift >}}
 extension SpeechlyManager: MicrophoneButtonDelegate {
     func didOpenMicrophone(_ button: MicrophoneButtonView) {
@@ -216,11 +230,9 @@ extension SpeechlyManager: MicrophoneButtonDelegate {
 </div>
 
 <div class="Android tabcontent platform code">
-In your main activity,
-define a touch listener that
-activates and deactivates audio transmission.
-Also, in the <code>onCreate</code> method
-assign this listener to <code>SpeechlyButton</code>.
+
+In your main activity, define a touch listener that activates and deactivates audio transmission. Also, in the `onCreate` method assign this listener to `SpeechlyButton`.
+
 {{< highlight kotlin >}}
 private var buttonTouchListener = object : View.OnTouchListener {
     override fun onTouch(v: View?, event: MotionEvent?): Boolean {
@@ -246,9 +258,10 @@ override fun onCreate(savedInstanceState: Bundle?) {
 </div>
 
 # Handle speech input
-The basic idea of the client-side API is to provide a “live view” to the ongoing speech segment. This is done by registering a callback function that receives a <code>Segment</code> data structure as argument. This data structure represents the ongoing speech segment. Also see our [Client API reference](/client-libraries/client-api-reference/).
+The basic idea of the client-side API is to provide a “live view” to the ongoing speech segment. This is done by registering a callback function that receives a `Segment` data structure as argument. This data structure represents the ongoing speech segment. Also see our [Client API reference](/client-libraries/client-api-reference/).
 
 After an audio context has started, callback is called every time the Speechly API returns an event that updates the currently ongoing segment.
+
 <div class="tab">
   <button class="tablinks platform WebClient active" onclick="openTab(event, 'platform=WebClient')">Web Components</button>
   <button class="tablinks platform React" onclick="openTab(event, 'platform=React')">React</button>
@@ -257,18 +270,17 @@ After an audio context has started, callback is called every time the Speechly A
 </div>
 
 <div class="WebClient tabcontent platform code" style="display: block;">
-Assign a listener to the <code>push-to-talk-button</code> that handles broadcasted updates
-to the ongoing <code>SpeechSegment</code>.
+
+Assign a listener to the `push-to-talk-button` that handles broadcasted updates to the ongoing `SpeechSegment`.
+
 {{< highlight html >}}
 <script type="text/javascript">
 document
   .getElementsByTagName("push-to-talk-button")[0]
   .addEventListener("speechsegment", (e) => {
     const segment = e.detail;
-
     // Handle speech segment and make tentative changes to app state
     console.log("speechsegment message:", segment);
-
     if (segment.isFinal) {
       // Handle speech segment and make permanent changes to app state
       // Optionally show confirmation
@@ -289,10 +301,11 @@ function SpeechlyApp() {
 
   useEffect(() => {
     if (segment) {
-      const plainString = segment.words.filter(w => w.value).map(w => w.value).join(' ')
-      console.log(plainString)
+      // Handle speech segment and make tentative changes to app state
+      console.log(segment);
       if (segment.isFinal) {
-        console.log("✅", plainString)
+        // Handle speech segment and make permanent changes to app state
+        console.log("✅", segment)
       }
     }
   }, [segment])
@@ -301,7 +314,9 @@ function SpeechlyApp() {
 </div>
 
 <div class="iOS tabcontent platform code">
+
 Implement the `Speechly.SpeechlyDelegate` for reacting to recognition results.
+
 {{< highlight swift >}}
 extension SpeechlyManager: SpeechlyDelegate {
     func speechlyClientDidUpdateSegment(_ client: SpeechlyProtocol, segment: Segment) {
@@ -317,8 +332,9 @@ extension SpeechlyManager: SpeechlyDelegate {
 </div>
 
 <div class="Android tabcontent platform code">
-In the <code>onCreate</code> method,
-define the callback to be used for handling a <code>Segment</code>.
+
+In the `onCreate` method, define the callback to be used for handling a `Segment`.
+
 {{< highlight kotlin >}}
 override fun onCreate(savedInstanceState: Bundle?) {
     ...
@@ -331,6 +347,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
     ...
 }
 {{< /highlight >}}
+
 For more details, please see our <a href="/client-libraries/client-api-reference/">Client API reference</a>,
 as well as the <a href="https://github.com/speechly/android-client/blob/main/client/src/main/kotlin/com/speechly/client/slu/Segment.kt">source code of Segment on Github</a>.
 </div>

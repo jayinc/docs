@@ -42,7 +42,7 @@ The voice command hints can be provided as an array of strings. You can also cus
   </transcript-drawer> 
   {{< /highlight >}}
 
-  {{< include-html "api-for-web-components.html" >}}
+  {{< include-md "api-for-web-components.md" >}}
 
 </div>
 
@@ -73,7 +73,7 @@ The voice command hints can be provided as an array of strings. You can also cus
 
 ## Displaying the confirmation checkmark
 
-Once the application has successfully responded to the voice input, send a <code>speechhandled</code> message to display the confirmation mark:
+Once the application has successfully responded to the voice input, send a `speechhandled` message to display the confirmation mark:
 
 {{< highlight tsx >}}
 

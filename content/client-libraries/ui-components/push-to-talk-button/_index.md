@@ -17,7 +17,7 @@ menu:
   }
 </script>
 
-Push-To-Talk Button is a holdable switch for controlling listening for speech. Pressing the button starts listening by calling <code>startContext</code>. Releasing it turns listening off by calling <code>stopContext</code>. Desktop users can control listening on/off with an optional keyboard hotkey, e.g. <code>space</code>.
+Push-To-Talk Button is a holdable switch for controlling listening for speech. Pressing the button starts listening by calling `startContext`. Releasing it turns listening off by calling `stopContext`. Desktop users can control listening on/off with an optional keyboard hotkey, e.g. `space`.
 
 You can toggle visibility and customise the appearance and the hint texts on the button.
 
@@ -43,7 +43,7 @@ You can toggle visibility and customise the appearance and the hint texts on the
 </push-to-talk-button>
 {{< /highlight >}}
 
-{{< include-html "api-for-web-components.html" >}}
+{{< include-md "api-for-web-components.md" >}}
 
 </div>
 
@@ -77,6 +77,6 @@ import { PushToTalkButton } from "@speechly/react-ui";
 
 ## Button placement options
 
-- Place the button close to the bottom-center of the viewport (fixed) to indicate app-wide speech control. Use <code>placement="bottom"</code> for this option.
+- Place the button close to the bottom-center of the viewport (fixed) to indicate app-wide speech control. Use `placement="bottom"` for this option.
 - Place the button close to a group of components if speech input only controls a few input fields.
 - Place the button close to an input field if speech input only controls that component (e.g. text in a search box)

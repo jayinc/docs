@@ -9,10 +9,12 @@ menu:
     title: "Quick Start"
 ---
 # Getting started with Speechly Web Components
+
 The video below will in five minutes teach you the basics of using the Speechly [Dashboard](https://www.speechly.com/dashboard) and Playground, as well as guide you through the three steps of
-1. setting up the Speechly microphone UI component,
-2. configuring an Appid, and
-3. binding the events returned by our API to UI functions.
+
+1. Setting up the Speechly microphone UI component,
+2. Configuring an Appid, and
+3. Binding the events returned by our API to UI functions.
 
 {{<youtube QmpFAJmF1gk>}}
 
@@ -21,6 +23,7 @@ The video below will in five minutes teach you the basics of using the Speechly 
 The Codepen example used in the video can be accessed [here](https://codepen.io/speechly/pen/MWvNEoM?editors=1010).
 
 # System Overview
+
 Adding voice functionalities to a website (or mobile application) with Speechly is similar to traditional event driven UI programming. In "non-voice" UIs callbacks are triggered by the user interacting with some UI component on the website / application. In Speechly powered UIs this event triggering happens via the user talking.
 
 When developing a Speechly Voice UI you can focus on defining what happens when the user says something. The difficult part of turning speech to events is taken care of by our Client libraries and the Speechly API. The figure below illustrates this.
@@ -28,6 +31,7 @@ When developing a Speechly Voice UI you can focus on defining what happens when 
 {{< figure src="speechly_architecture.jpg" alt="Speechly Application Architecture Overview" title="Speechly Application Architecture Overview" >}}
 
 # What next
+
 1. Check out [Example Configurations for the Web](/web-examples/) and try them out in CodePen.
 2. Have a look at Speechly's [Client Libraries](/client-libraries/) to discover the best way to introduce voice input to your app. For example, the above CodePens use the [Web Components](https://docs.speechly.com/client-libraries/usage/?platform=WebClient).
 3. The above video is the fifth part of a [five-part series](how-speechly-works) where we introduce our technology, introduce some basic concepts and briefly explain how things work under the hood.

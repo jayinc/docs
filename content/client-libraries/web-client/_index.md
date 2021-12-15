@@ -34,7 +34,7 @@ $ yarn install
 
 3. You'll find your application ID on the Speechly Dashboard. Make sure your application status is `Deployed`.
 
-{{< figure src="appid.png" alt="Speechly SLU Examples configuration view showing Speechly app id" title="The app ID is encircled in blue." >}}
+{{< figure src="appid.png" alt="Speechly SLU Examples configuration view showing Speechly App ID" title="The app ID is encircled in blue." >}}
 
 4. Add your application ID and the model language to environmental variables. By default, your app language is `en-US`, but it can be configured in the Speechly Dashboard. You can see the app language next to your app ID.
 
