@@ -3,3 +3,4 @@ resources/
 .DS_Store
 *.orig
 *~
+.hugo_build.lock
