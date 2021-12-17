@@ -65,25 +65,24 @@ Of course you can also build the client from source if you need to run this on a
 </div>
 
 # Adding an API token
-After installing the CLI, you must obtain an API token from the [Dashboard](https://api.speechly.com/dashboard). Please follow these steps to create an API token:
+After installing the CLI, you must obtain an API token from the [Dashboard](https://api.speechly.com/dashboard). The API tokens are project specific. If you need to access multiple projects from the CLI, you must create a separate token for each project. Please follow these steps to create an API token:
 
 1. Log on to the [Dashboard](https://api.speechly.com/dashboard).
-2. Click on the project menu in the top right corner (to the left of your user name), and select "Project settings".
-3. On the page that opens, click on "Create API Token" and give the token a name (this can be whatever).
-4. Click "Show" to see the API Token (It is a long, random string.), and click "Copy" to copy the token to the clipboard.
+1. Select the project for which you want to create the API token from the project menu in the top-left corner.
+1. After selecting the project, click on "Settings" in the top navigation bar.
+1. On the Settings page, click on "Create API Token" and give the token a name (this can be whatever).
+1. Click "Show" to see the API Token, and click "Copy" to copy the token to the clipboard.
 
-You have now created an API token for the project that is active on the Dashboard. It provides access to all app_ids within the active project.
-
-Once you have copied the API token to the clipboard, run the command below where `<API_Token>` has been replaced with your API token. (Simply paste it in your terminal.) You should also specify a name for the project by replacing `project_name` with something descriptive.
+Next, run the command below where `<API_Token>` has been replaced with your API token. You should also specify a name for the project by replacing `project_name` with something descriptive.
 ```bash
-speechly config add --name project_name --apikey <API_Token> --host api.speechly.com
+speechly config add --name project_name --apikey <API_Token>
 ```
 Now you are ready to start using the CLI!
 
 
 # Managing multiple projects
 
-If you have split your applications to multiple projects, you must configure the CLI for each of the projects by following the steps in [Adding an API token](#adding-an-api-token) separately for each project. NOTE: Before selecting "Project settings", please ensure that you have the correct project currently selected in the Dashboard!
+If you have split your applications to multiple projects, you must configure the CLI for each of the projects by following the steps in [Adding an API token](#adding-an-api-token) separately for each project.
 
 You can see a list of all projects (called "Contexts" in the CLI) that have an API token, as well as the one that is currently active, by invoking
 ```bash
@@ -188,7 +187,7 @@ current-context: my_project
 ```
 where `A_REALLY_LONG_SEEMINGLY_RANDOM_STRING` is the current API token of project `my_project`. If you have several projects, they are all shown separately, each with their own API token.
 
-You can generate a new API token by following steps 1-4 in [Adding an API token](#adding-an-api-token). (Ensure that you are viewing the appropriate project in the Dashboard before generating the token!) When you have copied the new token, replace `A_REALLY_LONG_SEEMINGLY_RANDOM_STRING` with the new token, which is just another really long seemingly random string. Save the config file, and the new API token for project `my_project` is immediately in use.
+You can generate a new API token by following the steps in [Adding an API token](#adding-an-api-token). (Ensure that you are viewing the appropriate project in the Dashboard before generating the token!) When you have copied the new token, replace `A_REALLY_LONG_SEEMINGLY_RANDOM_STRING` with the new token. Save the config file, and the new API token for project `my_project` is immediately in use.
 
 If you have several projects, you must separately replace the API token for each of these by creating a new token for every project in the Dashboard, and pasting it in the config file.
 
