@@ -8,11 +8,12 @@ $panel-padding: 1.25rem
   +tablet-only
     +flex-size(18%)
 
-.section 
+.section
   padding: 0rem 1.5rem
 
 .dashboard
   +row
+  flex-grow: 1
 
   &-sidebar
     padding: $panel-padding
@@ -22,6 +23,7 @@ $panel-padding: 1.25rem
     overflow: auto
     flex: 1
     padding-top: $panel-padding
+    padding-bottom: $panel-padding * 2
 
     +desktop
       padding-left: 1rem

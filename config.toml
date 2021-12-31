@@ -26,21 +26,16 @@ description = "Speechly is the Fast, Accurate, and Simple Voice Interface API fo
 icon_set = "ionicons"
 
 [params.colors]
-secondary = "#060D13"
+secondary = "#0f1923"
 primary = "#009FFA"
 
 [outputs]
 home = ["HTML", "JSON"]
 
 [[params.fonts]]
-name = "Inter"
-sizes = [400]
+name = "DM Sans"
+sizes = [400, 500, 700]
 type = "sans_serif"
-
-[[params.fonts]]
-name = "Sansation"
-sizes = [800]
-type = "bold"
 
 [[params.fonts]]
 name = "Roboto Mono"
