@@ -39,7 +39,7 @@ type = "sans_serif"
 
 [[params.fonts]]
 name = "Roboto Mono"
-sizes = [400]
+sizes = [400, 600]
 type = "monospace"
 
 [[menu.main]]
