@@ -3,9 +3,9 @@
 {{ $fonts     := site.Params.fonts }}
 {{ $fontSlice := (slice) }}
 {{ range $fonts }}
-{{ $fontSlice = $fontSlice | append (printf "%s:%s" (replace .name " " "+") (delimit .sizes ";")) }}
+{{ $fontSlice = $fontSlice | append (printf "family=%s:wght@%s" (replace .name " " "+") (delimit .sizes ";")) }}
 {{ end }}
-{{ $fontsUrl := printf "https://fonts.googleapis.com/css2?family=%s" (delimit $fontSlice "|") }}
+{{ $fontsUrl := printf "https://fonts.googleapis.com/css2?%s" (delimit $fontSlice "&") }}
 {{ $sansSerifFont := (index (where site.Params.fonts ".type" "sans_serif") 0).name | default $defaults.sans_serif_font }}
 {{ $boldFont := (index (where site.Params.fonts ".type" "bold") 1 ).name | default  $defaults.bold_font }}
 {{ $monospaceFont := (index (where site.Params.fonts ".type" "monospace") 0).name | default $defaults.monospace_font }}
