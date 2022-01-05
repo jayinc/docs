@@ -3,11 +3,11 @@ function openTab(evt, tabQueryStrings) {
   updateTab();
 }
 
-function changeQueryString(searchString, documentTitle){      
-  documentTitle = typeof documentTitle !== 'undefined' ? documentTitle : document.title;      
-  var urlSplit=( window.location.href ).split( "?" );      
-  var obj = { Title: documentTitle, Url: urlSplit[0] + searchString };      
-  history.pushState(obj, obj.Title, obj.Url);      
+function changeQueryString(searchString, documentTitle){
+  documentTitle = typeof documentTitle !== 'undefined' ? documentTitle : document.title;
+  var urlSplit=( window.location.href ).split( "?" );
+  var obj = { Title: documentTitle, Url: urlSplit[0] + searchString };
+  history.pushState(obj, obj.Title, obj.Url);
 }
 
 const navbarMenu = () => {
@@ -36,13 +36,6 @@ const sidebarAccordion = () => {
 $(() => {
   navbarMenu();
   sidebarAccordion();
-  $('img')
-    .wrap('<span style="display:inline-block"></span>')
-    .css('display', 'block')
-    .parent()
-    .zoom({'magnify':0.4, 'on':'click'});
-  $('.navbar-logo').trigger('zoom.destroy');
-  $('.no-zoom').trigger('zoom.destroy');
 });
 
 function selectTab(tabname, id) {
@@ -56,7 +49,7 @@ function selectTab(tabname, id) {
     var match = el.classList.contains(id);
     el.classList[match ? 'add' : 'remove']('active');
   });
-  
+
   // now hide all the panels, then filter to
   // the one we're interested in, and show it
   document.querySelectorAll(`.tabcontent.${tabname}`).forEach(el => {

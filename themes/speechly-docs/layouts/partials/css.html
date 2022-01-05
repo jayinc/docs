@@ -9,10 +9,6 @@
 {{ $css          := resources.Get $sass | resources.ExecuteAsTemplate $sass . | toCSS $cssOpts }}
 {{ $iconSet      := site.Params.icon_set | default site.Data.defaults.icon_set }}
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 {{ if $inServerMode }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 {{ else }}

@@ -50,6 +50,18 @@ You can add warning/note boxes by using the following shortcode.
 
 If you want to add a subpage, create a new directory under the page directory under `/content/` and create a new `_index.md` file.
 
+### Adding release notes
+
+Add a release note by running
+
+```
+hugo new release-notes/YYYY-MM-DD.md
+```
+
+This will create a new release note in `/content/release-notes` and will take the date from the file name.
+
+Toggle the  `draft` flag to publish the post. By default it is set `true` and won't show up in the list.
+
 ## Commiting changes
 
 You can verify everything is working (alt tags correctly placed, no incorrect urls etc) by using (`htmlproofer`)[https://github.com/gjtorikian/html-proofer/blob/master/bin/htmlproofer] Once you are happy with the changes in your local environment, do `git add . && git commit -m 'commit message'` followed by `git push`.
