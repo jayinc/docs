@@ -1,7 +1,7 @@
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `placement?` | `string` | Optional "bottom" string turns on internal placement without any CSS positioning. |
-| `captureKey?` | `string` | Keyboard key to use for controlling the button. Passing e.g. ` ` (a spacebar) will mean that holding down the spacebar key will key the button pressed. |
+| `captureKey?` | `string` | Keyboard key to use for controlling the button. Passing e.g. `" "` (a space) will mean that holding down the spacebar key will key the button pressed. |
 | `size?` | `string` | The size of the button, as CSS (e.g. `5rem`). |
 | `gradientStops?` | `string`[] | Colours of the gradient around the button. Valid input is an array of two hex colour codes, e.g. `['#fff', '#000']`. |
 | `hide?` | `boolean` | Optional boolean. Default: false |
