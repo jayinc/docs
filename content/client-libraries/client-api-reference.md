@@ -49,21 +49,21 @@ The callback function registered with `onSegmentChange` is called repeatedly wit
 ```json
 Segment {
     contextId: string (UUID),
-    segmentId: int,
+    id: int,
     isFinal: boolean,
     intent: Intent,
     entities: list of Entity objects,
-    transcripts: list of Transcript objects
+    words: list of Transcript objects
 }
 ```
 | name | type | description |
 | ---- | ---- | ----------- |
 | contextId | string | The audio context to which this segment belongs to. |
-| segmentId | int | The index (zero-based) of this segment within the audio context. An audio context can consist of several consecutive segments. |
+| id | int | The index (zero-based) of this segment within the audio context. An audio context can consist of several consecutive segments. |
 | isFinal | boolean | A boolean that indicates if this is the last time callback is called with this segment. Subsequent calls to callback within the same audio context refer to the next segment. Note that none of the data associated with this segment will no longer be attached to the next segment. |
 | intent | SpeechIntent | The intent associated with this segment. There can only be one intent for a segment. |
 | entities | List<Entity> | A list of entities. There can be several entities that belong to the same segment. |
-| transcripts | List<Transcript> | A list of Transcript objects. Together these contain the text produced by speech recognition. |
+| words | List<Transcript> | A list of Transcript objects. Together these contain the text produced by speech recognition. |
 
 
 ## Intent
