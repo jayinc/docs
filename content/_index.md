@@ -14,3 +14,9 @@ The documentation is divided into the following sections (also shown in the menu
 - [Speechly gRPC API](/speechly-api/) contains a description and reference of our low-level gRPC API. (For advanced users only!)
 - [FAQ](/faq/) is for the Frequently Asked Questions
 - [Product updates](/release-notes/) lists recent updates to our products.
+
+# I Need Help
+
+Please [post a question at our Github discussions page](https://github.com/speechly/speechly/discussions) or for a more concrete technical problem, please file an [issue](https://github.com/speechly/speechly/issues).
+
+Try to be as specific as you can. Describe *what* you are trying to do, *how* you do it, and *what errors* (if any) you are getting. We are happy to help you forward!

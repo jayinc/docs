@@ -44,3 +44,5 @@ When developing a Speechly Voice UI you can focus on defining what happens when 
 For general discussion or questions, please use our [GitHub Discussion forum](https://github.com/speechly/speechly/discussions).
 
 For feature requests or bug reports, please file a [GitHub Issue](https://github.com/speechly/speechly/issues).
+
+Try to be as specific as you can. Describe what you are trying to do, how you do it, and what errors (if any) you are getting. We are happy to help you forward, and you will receive an answer much quicker if your question is formulated in a way so that we can easily understand what your problem might be.

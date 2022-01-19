@@ -8,6 +8,16 @@ menu:
     title: "FAQ"
 ---
 
+# Getting help
+
+- **I have a problem, but the documentation does not help!**
+
+Please [post a question at our Github discussions page](https://github.com/speechly/speechly/discussions) or for a more concrete technical problem, please file an [issue](https://github.com/speechly/speechly/issues).
+
+Try to be as specific as you can. Describe what you are trying to do, how you do it, and what errors (if any) you are getting. We are happy to help you forward, and you will receive an answer much quicker if your question is formulated in a way so that we can easily understand what your problem might be.
+
+Also, if there's no answer to your question here, you might find one on the Github discussions page.
+
 # Building models
 
 - **What are SLU rules?**
@@ -64,7 +74,7 @@ The device ID is a unique identifier for the end-user device. It is used in our 
 - **The microphone doesn't work on iOS and Mobile Safari?**
 iOS doesn't allow asking for microphone permissions on the page load, but rather, after user interaction. While some browsers might support other patterns, this is the best practice on all browsers, because the user should explicitly initiate the action that requires a microphone. If the permissions are asked on the page load, the user might not understand why it is needed, and may simply deny access.
 
-# Troubleshooting
+# Common problems
 
 - **Why I'm getting bad results on browser?**
 If you are experiencing bad speech recognition results on browser clients (React and browser) it's probably due to corrupted audio. As Speechly is optimized for low latency and real-time audio, the audio can become corrupted if the main thread is blocked for too long times.
@@ -75,7 +85,7 @@ Make sure your application's main thread is not blocked by moving all resource h
 The Speechly SLU model is based on machine learning. If your intents and entities are not recognized correctly, we recommend you to add more training rules (i.e., example utterances) to the configuration that contain those intents and entities. Then try again.
 
 - **I'm having a weird issue and can't find the answer from the documentation, or the documentation is not correct.**
-Please [send us an email](mailto:hello@speechly.com) and we can help you forward.
+Please [post a question at our Github discussions page](https://github.com/speechly/speechly/discussions) or for a more concrete technical problem, please file an [issue](https://github.com/speechly/speechly/issues). Try to be as specific as you can, describe what you are trying to do, how you do it, and what errors (if any) you are getting. We are happy to help you forward, and you will receive an answer much quicker if your question is formulated in a way that we can easily address it.
 
 - **Why do I get "Mic consent denied" error in the Playground? Why doesn't my microphone work in the Playground?**
 Once you start the Playground, you'll have to click on `Tap to start` and give permissions for your browser to access the microphone. Here's a short clip that shows the process:
