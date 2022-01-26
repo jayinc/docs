@@ -20,6 +20,16 @@
   to = "/ui-libraries/:splat"
   status = 301
 
+[[redirects]]
+  from = "/client-libraries/voice-forms/"
+  to = "/ui-libraries/voice-forms/"
+  status = 301
+
+[[redirects]]
+  from = "/client-libraries/voice-forms/*"
+  to = "/ui-libraries/voice-forms/:splat"
+  status = 301
+
 [[headers]]
   for = "/release-notes/index.json"
     [headers.values]
