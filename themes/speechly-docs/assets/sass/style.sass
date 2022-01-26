@@ -175,3 +175,24 @@ h3, h4, h5, h6
 
   &:hover
     color: $link
+
+.homegrid
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 16px
+
+  &-item
+    border: 1px solid #ddd
+    padding: 20px
+    border-radius: 6px
+    color: inherit
+    transition: all .15s ease
+
+    &:hover
+      box-shadow: 0 0 8px #e5e5e5
+      border-color: #d5d5d5
+
+    &-title
+      color: $dark
+      font-size: 18px
+      font-weight: 700

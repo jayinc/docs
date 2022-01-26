@@ -1,13 +1,11 @@
 ---
-title: "UI components"
+title: "UI Components"
 description: Speechly UI components provide the visual interface to support voice functionality.
-weight: 3
 category: "References"
 display: article
 menu:
   sidebar:
-    title: "UI components"
-    parent: "Client Libraries"
+    weight: 3
 ---
 
 <script>
@@ -24,31 +22,27 @@ menu:
 </div>
 
 <div class="view ComponentIntroduction tabcontent" style="display: block;">
-
   {{< figure src="Component introduction.png" alt="Introduction to Speechly UI Components" >}}
-
 </div>
 
 <div class="view TranscriptDrawer tabcontent">
-
   {{< figure src="Transcript Drawer.png" alt="Introduction to Speechly UI Components" >}}
-
 </div>
 
 
-### [Push-to-Talk Button](/client-libraries/ui-components/push-to-talk-button)
+## [Push-to-Talk Button](/ui-components/push-to-talk-button)
 
 Push-to-Talk Button is a holdable switch for controlling listening for speech.
 
-### [Big Transcript](/client-libraries/ui-components/big-transcript)
+## [Big Transcript](/ui-components/big-transcript)
 
 Big Transcript is an overlay-style component that displays real-time speech-to-text transcript and feedback to the user.
 
-### [Transcript Drawer](/client-libraries/ui-components/transcript-drawer)
+## [Transcript Drawer](/ui-components/transcript-drawer)
 
 Transcript Drawer is an alternative for Big Transcript that slides down from the top of the viewport. It displays usage tips along with the real-time speech-to-text transcript and feedback.
 
-### [Error Panel](/client-libraries/ui-components/error-panel)
+## [Error Panel](/ui-components/error-panel)
 
 Error Panel displays recovery instructions for common voice-related problems.
 

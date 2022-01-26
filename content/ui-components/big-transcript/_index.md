@@ -5,8 +5,7 @@ category: "References"
 display: article
 menu:
   sidebar:
-    title: "Big Transcript"
-    parent: "UI components"
+    parent: "UI Components"
 ---
 <script>
   // updateTab function specific to this pages' tabs; called by updateTab() in app.js

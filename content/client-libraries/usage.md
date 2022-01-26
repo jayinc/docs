@@ -146,7 +146,7 @@ private var button: SpeechlyButton? = null
 
 # Take UI components to use
 
-Ready-made [UI components](/client-libraries/ui-components/) provide a Push-To-Talk Button for
+Ready-made [UI components](/ui-components/) provide a Push-To-Talk Button for
 starting and stopping listening for speech, and a display component for showing the returned transcript (not yet available on Android). It is not necessary to use these, but we highly recommend this as a first step to get started quickly.
 
 <div class="tab">

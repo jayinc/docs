@@ -3,10 +3,6 @@ title: How-to guides
 description: Learn how to build Speechly applications from complete tutorials
 display: article
 category: "User guide"
-menu:
-  sidebar:
-    title: "How-to guides"
-    weight: 6
 ---
 
 # Web Client Tutorial: SpeechToChess

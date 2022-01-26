@@ -5,7 +5,7 @@ echo
 CURL="curl --fail --silent --show-error"
 
 # ----------- Build step start -----------------
-TARGET_PATH=content/client-libraries/ui-components/push-to-talk-button
+TARGET_PATH=content/ui-components/push-to-talk-button
 TARGET_NAME=api-for-web-components.html
 SOURCE=https://raw.githubusercontent.com/speechly/speechly/main/libraries/browser-ui/src/assets/index.html
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$SOURCE\"...
@@ -19,7 +19,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Build step end-----------------
 
 # ----------- Build step start -----------------
-TARGET_PATH=content/client-libraries/ui-components/big-transcript
+TARGET_PATH=content/ui-components/big-transcript
 TARGET_NAME=api-for-web-components.html
 SOURCE=https://raw.githubusercontent.com/speechly/speechly/main/libraries/browser-ui/src/assets/index.html
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$SOURCE\"...
@@ -33,7 +33,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Build step end-----------------
 
 # ----------- Build step start -----------------
-TARGET_PATH=content/client-libraries/ui-components/transcript-drawer
+TARGET_PATH=content/ui-components/transcript-drawer
 TARGET_NAME=api-for-web-components.html
 SOURCE=https://raw.githubusercontent.com/speechly/speechly/main/libraries/browser-ui/src/assets/extras.html
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$SOURCE\"...
@@ -48,7 +48,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 
 
 # ----------- Build step start -----------------
-TARGET_PATH=content/client-libraries/ui-components/push-to-talk-button
+TARGET_PATH=content/ui-components/push-to-talk-button
 TARGET_NAME=api-for-react.md
 SOURCE=https://raw.githubusercontent.com/speechly/speechly/main/libraries/react-ui/docs/modules/components_PushToTalkButton.md
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$SOURCE\"...
@@ -61,7 +61,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Build step end-----------------
 
 # ----------- Build step start -----------------
-TARGET_PATH=content/client-libraries/ui-components/big-transcript
+TARGET_PATH=content/ui-components/big-transcript
 TARGET_NAME=api-for-react.md
 SOURCE=https://raw.githubusercontent.com/speechly/speechly/main/libraries/react-ui/docs/modules/components_BigTranscript.md
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$SOURCE\"...
@@ -74,7 +74,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Build step end-----------------
 
 # ----------- Build step start -----------------
-TARGET_PATH=content/client-libraries/ui-components/transcript-drawer
+TARGET_PATH=content/ui-components/transcript-drawer
 TARGET_NAME=api-for-react.md
 SOURCE=https://raw.githubusercontent.com/speechly/speechly/main/libraries/react-ui/docs/modules/components_TranscriptDrawer.md
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$SOURCE\"...
@@ -87,7 +87,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Build step end-----------------
 
 # ----------- Voice form build step start -----------------
-TARGET_PATH=content/client-libraries/voice-forms/voice-input
+TARGET_PATH=content/ui-components/voice-forms/voice-input
 TARGET_NAME=api-for-react.md
 SOURCE=https://raw.githubusercontent.com/speechly/speechly/main/libraries/react-voice-forms/docs/modules/components_VoiceInput.md
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$SOURCE\"...
@@ -100,7 +100,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Voice form build step end-----------------
 
 # ----------- Voice form build step start -----------------
-TARGET_PATH=content/client-libraries/voice-forms/voice-select
+TARGET_PATH=content/ui-components/voice-forms/voice-select
 TARGET_NAME=api-for-react.md
 SOURCE=https://raw.githubusercontent.com/speechly/speechly/main/libraries/react-voice-forms/docs/modules/components_VoiceSelect.md
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$SOURCE\"...
@@ -113,7 +113,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Voice form build step end-----------------
 
 # ----------- Voice form build step start -----------------
-TARGET_PATH=content/client-libraries/voice-forms/voice-toggle
+TARGET_PATH=content/ui-components/voice-forms/voice-toggle
 TARGET_NAME=api-for-react.md
 SOURCE=https://raw.githubusercontent.com/speechly/speechly/main/libraries/react-voice-forms/docs/modules/components_VoiceToggle.md
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$SOURCE\"...
@@ -126,7 +126,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Voice form build step end-----------------
 
 # ----------- Voice form build step start -----------------
-TARGET_PATH=content/client-libraries/voice-forms/voice-checkbox
+TARGET_PATH=content/ui-components/voice-forms/voice-checkbox
 TARGET_NAME=api-for-react.md
 SOURCE=https://raw.githubusercontent.com/speechly/speechly/main/libraries/react-voice-forms/docs/modules/components_VoiceCheckbox.md
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$SOURCE\"...
@@ -139,7 +139,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Voice form build step end-----------------
 
 # ----------- Voice form build step start -----------------
-TARGET_PATH=content/client-libraries/voice-forms/voice-date-picker
+TARGET_PATH=content/ui-components/voice-forms/voice-date-picker
 TARGET_NAME=api-for-react.md
 SOURCE=https://raw.githubusercontent.com/speechly/speechly/main/libraries/react-voice-forms/docs/modules/components_VoiceDatePicker.md
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$SOURCE\"...
