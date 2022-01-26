@@ -1,7 +1,7 @@
 ---
 title: Development tools
 description: Speechly libraries, Dashboard, and Command line tool
-weight: 2
+weight: 5
 category: "References"
 display: article
 menu:
