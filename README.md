@@ -78,10 +78,10 @@ If there is an error fetching the content (e.g. content is not available), an er
 
 ### Generated files
 
-- `content/client-libraries/ui-components/push-to-talk-button/api-for-web-components.html`
-- `content/client-libraries/ui-components/big-transcript/api-for-web-components.html`
-- `content/client-libraries/ui-components/transcript-drawer/api-for-web-components.html`
-- `content/client-libraries/ui-components/push-to-talk-button/api-for-react.md`
-- `content/client-libraries/ui-components/big-transcript/api-for-react.md`
-- `content/client-libraries/ui-components/transcript-drawer/api-for-react.md`
+- `content/ui-components/push-to-talk-button/api-for-web-components.html`
+- `content/ui-components/big-transcript/api-for-web-components.html`
+- `content/ui-components/transcript-drawer/api-for-web-components.html`
+- `content/ui-components/push-to-talk-button/api-for-react.md`
+- `content/ui-components/big-transcript/api-for-react.md`
+- `content/ui-components/transcript-drawer/api-for-react.md`
 - `content/speechly-api/api-reference.md`

@@ -5,7 +5,7 @@ echo
 CURL="curl --fail --silent --show-error"
 
 # ----------- Build step start -----------------
-TARGET_PATH=content/client-libraries/ui-components/push-to-talk-button
+TARGET_PATH=content/ui-components/push-to-talk-button
 TARGET_NAME=api-for-web-components.html
 SOURCE=https://raw.githubusercontent.com/speechly/speechly/main/libraries/browser-ui/src/assets/index.html
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$SOURCE\"...
@@ -19,7 +19,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Build step end-----------------
 
 # ----------- Build step start -----------------
-TARGET_PATH=content/client-libraries/ui-components/big-transcript
+TARGET_PATH=content/ui-components/big-transcript
 TARGET_NAME=api-for-web-components.html
 SOURCE=https://raw.githubusercontent.com/speechly/speechly/main/libraries/browser-ui/src/assets/index.html
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$SOURCE\"...
@@ -33,7 +33,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Build step end-----------------
 
 # ----------- Build step start -----------------
-TARGET_PATH=content/client-libraries/ui-components/transcript-drawer
+TARGET_PATH=content/ui-components/transcript-drawer
 TARGET_NAME=api-for-web-components.html
 SOURCE=https://raw.githubusercontent.com/speechly/speechly/main/libraries/browser-ui/src/assets/extras.html
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$SOURCE\"...
@@ -48,7 +48,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 
 
 # ----------- Build step start -----------------
-TARGET_PATH=content/client-libraries/ui-components/push-to-talk-button
+TARGET_PATH=content/ui-components/push-to-talk-button
 TARGET_NAME=api-for-react.md
 SOURCE=https://raw.githubusercontent.com/speechly/speechly/main/libraries/react-ui/docs/modules/components_PushToTalkButton.md
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$SOURCE\"...
@@ -61,7 +61,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Build step end-----------------
 
 # ----------- Build step start -----------------
-TARGET_PATH=content/client-libraries/ui-components/big-transcript
+TARGET_PATH=content/ui-components/big-transcript
 TARGET_NAME=api-for-react.md
 SOURCE=https://raw.githubusercontent.com/speechly/speechly/main/libraries/react-ui/docs/modules/components_BigTranscript.md
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$SOURCE\"...
@@ -74,7 +74,7 @@ rm $TARGET_PATH/$TARGET_NAME.bak
 # ----------- Build step end-----------------
 
 # ----------- Build step start -----------------
-TARGET_PATH=content/client-libraries/ui-components/transcript-drawer
+TARGET_PATH=content/ui-components/transcript-drawer
 TARGET_NAME=api-for-react.md
 SOURCE=https://raw.githubusercontent.com/speechly/speechly/main/libraries/react-ui/docs/modules/components_TranscriptDrawer.md
 echo Building \"$TARGET_PATH/$TARGET_NAME\" from \"$SOURCE\"...

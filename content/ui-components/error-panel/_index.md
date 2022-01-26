@@ -1,12 +1,11 @@
 ---
 title: Error Panel
-weight: 10
+weight: 5
 category: "References"
 display: article
 menu:
   sidebar:
-    title: "Error Panel"
-    parent: "UI components"
+    parent: "UI Components"
 ---
 <script>
   // updateTab function specific to this pages' tabs; called by updateTab() in app.js

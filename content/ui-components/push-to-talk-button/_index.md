@@ -5,8 +5,7 @@ category: "References"
 display: article
 menu:
   sidebar:
-    title: "Push-To-Talk Button"
-    parent: "UI components"
+    parent: "UI Components"
 ---
 
 <script>

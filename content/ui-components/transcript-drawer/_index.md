@@ -5,8 +5,7 @@ category: "References"
 display: article
 menu:
   sidebar:
-    title: "Transcript Drawer"
-    parent: "UI components"
+    parent: "UI Components"
 ---
 <script>
   // updateTab function specific to this pages' tabs; called by updateTab() in app.js
