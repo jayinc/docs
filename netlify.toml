@@ -6,8 +6,8 @@
   HUGO_VERSION = "0.78.2"
 
 [[redirects]]
-  from = "https://docs.speechly.com/client-libraries/react-client/"
-  to = "https://docs.speechly.com/client-libraries/react/"
+  from = "/client-libraries/react-client/"
+  to = "/client-libraries/react/"
   status = 301
 
 [[redirects]]
