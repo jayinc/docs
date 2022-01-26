@@ -1,22 +1,32 @@
 ---
 title: Welcome to Speechly Docs
-description: "With Speechly you can easily add voice functionalities to any user interface. We provide speech-to-text and natural language understanding features, both accessible via a simple API using ready-made client libraries. All you need to do is provide a small amount of training data for our machine learning models, and integrate one of the client libraries to your application."
+description: Everything you need to start building with Speechly.
 display: article
+hideToc: true
 ---
 
-The documentation is divided into the following sections (also shown in the menu to the left):
+<div class="homegrid">
+  <a href="/quick-start/" class="homegrid-item">
+    <p class="homegrid-item-title">🚀 Quick Start</p>
+    <p>Get started with developing your first voice application with Speechly.</p>
+  </a>
+  <a href="/client-libraries/usage/" class="homegrid-item">
+    <p class="homegrid-item-title">📦 Client Libraries</p>
+    <p>How to use and integrate Speechly to your application using our Client Libraries available for Web, React, iOS and Android.</p>
+  </a>
+  <a href="/slu-examples/" class="homegrid-item">
+    <p class="homegrid-item-title">💬 Configuration</p>
+    <p>How to provide training data for the machine learning models that underlie everything that happens behind the scenes.</p>
+  </a>
+  <a href="/ui-components/" class="homegrid-item">
+    <p class="homegrid-item-title">🕹 UI Components</p>
+    <p>Speechly UI components provide the visual interface to support voice functionality.</p>
+  </a>
+</div>
 
-- [Quick Start](/quick-start/) goes through the basic steps to set up your first voice application in the Speechly Dashboard. Also check out our five-part video tutorial about [How Speechly Works](quick-start/how-speechly-works).
-- [Development Tools](/dev-tools/) gives an overview of our library offering, as well as provides instructions on how to use our Dashboard and Command Line Tool.
-- [Client Libraries](/client-libraries/) shows how to start integrating Speechly to your application using our Client libraries (available for Web, React, iOS and Android).
-- [Configuration](/slu-examples/) teaches you how to provide training data for the machine learning models that underlie everything that happens behind the scenes.
-- [Design](/design-philosophy/) provides some high-level guidelines on how to design a responsive multi-modal voice user interface.
-- [Speechly gRPC API](/speechly-api/) contains a description and reference of our low-level gRPC API. (For advanced users only!)
-- [FAQ](/faq/) is for the Frequently Asked Questions
-- [Product updates](/release-notes/) lists recent updates to our products.
-
-# I Need Help
+## Need help?
 
 Please [post a question at our Github discussions page](https://github.com/speechly/speechly/discussions) or for a more concrete technical problem, please file an [issue](https://github.com/speechly/speechly/issues).
 
-Try to be as specific as you can. Describe *what* you are trying to do, *how* you do it, and *what errors* (if any) you are getting. We are happy to help you forward!
+Try to be as specific as you can. Describe **what** you are trying to do, **how** you do it, and **what errors** (if any) you are getting. We are happy to help!
+

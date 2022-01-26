@@ -10,14 +10,16 @@
     <div class="dashboard-main">
       {{ partial "components/hero.html" (dict "title" .Title "description" .Params.description "size" "normal" "breadcrumb" . "scale" 2 "title_color" "dark" "desc_color" "grey-dark" "draft" .Draft "new" .Params.new "tags" .Params.tags) }}
       {{ partial "components/content.html" .Content }}
-      {{ partial "components/git-info.html" . }}  
+      {{ partial "components/git-info.html" . }}
     </div>
 
-    <div class="dashboard-toc is-hidden-touch">
-      {{ if $hasToc }}
-      {{ partial "components/toc.html" . }}
-      {{ end }}
-    </div>
+    {{ if not .Params.hideToc }}
+      <div class="dashboard-toc is-hidden-touch">
+        {{ if $hasToc}}
+        {{ partial "components/toc.html" . }}
+        {{ end }}
+      </div>
+    {{ end }}
   </div>
 
   {{ partial "components/footer.html" . }}
