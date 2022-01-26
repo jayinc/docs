@@ -15,7 +15,7 @@ hideToc: true
     <p>How to use and integrate Speechly to your application using our Client Libraries available for Web, React, iOS and Android.</p>
   </a>
   <a href="/slu-examples/" class="homegrid-item">
-    <p class="homegrid-item-title">💬 Configuration</p>
+    <p class="homegrid-item-title">🛠 Configuration</p>
     <p>How to provide training data for the machine learning models that underlie everything that happens behind the scenes.</p>
   </a>
   <a href="/ui-components/" class="homegrid-item">
