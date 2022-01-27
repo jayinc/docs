@@ -1,5 +1,5 @@
 {{ define "title" }}
-{{ site.Title }} | {{ .CurrentSection.Title }}
+{{ .CurrentSection.Title }} | {{ site.Title }}
 {{ end }}
 
 {{ define "main" }}
@@ -10,7 +10,7 @@
   {{ partial "components/navbar.html" (dict "color" "white") }}
   {{ partial "components/hero.html" (dict "title" .Title "description" .Params.description "size" "medium") }}
   {{ partial "components/content.html" .Content }}
-  
+
 </main>
 {{ else if eq $display "article" }}
 {{ partial "display/article.html" . }}
