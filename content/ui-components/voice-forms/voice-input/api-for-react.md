@@ -5,4 +5,4 @@
 | `value?` | `string` | The current value. Specifying the value controls the components's state so it makes sense to provide an onChange handler. |
 | `defaultValue?` | `string` | Initial value. Has no effect if `value` is specified. |
 | `changeOnIntent?` | `string` | `string` (intent) filters out all but the specified intent. `undefined` disables intent filtering. |
-| `onChange?` | (`value`: `string`) => `void` | - |
+| `onChange?` | `(value: string) => void` | - |

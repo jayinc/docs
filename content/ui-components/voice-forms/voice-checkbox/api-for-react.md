@@ -7,4 +7,4 @@
 | `intent?` | `string` | `string` (intent) filters out all but the specified intent. `undefined` sets on any intent. |
 | `clearIntent?` | `string` | `string` (intent) forces clearing values both on `setOnEntityType` and `clearOnEntityType`. |
 | `clearOnEntityType?` | `string` | `string` (entity type) clears (unchecks) this widget if a matched entity type is found in the SpeechSegment. |
-| `onChange?` | (`value`: `boolean`) => `void` | - |
+| `onChange?` | `(value: boolean) => void` | - |

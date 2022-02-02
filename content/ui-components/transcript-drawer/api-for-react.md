@@ -8,7 +8,7 @@
 | `backgroundColor?` | `string` | Optional string (CSS color) for hint text background. Default: "#202020" |
 | `marginBottom?` | `string` | Optional string (CSS dimension). Dynamic margin added when element is visible. Default: "0rem" |
 | `mockSegment?` | `SpeechSegment` | Optional SpeechSegment to be displayed instead of actual transcription from API. Can be used to demonstrate voice functionality to the user. |
-| `hint?` | `string` \| `string`[] | Optional hint text or array |
+| `hint?` | `string \| string[]` | Optional hint text or array |
 | `height?` | `string` | Optional minimum height as CSS string. Default: "8rem" |
 | `smallTextColor?` | `string` | Optional string (CSS color) for hint text. Default: "#ffffff70" |
 | `hintFontSize?` | `string` | Optional CSS string for hint text size. Default: "0.9rem" |
