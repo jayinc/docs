@@ -63,7 +63,6 @@ $max-character-width: 80ch
 
 // Component-specific files
 @import "admonition"
-@import "article"
 @import "dashboard"
 @import "nav"
 @import "toc"
@@ -109,7 +108,25 @@ $max-character-width: 80ch
     text-transform: uppercase
 
 code
-  font-size: 13px !important
+  font-size: 13px
+  color: #333
+  background: rgba(#000, 0.04)
+  padding: 2px 4px
+
+a
+  code
+    color: $primary
+
+h1, h2
+  code
+    font-size: 16px
+    font-weight: inherit
+
+
+td:not(:last-child)
+  code
+    background: none
+    padding: 0
 
 h1
   letter-spacing: -0.02em
