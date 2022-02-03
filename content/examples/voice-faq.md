@@ -1,8 +1,13 @@
 ---
-title: Ecommerce Voice FAQ Example
+title: Command and Control
 description: Maps users questions to a number of intents that can be used to trigger different front-end actions.
 weight: 4
+category: "User guide"
+menu:
+  sidebar:
+    parent: "Speechly Examples"
 ---
+
 # Basic information
 This configuration demonstrates voice activated navigation shortcuts. For example, the user utterance *"what is your return policy"* triggers the intent `return_plicy`, which the front-end can use to redirect the user to a relevant page.
 
@@ -29,7 +34,8 @@ Things to note:
 Structuring your configurations like this is a good design pattern also when writing your own configurations.
 
 (The [SAL syntax](/slu-examples/cheat-sheet/) reference is good to keep handy as well.)
-```
+
+```bash
 hello_phrases = [
   hi
   hello
@@ -97,3 +103,29 @@ all_intents = [
 
 $all_intents
 ```
+
+# Try it yourself
+
+1. Log-in to the Speechly [Dashboard](https://api.speechly.com/dashboard)
+1. Create a new application and select the "Command and Control" template
+1. Click "Deploy" adn wait for the deployment to finish (the status indicator turns green)
+1. Copy the `App ID` from the header
+1. Run it locally or try it in CodePen
+
+## Run it locally
+
+https://github.com/speechly/speechly/tree/main/templates/command-control
+
+```bash
+npx degit speechly/speechly/templates/command-control my-app
+cd my-app
+// Add your App ID into index.js
+npm install
+npm start
+```
+
+## Try it in CodePen
+
+Paste `App ID` into the CodePen
+
+https://codepen.io/aukkonen/pen/powOzor?editors=1010

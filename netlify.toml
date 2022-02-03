@@ -35,6 +35,16 @@
   to = "/dev-tools/command-line-tool/"
   status = 301
 
+[[redirects]]
+  from = "/slu-examples/example-configuration/"
+  to = "/examples/"
+  status = 301
+
+[[redirects]]
+  from = "/slu-examples/example-configuration/*"
+  to = "/examples/:splat"
+  status = 301
+
 [[headers]]
   for = "/release-notes/index.json"
     [headers.values]

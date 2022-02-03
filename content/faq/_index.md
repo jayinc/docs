@@ -1,7 +1,7 @@
 ---
 title: FAQ
 description: Frequently Asked Questions about the Speechly SLU platform and API. 
-weight: 9
+weight: 10
 display: article
 menu:
   sidebar:

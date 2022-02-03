@@ -15,7 +15,7 @@ This page is about the basics of Speechly Annotation Language (SAL). SAL is the 
 
 On this page, you'll learn about configuring your application through example utterances, basic concepts intents and entities and the Speechly Dashboard basic functionalities
 
-{{< info title="Example configurations" >}} If you want to get up and running fast, you can copy paste our [example configurations](/slu-examples/example-configuration/) and try them out.{{< /info >}}
+{{< info title="Example configurations" >}} If you want to get up and running fast, you can copy paste our [example configurations](/examples/) and try them out.{{< /info >}}
 
 
 ## Example utterances

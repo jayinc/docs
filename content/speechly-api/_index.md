@@ -1,7 +1,7 @@
 ---
 title: Speechly gRPC API
 description: 
-weight: 8
+weight: 9
 category: "References"
 display: article
 menu:

@@ -61,7 +61,7 @@ Since Speechly is a **spoken language** understanding system, it is important to
 Notice that how something spoken can depend on the *context*. For example, the number 16500 could be either the price of a car, or a (US) zip-code. However, it is spoken quite differently depending on the context: *"sixteen thousand five hundred"* (price) vs *"one six five zero zero"* (zip-code). A good configuration takes such contextual details into account.
 
 # Where can I learn more about Speechly Annotation Language?
-- Take a look at [example configurations](/slu-examples/example-configuration/) and try to understand how they work.
+- Take a look at [example configurations](/examples/) and try to understand how they work.
 - The [SAL syntax summary](/slu-examples/cheat-sheet/) should be helpful.
 - Try designing your own configurations on the [Dashboard](https://api.speechly.com/dashboard). Start with something simple, and then expand this little by little.
 - [SAL semantics](/slu-examples/semantics) is a useful resource once you have familiarised yourself with the very basics and have written a few simple configurations.
