@@ -30,6 +30,7 @@ The Command Line Tool (CLI) is a simple program that works in a Unix shell or Wi
 The tool is open-source and can be found at our [Github repository](https://github.com/speechly/cli). For easy installation, we also provide binary releases for macOS, Linux and Windows. Once installed, the tool is invoked by typing `speechly`.
 
 Select your OS for quick installation instructions.
+
 <div class="tab">
   <button class="tablinks platform macos active" onclick="openTab(event, 'platform=macos')">MacOS</button>
   <button class="tablinks platform windows" onclick="openTab(event, 'platform=windows')">Windows</button>
@@ -37,64 +38,40 @@ Select your OS for quick installation instructions.
 </div>
 
 <div class="platform macos tabcontent code" style="display: block;">
+
 If you are using MacOS, the easiest way to install is by using <a href="https://brew.sh">Homebrew</a>. 
 
 ```bash
 $ brew tap speechly/tap
 $ brew install speechly
 ```
+
 After tapping, brew updates will include the new versions of `speechly`.
+
 </div>
 
 <div class="platform windows tabcontent code">
+
 If you are using Windows, the easiest way to install is by using <a href="https://github.com/lukesampson/scoop">Scoop</a>.
 
 ```posh
 C:\> scoop bucket add speechly https://github.com/speechly/scoop-bucket
 C:\> scoop install speechly
 ```
+
 You can update the tool by using `scoop update`.
+
 </div>
 
 <div class="platform linux tabcontent code">
-For Linux, we provide a pre-compiled x86_64 binary at
-<a href="https://github.com/speechly/cli/releases/latest">https://github.com/speechly/cli/releases/latest</a>.
+
+For Linux, we provide a pre-compiled x86_64 binary at https://github.com/speechly/cli/releases/latest
+
 The release package contains a README as well as the binary. Just put it anywhere on your PATH and you are good to go.
-<br><br>
+
 Of course you can also build the client from source if you need to run this on an exotic architecture.
+
 </div>
-
-# Adding an API token
-After installing the CLI, you must obtain an API token from the [Dashboard](https://api.speechly.com/dashboard). The API tokens are project specific. If you need to access multiple projects from the CLI, you must create a separate token for each project. Please follow these steps to create an API token:
-
-1. Log on to the [Dashboard](https://api.speechly.com/dashboard).
-1. Select the project for which you want to create the API token from the project menu in the top-left corner.
-1. After selecting the project, click on "Settings" in the top navigation bar.
-1. On the Settings page, click on "Create API Token" and give the token a name (this can be whatever).
-1. Click "Show" to see the API Token, and click "Copy" to copy the token to the clipboard.
-
-Next, run the command below where `<API_Token>` has been replaced with your API token. You should also specify a name for the project by replacing `project_name` with something descriptive.
-```bash
-speechly config add --name project_name --apikey <API_Token>
-```
-Now you are ready to start using the CLI!
-
-
-# Managing multiple projects
-
-If you have split your applications to multiple projects, you must configure the CLI for each of the projects by following the steps in [Adding an API token](#adding-an-api-token) separately for each project.
-
-You can see a list of all projects (called "Contexts" in the CLI) that have an API token, as well as the one that is currently active, by invoking
-```bash
-speechly config
-```
-The project that is currently active is indicated by "Current config" in the listing.
-
-Switching between projects is done by invoking
-```bash
-speechly config use --name name_of_my_other_project
-```
-
 
 # Basic usage and getting help
 
@@ -103,32 +80,78 @@ This is a brief overview of how the CLI works in general. A [reference](#cli-ref
 The CLI follows an approach similar to e.g. `git` or `docker` where different functionalities of the tool are accessed by specifying a command followed by arguments to this command. The tool provides usage instructions when invoked without sufficient parameters.
 
 For example, invoking
+
 ```bash
 speechly
 ```
+
 without other arguments, will print a list of all commands supported by the CLI. Running `speechly command` will print a brief usage guide for the given `command`, e.g. typing
+
 ```bash
 speechly create
 ```
+
 gives instructions on how to create a new application.
+
+# Adding an API token
+
+After installing the CLI, you must obtain an API token from the [Dashboard](https://api.speechly.com/dashboard). The API tokens are project specific. If you need to access multiple projects from the CLI, you must create a separate token for each project. Please follow these steps to create an API token:
+
+1. Log on to the [Dashboard](https://api.speechly.com/dashboard).
+1. Select the project for which you want to create the API token from the project menu in the top-left corner.
+1. After selecting the project, click on "Settings" in the top navigation bar.
+1. On the Settings page, click on "Create API Token" and give the token a name, this can be whatever.
+1. Click "Show" to see the API Token, and click "Copy" to copy the token to the clipboard.
+
+Next, run the command below where `<api_token>` has been replaced with your API token. You should also specify a name for the project by replacing `project_name` with something descriptive.
+
+```bash
+speechly projects add --name <project_name> --apikey <api_token>
+```
+
+Now you are ready to start using the CLI!
+
+# Managing multiple projects
+
+If you have split your applications to multiple projects, you must configure the CLI for each of the projects by following the steps in [Adding an API token](#adding-an-api-token) separately for each project.
+
+You can see a list of all projects that have an API token, as well as the one that is currently active, by invoking
+
+```bash
+speechly projects
+```
+
+The project that is currently active is indicated by "Current project" in the listing.
+
+Switching between projects is done by invoking
+
+```bash
+speechly projects use
+```
+
+This allows you to select the desired project from a list of available projects.
 
 
 # Deploying with the CLI
 
 When deploying a Speechly application with the CLI, the application configuration (SAL templates, Entity Data Types, etc) are defined in a YAML formatted file. This *Configuration YAML*, together with other configuration files if needed, should all be put in the same directory. The contents of this directory are deployed by invoking
+
 ```bash
-speechly deploy name_of_directory -a deployment_app_id -w
+speechly deploy <app_id> <directory> -w
 ```
-where `deployment_app_id` should be replaced with the app_id you want to deploy the application to. The `-w` flag means the Command Line Tool will wait until model training is complete.
+where `<app_id>` should be replaced with the application id you want to deploy. The `-w` flag means the Command Line Tool will wait until model training is complete.
 
 Note that the CLI builds and uploads a deployment package that contains *all files* in the specified directory! It is thus highly recommended to store there only files that are relevant to the configuration. In the simplest case this is only the Configuration YAML.
 
 
 # Configuration YAML
+
 The configuration YAML defines a dictionary of `(key, value)` pairs that contain definitions both for SAL templates and Entity Data Types as described below. Also, [Imports and Lookups](/slu-examples/imports-and-lookups/) are configured within the same Configuration YAML.
 
 ## Defining SAL templates
+
 Templates are defined with key `templates` within a "Literal Block Scalar":
+
 ```yaml
 templates: |
   SAL line 1
@@ -137,7 +160,9 @@ templates: |
 ```
 
 ## Defining Entity Data Types
+
 Entity Data Types are defined with key `entities` that has a list of `(name, type)` pairs as its value:
+
 ```yaml
 entities:
  - name: entity1_name
@@ -148,7 +173,9 @@ entities:
 ```
 
 ## Example configuration YAML
+
 This is a simple example that shows what a complete configuration YAML with entity types and templates looks like:
+
 ```yaml
 entities:
  - name: product_name
@@ -173,38 +200,50 @@ templates: |
 
 # Updating the API token
 
-Updating the API token of a project in the command line tool is done by modifying the CLI config file. You can see where the config file is located by invoking
+Updating the API token of a project in the command line tool is done by modifying the CLI settings file. You can see where the settings file is located by invoking
+
 ```
-speechly config
+speechly projects
 ```
-The first output line should indicate the "Config file used". The name of the config file should be `.speechly.yaml` and it should be located in your home directory. Open this file in a text editor. You should see something like
+
+The first output line should indicate the "Settings file used". The name of the settings file should be `.speechly.yaml` and it should be located in your home directory. Open this file in a text editor. You should see something like
+
 ```yaml
 contexts:
-- apikey: A_REALLY_LONG_SEEMINGLY_RANDOM_STRING
+- name: my_project
   host: api.speechly.com
-  name: my_project
+  apikey: <api_token>
+  remotename: My Project
 current-context: my_project
 ```
-where `A_REALLY_LONG_SEEMINGLY_RANDOM_STRING` is the current API token of project `my_project`. If you have several projects, they are all shown separately, each with their own API token.
 
-You can generate a new API token by following the steps in [Adding an API token](#adding-an-api-token). (Ensure that you are viewing the appropriate project in the Dashboard before generating the token!) When you have copied the new token, replace `A_REALLY_LONG_SEEMINGLY_RANDOM_STRING` with the new token. Save the config file, and the new API token for project `my_project` is immediately in use.
+where `<api_token>` is the current API token of project `my_project`. If you have several projects, they are all shown separately, each with their own API token.
 
-If you have several projects, you must separately replace the API token for each of these by creating a new token for every project in the Dashboard, and pasting it in the config file.
+You can generate a new API token by following the steps in [Adding an API token](#adding-an-api-token). Ensure that you are viewing the appropriate project in the Dashboard before generating the token!
+
+When you have copied the new token, replace `<api_token>` with the new token. Save the settings file, and the new API token for project `my_project` is immediately in use.
+
+If you have several projects, you must separately replace the API token for each of these by creating a new token for every project in the Dashboard, and pasting it in the settings file.
 
 
 # Converting an Alexa Model [Beta]
 
-To convert an Alexa Interaction Model to a Speechly configuration,
+To convert an Alexa Interaction Model to a Speechly configuration
+
 1. copy the Interaction Model JSON from the Alexa Developer Console and save it into a file (e.g. `alexa-model.json`),
 1. enter the directory in which you want the Speechly configuration files to be stored, and
 1. and then run
+
 ```bash
 speechly convert /path/to/my-alexa-model.json
 ```
+
 Depending on what kind of intents and slots the original Interaction Model had, the directory should now contain a `config.yaml` file, and possibly a number of `.csv` files. The `config.yaml` file contains the configuration, and the `.csv` files contain [imported entity values and lookup mappings](/slu-examples/imports-and-lookups). These can be deployed with the `deploy` command as any other Speechly configuration.
 
 ## Supported Alexa slot types
+
 The Alexa slot types are mapped to Speechly [Standard Variables](/slu-examples/standard-variables) and [Entity Types](/slu-examples/postprocessing)  as follows:
+
 | Alexa slot type | Speechly Standard Variable / Entity Type   |
 |-----------------|-------------------------------------------|
 | AMAZON.NUMBER      | SPEECHLY.NUMBER / Number               |
@@ -275,18 +314,22 @@ This command applied to previous example now yields a different annotation for `
 ## Compute accuracy
 
 To compute accuracy, you need both the annotations from the Speechly API, as obtained in previous step, as well as ground truth annotations. The ground truth annotations must be given using the same syntax as the API returns. For example, suppose the file `ground_truth.txt` contains:
+
 ```yaml
 *search can i see [blue|blue](color) [sneakers|category_sneaker](product)
 *add_to_cart i want [two|2](amount) of those
 *set_address my address is [one twenty three imaginary road|123 Imaginary Rd.](address)
 *set_delivery_date delivery [tomorrow|2021-09-12](delivery_date)
 ```
+
 These are compared against the API generated annotations by running:
 
 ```bash
 speechly evaluate --input annotated_utterances.txt --ground-truth ground_truth.txt
 ```
+
 the command outputs:
+
 ```
 Ground truth had:
   *add_to_cart i want [two|2](amount) of those
@@ -303,6 +346,7 @@ Matching rows out of total:
 Accuracy:
 0.50
 ```
+
 In the first case the prediction is missing the `amount` entity. This type of errors can be mitigated by ensuring that the utterance appears in the configuration and is properly annotated. In the second case the `delivery_date` entity was correctly recognized (from the word "tomorrow"), but since the return value of relative dates resolves to the current day, it is a good idea to make sure all the relative dates in your ground truth data are computed against some fixed reference date, and then use that when running `speechly annotate` as described above.
 
 If you modify and re-deploy your application, you can run the evaluation again with the same test utterances (`test_utterances.txt`) and ground truths (`ground_truth.txt`). Note that you always have to first run `speechly evaluate annotate` to get the API annotations, and then `speechly evaluate accuracy` to compare these against the ground truths.
@@ -348,7 +392,7 @@ Deploy a configuration by invoking
 speechly deploy <app_id> <directory>
 ```
 
-Replace `<app_id>` with application id you want to deploy. If the current directory contains your configuration, replace `<directory>` with `.`. Note that `app_id` must belong to the current project. To learn more about projects, see the [List and switch projects](#list-and-switch-projects) section below.
+Replace `<app_id>` with application id you want to deploy. If the current directory contains your configuration, replace `<directory>` with `.`. Note that `app_id` must belong to the current project. To learn more about projects, see the [Managing multiple projects](#managing-multiple-projects) section above.
 
 ## Download a deployed configuration
 
@@ -411,19 +455,3 @@ speechly evaluate --input annotated_utterances.txt --ground-truth ground_truth.t
 ```
 
 The command will output those test utterances that failed, as well as the total number of these utterances that passed without error. For more details about evaluation, please see the [Evaluate the accuracy of your configuration](#evaluate-the-accuracy-of-your-configuration) section above.
-
-## List and switch projects
-
-List all your projects by invoking
-
-```bash
-speechly projects
-```
-
-To switch between projects run
-
-```bash
-speechly projects use
-```
-
-This allows you to select the desired project from a list of available projects.
