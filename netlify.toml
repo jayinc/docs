@@ -45,6 +45,11 @@
   to = "/examples/:splat"
   status = 301
 
+[[redirects]]
+  from = "/quick-start/stt-only/"
+  to = "/examples/stt-only/"
+  status = 301
+
 [[headers]]
   for = "/release-notes/index.json"
     [headers.values]
