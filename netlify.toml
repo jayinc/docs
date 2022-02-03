@@ -31,7 +31,7 @@
   status = 301
 
 [[redirects]]
-  from = "/dev-tools/command-line-tool/"
+  from = "/dev-tools/command-line-client/"
   to = "/dev-tools/command-line-tool/"
   status = 301
 
