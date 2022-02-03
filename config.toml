@@ -124,5 +124,5 @@ weight = 3
 
 [[menu.main]]
 name = "npm"
-url = "https://www.npmjs.com/search?q=%40speechly"
+url = "https://www.npmjs.com/org/speechly"
 weight = 4
