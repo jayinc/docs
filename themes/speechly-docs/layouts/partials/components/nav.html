@@ -4,7 +4,7 @@
 {{ define "header" }}
 {{ $isHere := eq .here .url }}
 <header class="nav-section-header">
-  <a{{ if $isHere }} class="is-active"{{ end }} href="{{ .url }}">
+  <a {{ if $isHere }}class="is-active"{{ end }} href="{{ .url }}">
     {{ .title }}
   </a>
 </header>
@@ -13,41 +13,24 @@
 {{ define "submenu" }}
 {{ $isHere := eq .here .url }}
 <li class="nav-subitem">
-  <a{{ if $isHere }} class="is-active"{{ end }} href="{{ .url }}">
+  <a {{ if $isHere }}class="is-active"{{ end }} href="{{ .url }}">
     {{ .title }}
   </a>
 </li>
 {{ end }}
 
 <nav class="nav is-sticky">
-  <header class="nav-header">
-    <nav class="level is-size-5">
-      <div class="level-left">
-        <div class="level-item">
-          <p class="nav-header-title has-text-weight-bold">
-            <a href="/">Documentation</a>
-          </p>
-        </div>
-        <div class="level-item">
-          <span class="icon has-text-primary">
-            {{ partial "components/icon.html" (dict "icon" "apps") }}
-          </span>
-        </div>
-      </div>
-    </nav>
-  </header>
-
   <div class="nav-container is-scrollable">
     <div class="nav-section">
       {{ range .Site.Menus.sidebar }}
         {{ template "header" (dict "title" .Title "url" .URL "here" $here) }}
-        {{ if .HasChildren }} 
-          {{ if or ($currentPage.IsMenuCurrent "sidebar" .) ($currentPage.HasMenuCurrent "sidebar" .)}} 
+        {{ if .HasChildren }}
+          {{ if or ($currentPage.IsMenuCurrent "sidebar" .) ($currentPage.HasMenuCurrent "sidebar" .)}}
             <ul class="nav-section-links">
             {{ range .Children }}
               {{ template "submenu" (dict "title" .Title "url" .URL "here" $here) }}
-              {{ if or ($currentPage.IsMenuCurrent "sidebar" .) ($currentPage.HasMenuCurrent "sidebar" .)}} 
-                {{ if .HasChildren }} 
+              {{ if or ($currentPage.IsMenuCurrent "sidebar" .) ($currentPage.HasMenuCurrent "sidebar" .)}}
+                {{ if .HasChildren }}
                   <ul class="nav-section-links">
                     {{ range .Children }}
                       {{ template "submenu" (dict "title" .Title "url" .URL "here" $here) }}
@@ -58,7 +41,7 @@
             {{end }}
             </ul>
           {{ end }}
-        {{ end }} 
+        {{ end }}
       {{ end }}
     </div>
   </div>

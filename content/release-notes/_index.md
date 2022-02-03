@@ -1,12 +1,11 @@
 ---
-title: Product updates
+title: Product Updates
 description: New features and improvements to Speechly spoken language understanding API and client libraries 
-weight: 3
+weight: 999
 type: release-notes
 menu:
   sidebar:
-    title: "Product updates"
-    weight: 999
+    title: "Product Updates"
 outputs: 
   - html
   - json

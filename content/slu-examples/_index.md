@@ -1,13 +1,12 @@
 ---
 title: Configuring Your Application
 description: Every Speechly application needs a configuration for your specific use case. 
-weight: 3
+weight: 5
 category: "User guide"
 aliases: [/editing-nlu-examples/]
 menu:
   sidebar:
     title: "Configuration"
-    weight: 4
 ---
 The Speechly API takes an audio stream as input, and returns a *transcript* of the users speech, together with the identified *intents* and *entities* to your application. The Speechly API achieves this by applying machine learning. However, training the machine learning models requires example utterances annotated with the information specific to your application.
 

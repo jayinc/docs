@@ -1,7 +1,7 @@
 ---
 title: Client Libraries
 description: Available for Web, React, iOS, and Android.
-weight: 2
+weight: 3
 category: "References"
 display: article
 menu:

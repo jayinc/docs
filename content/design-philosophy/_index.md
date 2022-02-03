@@ -1,8 +1,8 @@
 ---
 title: Speechly Design Philosophy
 description: "How Speechly should be used to improve your application's user experience?"
+weight: 7
 display: article
-weight: 5
 menu:
   sidebar:
     title: "Design Philosophy"

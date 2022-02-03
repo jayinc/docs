@@ -1,11 +1,12 @@
 ---
 title: "UI Components"
 description: Speechly UI components provide the visual interface to support voice functionality.
+weight: 4
 category: "References"
 display: article
 menu:
   sidebar:
-    weight: 3
+    title: "UI Components"
 ---
 
 <script>

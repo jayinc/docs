@@ -1,7 +1,7 @@
 ---
 title: Quick Start
 description: The Speechly Quick Start helps you get started on developing with Speechly on the Web.
-weight: 1
+weight: 2
 display: article
 category: "User guide"
 menu:
@@ -39,10 +39,8 @@ When developing a Speechly Voice UI you can focus on defining what happens when 
 5. Take a look at our [Development tool offering](/dev-tools).
 6. Browse our [public GitHub repositories](https://github.com/speechly).
 
-# Get help
+# Need help?
 
-For general discussion or questions, please use our [GitHub Discussion forum](https://github.com/speechly/speechly/discussions).
+Please [post a question at our Github discussions page](https://github.com/speechly/speechly/discussions) or for a more concrete technical problem, please file an [issue](https://github.com/speechly/speechly/issues).
 
-For feature requests or bug reports, please file a [GitHub Issue](https://github.com/speechly/speechly/issues).
-
-Try to be as specific as you can. Describe what you are trying to do, how you do it, and what errors (if any) you are getting. We are happy to help you forward, and you will receive an answer much quicker if your question is formulated in a way so that we can easily understand what your problem might be.
+Try to be as specific as you can. Describe **what** you are trying to do, **how** you do it, and **what errors** (if any) you are getting. We are happy to help!

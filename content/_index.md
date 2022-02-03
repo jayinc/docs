@@ -1,8 +1,12 @@
 ---
 title: Welcome to Speechly Docs
 description: Everything you need to start building with Speechly.
+weight: 1
 display: article
 hideToc: true
+menu:
+  sidebar:
+    title: "Docs Home"
 ---
 
 <div class="homegrid">
@@ -14,13 +18,13 @@ hideToc: true
     <p class="homegrid-item-title">📦 Client Libraries</p>
     <p>How to use and integrate Speechly to your application using our Client Libraries available for Web, React, iOS and Android.</p>
   </a>
-  <a href="/slu-examples/" class="homegrid-item">
-    <p class="homegrid-item-title">🛠 Configuration</p>
-    <p>How to provide training data for the machine learning models that underlie everything that happens behind the scenes.</p>
-  </a>
   <a href="/ui-components/" class="homegrid-item">
     <p class="homegrid-item-title">🕹 UI Components</p>
     <p>Speechly UI components provide the visual interface to support voice functionality.</p>
+  </a>
+  <a href="/slu-examples/" class="homegrid-item">
+    <p class="homegrid-item-title">🛠 Configuration</p>
+    <p>How to provide training data for the machine learning models that underlie everything that happens behind the scenes.</p>
   </a>
 </div>
 
