@@ -1,14 +1,12 @@
 ---
 title: Speechly Command Line Tool
 description: The Speechly Command Line Tool provides additional configuration options and allows you to efficiently integrate Speechly to your development workflow.
-weight: 5
+weight: 2
 category: "User guide"
-aliases: [/command-line-client/]
 menu:
   sidebar:
     title: "Command Line Tool"
-    weight: 8
-    parent: "Development tools"
+    parent: "Development Tools"
 ---
 <script>
   // updateTab function specific to this pages' tabs; called by updateTab() in app.js

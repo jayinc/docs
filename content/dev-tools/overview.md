@@ -1,13 +1,13 @@
 ---
-title: Speechly libraries overview
+title: Speechly Libraries Overview
 description: Select the right integration library
-weight: 3
+weight: 1
 category: "References"
 display: article
 menu:
   sidebar:
-    title: "Speechly libraries"
-    parent: "Development tools"
+    title: "Speechly Libraries"
+    parent: "Development Tools"
 ---
 
 Our development library offering consists of

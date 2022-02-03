@@ -10,7 +10,7 @@ menu:
     parent: "Configuring Your Application"
 ---
 
-***Note!** These functionalities are not available on the Dashboard. Using Imports and Lookups requires deploying your application using the [Command Line Tool](/dev-tools/command-line-client/)!*
+***Note!** These functionalities are not available on the Dashboard. Using Imports and Lookups requires deploying your application using the [Command Line Tool](/dev-tools/command-line-tool/)!*
 
 # Importing a List from file
 
@@ -22,7 +22,7 @@ fruit = [apple | orange | blood orange | banana | lemon | apricot | peach | pine
 ```
 However, if your list contains hundreds of items, the above becomes cumbersome to write and maintain.
 
-Using the import functionality, you can import the list from a CSV file. The CSV file must have the list items in one of its columns, and the file must be located in the same directory as your [Configuration YAML file](/dev-tools/command-line-client/#configuration-yaml).
+Using the import functionality, you can import the list from a CSV file. The CSV file must have the list items in one of its columns, and the file must be located in the same directory as your [Configuration YAML file](/dev-tools/command-line-tool/#configuration-yaml).
 
 ## A simple import example
 
@@ -58,7 +58,7 @@ imports:
 ```
 
 ## Import Reference
-Imports are defined by adding the `imports` key to your [Configuration YAML](/dev-tools/command-line-client/#configuration-yaml). The value of `imports` must be a list of dictionaries that each have the keys `name`, `source` and `field`:
+Imports are defined by adding the `imports` key to your [Configuration YAML](/dev-tools/command-line-tool/#configuration-yaml). The value of `imports` must be a list of dictionaries that each have the keys `name`, `source` and `field`:
 ```yaml
 imports:
   ...

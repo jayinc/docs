@@ -1,22 +1,22 @@
 ---
-title: Development tools
+title: Development Tools
 description: Speechly libraries, Dashboard, and Command line tool
-weight: 5
+weight: 6
 category: "References"
 display: article
 menu:
   sidebar:
-    title: "Development tools"
+    title: "Development Tools"
 ---
 
-# Speechly libraries
+# [Speechly Libraries](./overview)
 
-We offer [a variety of libraries](/dev-tools/overview) for integrating Speechly to your application. Our high-level [Client libraries](/client-libraries/), available for for Web, React, iOS, and Android, are the most advanced. They make it easy to interact with the Speechly gRPC API in a conforming way, and we recommend using them whenever possible.
+We offer a variety of libraries for integrating Speechly to your application. Our high-level [Client Libraries](/client-libraries/), available for for Web, React, iOS, and Android, are the most advanced. They make it easy to interact with the Speechly gRPC API in a conforming way, and we recommend using them whenever possible.
 
-# Dashboard
+# [Dashboard](https://api.speechly.com/dashboard)
 
-The [Speechly Dashboard](https://www.speechly.com/dashboard) is where you create, deploy and configure Speechly applications. The Dashboard provides some simple usage instructions when you log in for the first time.
+The Speechly Dashboard is where you create, deploy, preview and configure your Speechly applications. The Dashboard provides an user friendly interface and helpful usage instructions.
 
-# Command line tool
+# [Command Line Tool](./command-line-tool)
 
-Our [Command Line Tool](/dev-tools/command-line-client/) lets you create, deploy and configure Speechly applications from the command line. Some of our more advanced features are only available when using the Command Line Tool. Beginners should start with the Dashboard.
+If you prefer using the terminal, Speechly’s command line tool is for you. Access any Speechly feature straight from your terminal. New and experimental features are usually released to the command line tool before they are available in the Dashboard.

@@ -30,6 +30,11 @@
   to = "/ui-libraries/voice-forms/:splat"
   status = 301
 
+[[redirects]]
+  from = "/dev-tools/command-line-tool/"
+  to = "/dev-tools/command-line-tool/"
+  status = 301
+
 [[headers]]
   for = "/release-notes/index.json"
     [headers.values]
