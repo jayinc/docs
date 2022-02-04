@@ -4,6 +4,7 @@ description: Everything you need to start building with Speechly.
 weight: 1
 display: article
 hideToc: true
+hideBreadcrumb: true
 menu:
   sidebar:
     title: "Docs Home"

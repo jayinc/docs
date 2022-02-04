@@ -9,7 +9,7 @@
 {{ $tags  := .tags }}
 <section class="hero is-{{ $color }} is-{{ $size }}{{ if $bold }} is-bold{{ end }}">
   {{ with $bread }}
-    {{ if not (eq .RelPermalink "/")}}
+  {{ if not .Params.hideBreadcrumb }}
     <div class="hero-head" style="padding-left: 1.5rem;">
       <div class="container">
         {{ partial "components/breadcrumb.html" . }}
@@ -18,6 +18,7 @@
     {{ end }}
   {{ end }}
 
+  {{ if $title }}
   <div class="hero-body">
     <div class="container">
       {{ partial "components/title.html" (dict "title" $title "description" $desc "scale" $scale "draft" .draft "new" .new) }}
@@ -43,4 +44,5 @@
       {{ end }}
     </div>
   </div>
+  {{ end }}
 </section>
